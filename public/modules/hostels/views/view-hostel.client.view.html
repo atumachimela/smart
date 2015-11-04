@@ -1,0 +1,24 @@
+<section data-ng-controller="HostelsController" data-ng-init="findOne()">
+	<div class="page-header">
+		<h1 data-ng-bind="hostel.name"></h1>
+	</div>
+	<div class="pull-right" data-ng-show="authentication.user._id == hostel.user._id && rooms.$resolved || rooms.length == 0">
+		<a class="btn btn-primary" data-ng-href="/#!/hostels/{{hostel._id}}/rooms/create" class="list-group-item">
+			<i class="glyphicon glyphicon-pencil"></i>
+		</a>
+  	<a class="btn btn-primary" data-ng-href="/#!/hostels/{{hostel._id}}/rooms" class="list-group-item">
+  		<i class="glyphicon glyphicon-list"></i>
+  	</a>
+	  <small>
+		<em class="text-muted">
+			Created on
+			<span data-ng-bind="room.created | date:'mediumDate'"></span>
+			by
+			<span data-ng-bind="room.user.displayName"></span>
+		</em>
+		</small>
+	</div>
+	<div class="alert alert-warning text-center">
+    	No Rooms yet, why don't you <a href="/#!/hostels/{{hostel._id}}/rooms/create">Create One</a>
+  </div>
+</section>
