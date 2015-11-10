@@ -2,8 +2,8 @@
 
 module.exports = {
 	app: {
-		title: 'e-Amity',
-		description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
+		title: 'Oris Education Center',
+		description: 'ORIS EDUCATION CENTER WEBSITE',
 		keywords: 'MongoDB, Express, AngularJS, Node.js'
 	},
 	port: process.env.PORT || 3000,
