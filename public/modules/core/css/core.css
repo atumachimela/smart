@@ -26,12 +26,13 @@ body {
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
 }
+
 #wrapper{
     position: absolute;
     height: 100%;
     width: 100%;
 }
-.panels, .location-panels{
+.panels{
     position: relative;
     width: 100%;
     min-height: 100%;
@@ -39,24 +40,56 @@ body {
     z-index: 1000;
     overflow: hidden;
 }
-
+.testimonial-panels{
+    position: relative;
+    width: 100%;
+    min-height: 900px;
+    height: 900px;
+    z-index: 1000;
+    overflow: hidden;
+}
+.staff-panels{
+    position: relative;
+    width: 100%;
+    min-height: 1200px;
+    height: 1200px;
+    z-index: 1000;
+    overflow: hidden;
+}
+.location-panels{
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    height: 700px;
+    z-index: 1000;
+    overflow: visible;
+}
+.about-us-panels{
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    z-index: 1000;
+    overflow: hidden;
+    background-color: #fff !important;
+}
 .contact-us-panels{
 	height: 20% !important;
 	min-height: 20% !important;
     position: relative;
 }
 .link-panels{
-    position: relative;
-    height: 10% !important;
-    min-height: 10% !important;
+    position: absolute;
+    height: 20% !important;
+    min-height: 20% !important;
     width: 100%;
     z-index: 1000;
 }
 .footer-panels{
 	position: fixed;
     bottom: 0 !important;
-    height: 20% !important;
-    min-height: 20% !important;
+    height: 10% !important;
+    min-height: 10% !important;
     width: 100%;
     z-index: 1000;
 }
@@ -68,7 +101,7 @@ body {
 }
 #about-us{
     margin-top: 60%;
-    background-color: #fff;  
+    background-color: #fff !important;  
     min-height: 100%;
     height:100%;
     /*background-color: #f5f5f5;  */
@@ -84,72 +117,129 @@ body {
     background-color: #fff;  
 }
 #training-services{
-    background: #fff;
+    background: #BCC6CC !important;
     /*background-color: #f5f5f5;  */
     /*background: url('/modules/core/img/brand/foucs.jpg') no-repeat;  
     background-size: cover; */  
 }
+#staff{
+    background-color: #fff; 
+    min-height: 1200px !important;
+    height: 1200px !important;
+}
+.section-wrapper {
+    width: 100%;
+    /*max-width: 60em;*/
+    float: left;
+    overflow: hidden;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: .5em;
+    font-size: 2.5em;
+    word-break: break-word;
+}
+.staff-holder {
+    text-align: center;
+}
+.staff {
+    text-align: center;
+}
+.staff-holder .staff {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 1em;
+}
+.staff__image img {
+    width: 60%;
+}
+.staff__name {
+    font-size: 1.5em;
+}
+.staff__title {
+    font-weight: bold;
+    font-family: "Open Sans Condensed",sans-serif;
+    display: block;
+}
+.staff__label {
+    display: block;
+    font-style: italic;
+    font-size: .9em;
+    margin-top: .3em;
+}
 
-
+.staff__info a {
+    font-weight: bold;
+    font-family: "Open Sans Condensed",sans-serif;
+    color: black;
+    text-decoration: none;
+}
 #training-services .lectures-box {
     width: 20%;
     float: left;
-    border: 1px solid #37373f;
+    border: 1px solid #28282e;
     padding: 65px 20px 65px;
     position: relative;
     height: 205px;
     cursor: pointer;
 }
 
-#training-services .lectures-box:hover{
-    background: #f5f5f5;
+.lectures-box .lecture-link:hover{
+    background: #fff;
     color:#FA787E;
-    border: 2px solid #f5f5f5;
+    border: 1px solid #fff;
 }
-#training-services .lectures-box:visited{
-    background: red;
+.lectures-box .lecture-link:visited{
+    background:#757575 ;
+    color:#fff;
+    border: 1px solid #757575;
+}
+.lectures-box .lecture-link:active{
+    background: #28282e;
     color:#FA787E;
-    border: 2px solid #fff;
-}
-#training-services .lectures-box:active{
-    background: pink;
-    color:#FA787E;
-    border: 2px solid #fff;
-}
-.lectures-box .lecture-title {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    padding: 0 20px;
-    text-align: justify;
-    font-size: 15px;
-    font-family: 'proxima-nova';
-    font-weight: 700;
-    line-height: 1.1em;
-    text-transform: uppercase;
-    color: #444;
+    border: 1px solid #28282e;
 }
 
 .lectures-box .lecture-link {
+    min-height: 100%;
+    border:none;
     position: absolute;
     width: 100%;
-    bottom: 30px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
     padding: 0 20px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Merriweather';
-    font-size: 12px;
-    line-height: 1.2em;
+    /*font-size: 1.3em;*/
+    line-height: 1.1em;
     font-style: italic;
-    color: #757575;
     text-align: center;
+    background: #28282e; 
 }
 
-
-
-
+.lectures-box .lecture-title {
+    /*left: 0px;*/
+    text-align: center;
+    font-size: 1.1em;
+    font-family: 'proxima-nova';
+    font-weight: bolder;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    color: #bbb;
+    padding-bottom: 15px;
+}
+.lecture-link .lecture-foot{
+    font-size:1em;
+    color: #bbb;
+    font-weight: lighter;
+    bottom: 0;
+}
+.lecture-link span{
+    display: block;
+}
 
 #testimonials{
     background-color: #fff;
@@ -167,8 +257,8 @@ body {
     /*background-color:rgb(229, 227, 223);*/
     background-color:#f5f5f5 ;  
     overflow: visible;
-    min-height: 900px;
-    height: 900px;
+    min-height: 700px;
+    height: 700px;
     display:relative;
 }
 #location-wrapper, #contact-us, #trainigs, #time-table, #about-us, #training-services{
@@ -283,6 +373,7 @@ a {
     color: #474747;
     /*margin-top: 150px;*/
     position: relative;
+    padding-top: 80px;
 }
 
 .about-text p , 
@@ -329,7 +420,7 @@ a {
     display: inline-block;
 	border-left:none !important;
 	border-right: 90px solid transparent;
-    border-bottom: 90px solid #fff;
+    border-bottom: 90px solid #BCC6CC;
     line-height: 90px;
     height: 0;
     font-family: 'proxima-nova';
@@ -757,19 +848,20 @@ p:last-of-type {
     height: 0px;
 }
 #footer {
-    padding: 10px;
+    padding-bottom:10px;
     background: #28282e;
     position: fixed;
     bottom:0;
-    height: 20% !important;
+    height: 10% !important;
 }
 #link{
-    padding: 10px;
+    padding:10px;
     background: #444 !important;
-    position: relative;
-    /*margin-bottom: -900px;*/
-    height: 40% !important;
-    min-height:40%;
+    position: absolute;
+    /*margin-bottom: 900px;
+    margin-top: 450px;*/
+    height: 20% !important;
+    min-height:20%;
     line-height: 4.5em;
 }
 /*#footer .footer-logo {
@@ -781,13 +873,56 @@ p:last-of-type {
     position: relative;
 }*/
 
+
+
+#oris-serve-wrapper{
+    min-width: 100%;
+}
+#circle-one:hover{
+    border-color: #728C00 !important;
+}
+#circle-two{
+    border-color: #ff4500!important;   
+}
+#circle-two:hover{
+    border-color: #3EA055 !important;
+}
+#circle-three{
+    border-color: #e91e63 !important;
+}
+#circle-three:hover{
+    border-color: #9F000F !important;
+}
+#circle-four{
+    border-color: #1ee9a4!important;
+}
+#circle-four:hover{
+    border-color: #7F525D!important;
+}
+.circle{
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border: 4px solid #ab86d2;
+}
+#oris-serve-wrapper .circle{
+    float:left;
+    color:#fff;
+    text-align:left;
+    margin-left:5px;
+    padding:20px;
+    display: inline;
+}
 #link ul li a
 {
     float:left;
-    color:#bbb;;
+    color:#bbb;
     text-align:left;
     margin-left:5px;
-    padding:10px;
+    padding:0 20px 90px 20px;
     text-decoration: none;
     font-weight: bolder;
     font-size: 1em;
@@ -803,12 +938,12 @@ p:last-of-type {
     color: #fff;
     text-decoration: none;
 }
-#footer ul li {
+#footer ul li a {
     float:right;
     color:#fff;
     text-align:right;
     margin-left:5px;
-    padding:10px;
+    padding:0 20px 50px 20px;
 }
 #footer ul li:hover{
     opacity: 0.3;
@@ -834,6 +969,12 @@ li {
     text-align: -webkit-match-parent;
     list-style: none !important;
 }
+
+
+
+
+
+
 @media (min-width: 1200px){
 
 	.location-wrapper .inner {
@@ -866,4 +1007,19 @@ li {
 	    width: 50%;
 	    /*float: left;*/
 	}
+}
+@media (min-width: 30em){
+    .staff-holder .staff {
+        width: 50%;
+    }
+}
+@media (min-width: 40em){
+    .section-title {
+        font-size: 4em;
+    }
+}
+@media (min-width: 60em){
+    .staff-holder .staff {
+        width: 33%;
+    }
 }
