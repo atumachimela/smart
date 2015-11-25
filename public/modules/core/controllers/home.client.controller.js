@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authentication', '$compile', '$log',
-	function($scope, $modal, Authentication, $compile, $log) {
+angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authentication', '$compile', '$log', 'Translations',
+	function($scope, $modal, Authentication, $compile, $log, Translations) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 		$scope.viewMontessori = function(){
-			console.log('test');
+			// console.log('test');
 			triggerModal();
 		};
 
@@ -29,5 +29,12 @@ angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authen
 	        });
 		};
 
+			//Run translation if selected language changes
+		$scope.translate = function(){
+			console.log('testing');
+	       Translations.getTranslation($scope, $scope.selectedLanguage);
+		};   
+		$scope.selectedLanguage = 'en';
+		$scope.translate();		
 	}
 ]);

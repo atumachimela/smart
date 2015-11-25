@@ -938,14 +938,33 @@ p:last-of-type {
     color: #fff;
     text-decoration: none;
 }
-#footer ul li a {
+.form-control{
+  width: 15%;
+  font-weight: bold;
+  font-size: 1em;
+}
+ .language-select #select-title{
+    color: #fff;
+    font-weight: bolder;
+    line-height: 2.6em;
+ }
+#footer #footer-img li a {
     float:right;
     color:#fff;
     text-align:right;
     margin-left:5px;
+    padding:10px;
     padding:0 20px 50px 20px;
 }
-#footer ul li:hover{
+#footer #footer-lang-select h4,
+#footer #footer-lang-select select,#footer-lang-select select option{
+    float:left;
+    text-align:right;
+    margin-left:35px;
+    padding:0; 
+    margin-top: 23px;
+}
+#footer #footer-img li:hover{
     opacity: 0.3;
 }
 #footer ul li a img{
