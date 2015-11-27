@@ -1,4 +1,4 @@
-<div data-ng-controller="HomeController">
+<section data-ng-controller="HomeController">
     <div id="wrapper">
         <div id="landing-page" class="panels">
             <div class="bg-one">
@@ -20,7 +20,7 @@
                     <div class="col-md-10 home-title col-md-offset-1">
                         <span class="col-md-12 home-subtitle has-line-top" id="trade-mark">
                         <hr>
-                            Your Linguistics & Strategic Learning Center
+                            {{translation.HELLO_WORLD}}
                         </span>
                     </div>>
                         
@@ -36,24 +36,23 @@
                 </div> -->
             </div>
         </div>
-        <div id="about-us" class="panels">
+        <div id="about-us" class="about-us-panels">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                 <br><br><br>
                     <span class="note">
                         <i class="nbr">
-                            #02 Our Core</i> 
+                            #02 {{translation.TWO}}</i> 
                     </span>
                         <br><br><br><br><br>
                         <span class="about-subtitle">
-                            <p>
-                               ORIS EDUCATION CENTER deals with corporate and general public clients.<br>
-                               Our courses are flexible and tailor-made to suit the needs of our clients.<br>
-                               Certificates of completion of every level.
+                            <p>{{translation.ABOUT_TEXTA}}
+                               <br>
+                               {{translation.ABOUT_TEXTB}}
                            </p>
                         </span>  
-                </div>
-            </div> 
+                </div>  
+            </div>
         </div>
 
         <div id="our-goal" class="panels">
@@ -62,23 +61,22 @@
                 <br><br><br>
                     <span class="note">
                         <i class="nbr">
-                            #03  What you don't know </i> 
+                            #03 {{translation.OUR_GOAL}} </i> 
                     </span>
                         <br><br>
                         <h2 class="title">
-                                Expertise<br>
-                                & Focus
+                             {{translation.THREE}}   
                         </h2>
                         <br>
                         <span class="about-text">
                             <p>
-                                High quality education services tailored to help of our clients is our priority.<br>
-                                Our Team is made up of very awesome and professional individuals.<br>
-                                <!-- We publicly declare and decree our code of business ethics and promise to live by it.<br> -->
-                                Accountability and transparency to our clients and the society forms our business core.<br>
-                                <!-- We continuously work to ensure that we always provide unparalleled educational experience.<br> -->
-                               <!--  We conduct our business with integrity and respect.<br>
-                                We remain steadfast in our personal and corporate responsibility. -->
+                                
+                                {{translation.ABOUT_TEXTC}} <br>
+                                <!-- <! - Nós declaramos publicamente e decreto nosso código de ética nos negócios ea promessa de viver por ela <br> - . >
+                                Responsabilidade e transparência aos nossos clientes e da sociedade constitui o nosso core business . <br>
+                                <! - Trabalhamos continuamente para garantir que nós sempre oferecer experiência educacional sem precedentes <br> - . >
+                               <! - . Nós conduzimos nossos negócios com integridade e respeito <br>
+                                Nós permanecemos firmes em nossa responsabilidade pessoal e empresarial . - > -->
                             </p>
                         </span>
 
@@ -97,7 +95,8 @@
                     <div class="row enrol-button-wrapper">
                         <div class="col-md-12">
                             <a href="#contact-us" class="call-about-us" id="enrol-link">
-                                <span id="enrol-button">Contact us now!
+                                <span id="enrol-button">
+                                {{translation.CONTACT_USB}}
                                 </span>      
                             </a>
                         </div>  
@@ -110,51 +109,54 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 ">
                 <br><br>
-                    <span class="note">
-                        <i class="nbr">
-                            #04  Our Kind of Services </i> 
-                    </span>
-                    <br><br>
-                    <h2 class="title">
-                        Client Services <br> & Packages
-                    </h2>
-                     <br><br><br>
-                    <div class="col-md-12">
-                        <div class="lectures-box md-trigger" data-box="facebookAdsAdvanced" data-modal="modal-7">
-                            <span class="lecture-title">Oris Montessori</span>
-                            <span class="lecture-link">Vew more details <span> +</span></span>
+                <span class="note">
+                    <i class="nbr">
+                        #04 {{translation.FOUR}}</i> 
+                </span>
+                <br><br>
+                <h2 class="title">
+                    {{translation.OUR_SERVICES}}
+                </h2>
+                 <br><br><br><br><br>
+
+                <div id="oris-serve-wrapper">
+                    <div class="circle" id="circle-one"></div>
+                    <div class="circle" id="circle-two"></div>
+                    <div class="circle" id="circle-three"></div>
+                    <div class="circle" id="circle-four"></div>
+                </div>
+
+                        <!-- <div class="lectures-box">
+                            <button ng-click="viewMontessori()" class="lecture-link" name="Vew more details" value="view more details">
+                            <span class="lecture-title">Linguistic Center</span><br><br>
+                              <span class="lecture-foot">View more details +</span> 
+                            </button>
                         </div>
-                        <div class="lectures-box md-trigger" data-box="performanceMarketing" data-modal="modal-8">
-                            <span class="lecture-title">Linguistic Center</span>
-                            <span class="lecture-link">Vew more details <span> +</span></span>
-                        </div>
-                        <div class="lectures-box md-trigger" data-box="googleAnalyticsAdvanced" data-modal="modal-9">
+                        <div class="lectures-box" data-box="googleAnalyticsAdvanced" data-modal="modal-9">
                             <span class="lecture-title">American Corner</span>
                             <span class="lecture-link">Vew more details <span> +</span></span>
                         </div>
-                        <div class="lectures-box md-trigger" data-box="newsletterMarketing" data-modal="modal-10">
+                        <div class="lectures-box" data-box="newsletterMarketing" data-modal="modal-10">
                             <span class="lecture-title">GMAT, TOEFL &amp ACCA PREP</span>
                             <span class="lecture-link">Vew more details <span> +</span></span>
                         </div>
-                        <div class="lectures-box md-trigger" data-box="remarketing" data-modal="modal-11">
+                        <div class="lectures-box" data-box="remarketing" data-modal="modal-11">
                             <span class="lecture-title">Professional Communication Center</span>
-                            <span class="lecture-link">Vew more details <span> +</span></span>
-                        </div>
-                    </div>
+                            <span class="lecture-link">Vew more details <span> +</span></span> -->
                 </div>
             </div>
         </div>
-         <div id="testimonials" class="panels">
+         <div id="testimonials" class="testimonial-panels">
             <div class="row">
                 <div class="col-md-5 col-md-offset-1 left">
                 <br><br>
                     <span class="note">
                         <i class="nbr">
-                            Our Proofs<br> & Commendations</i> 
+                          #05 {{translation.FIVE}}</i> 
                     </span>
                     <br><br><br>
                     <h2 class="title">
-                            What Our Clients <br> & Students say
+                            {{translation.CLIENTS_SAY}}
                     </h2>
                 </div>
             </div>
@@ -166,20 +168,21 @@
                             <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #fff;">  
                                 <div class="et_pb_testimonial_description">
                                     <p align="justify">
-                                        Communication and efficient staff. The fact that we submit electronically is a very good thing as sometimes Post strike and there are delays with the assignments.
+                                    {{translation.TESTIMONIALA}}
                                     </p>
                                     <strong class="et_pb_testimonial_author">Diana Motshegare</strong>
-                                    <p class="et_pb_testimonial_meta">Student </p>
+                                    <p class="et_pb_testimonial_meta">{{translation.STUDENT_NAME}}</p>
                                 </div>    
                             </div>
                         </div>
                         <div class="et_pb_column et_pb_column_1_3">
                             <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
                                 <div class="et_pb_testimonial_description">
-                                    <p align="justify">I always get the help I need from the financial advisor Mrs Sassman. She always helps me to understand even if it has nothing to do with her.
+                                    <p align="justify">
+                                    {{translation.TESTIMONIALB}}
                                     </p>
                                     <strong class="et_pb_testimonial_author">Arina Koen</strong>
-                                    <p class="et_pb_testimonial_meta">Student </p>
+                                    <p class="et_pb_testimonial_meta">{{translation.STUDENT_NAME}}</p>
                                 </div>
                             </div> 
                         </div>
@@ -187,10 +190,11 @@
                             <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
                                 <div class="et_pb_testimonial_description">
                     
-                                    <p align="justify">I’m a She Rep at work so this course help me a lot give me a good experience. Thank you Oxbridge Academy it really means a lot to me. All the best.
+                                    <p align="justify">
+                                    {{translation.TESTIMONIALC}}
                                     </p>
                                 <strong class="et_pb_testimonial_author">Mary Tshabalala</strong>
-                                 <p class="et_pb_testimonial_meta">Student </p>
+                                 <p class="et_pb_testimonial_meta">{{translation.STUDENT_NAME}}</p>
                                 </div> 
                             </div> 
                         </div>
@@ -198,31 +202,34 @@
                             <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #fff;">  
                                 <div class="et_pb_testimonial_description">
                                     <p align="justify">
-                                        Communication and efficient staff. The fact that we submit electronically is a very good thing as sometimes Post strike and there are delays with the assignments.
+                                        {{translation.TESTIMONIALD}}
                                     </p>
                                     <strong class="et_pb_testimonial_author">Diana Motshegare</strong>
-                                    <p class="et_pb_testimonial_meta">Student </p>
+                                    <p class="et_pb_testimonial_meta">{{translation.STUDENT_NAME}}</p>
                                 </div>    
                             </div>
                         </div>
                         <div class="et_pb_column et_pb_column_1_3">
                             <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
                                 <div class="et_pb_testimonial_description">
-                                    <p align="justify">I always get the help I need from the financial advisor Mrs Sassman. She always helps me to understand even if it has nothing to do with her.
+                                    <p align="justify">
+                                    {{translation.TESTIMONIALE}}
                                     </p>
                                     <strong class="et_pb_testimonial_author">Arina Koen</strong>
-                                    <p class="et_pb_testimonial_meta">Student </p>
+                                    <p class="et_pb_testimonial_meta">
+                                        {{translation.STUDENT_NAME}}
+                                    </p>
                                 </div>
                             </div> 
                         </div>
                         <div class="et_pb_column et_pb_column_1_3">
                             <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
                                 <div class="et_pb_testimonial_description">
-                    
-                                    <p align="justify">I’m a She Rep at work so this course help me a lot give me a good experience. Thank you Oxbridge Academy it really means a lot to me. All the best.
+                                    <p align="justify">
+                                    {{translation.TESTIMONIALF}}
                                     </p>
                                 <strong class="et_pb_testimonial_author">Mary Tshabalala</strong>
-                                 <p class="et_pb_testimonial_meta">Student </p>
+                                 <p class="et_pb_testimonial_meta">{{translation.STUDENT_NAME}}</p>
                                 </div> 
                             </div> 
                         </div>
@@ -230,111 +237,185 @@
                 </div>  
             </div>
         </div>
-        <!-- <div id="time-table" class="panels">
+        <div class="staff-panels" id="staff">
             <div class="row">
                 <div class="col-md-5 col-md-offset-1 left">
-                    <br><br>
+                <br><br>
                     <span class="note">
                         <i class="nbr">
-                            "05" "Class/Training Schedule" </i> 
+                        #6 {{translation.SIX}} </i> 
                     </span>
-                    <br><br>
-                    <h2 class="time-table-title">
-                            TIMETABLE
+                    <br><br><br>
+                    <h2 class="title">
+                          {{translation.TEAM}}
                     </h2>
-                    <span class="text"> classes are held at the stipulated time except for special considerations</span>  
                 </div>
             </div>
-            <div class="row before-lunch">
-                <div class="col-md-6 first">
-                    <ul>
-                        <li>
-                            <span class="half l">-</span>
-                            <span class="half r">BEFORE LUNCH</span>
-                        </li>
-                        <li>
-                            <span class="half l">9:30 - 10:30h</span>
-                            <span class="half r">Turning leads into guest with content & Ux</span>
-                        </li>
-                        <li>
-                            <span class="half l">9:30 - 10:30h</span>
-                            <span class="half r">Turning leads into guest with content & Ux</span>
-                        </li>
-                        <li>
-                            <span class="half l">9:30 - 10:30h</span>
-                            <span class="half r">Turning leads into guest with content & Ux</span>
-                        </li>
-                        <li>
-                            <span class="half l">9:30 - 10:30h</span>
-                            <span class="half r">Turning leads into guest with content & Ux</span>
-                        </li>
-                        <li>
-                            <span class="half l">9:30 - 10:30h</span>
-                            <span class="half r">Turning leads into guest with content & Ux</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6 second"> 
+            <br><br>
+            <div class="section-wrapper">
+                <div class="staff-holder">
+                    <div class="staff">
+                        <div class="staff__image">
+                            <img src="http://www.stlshipping.se/wp_2015/wp-content/uploads/2011/12/profilbilder_v2_0012_DennisBech.png">    
+                        </div>
+                        <div class="staff__information">
+                            <h3 class="staff__name">Dennis Bech</h3>
+                            <span class="staff__title">Managing Director</span>
+                            <span class="staff__label">Direct Phone</span>
+                            <span class="staff__info">
+                                <a href="tel:+46 31 10 73 02">+46 31 10 73 02</a>
+                            </span>
+                            <span class="staff__label">Mobile Phone</span>
+                            <span class="staff__info">
+                                <a href="tel:+46 702 86 00 57">+46 702 86 00 57</a>
+                            </span>
+                            <span class="staff__label">Email</span>
+                            <span class="staff__info">
+                                <a href="mailto:dennis.bech@stlshipping.se">dennis.bech@stlshipping.se</a>
+                            </span>    
+                        </div>
+                    </div>
+                    <div class="staff">
+                        <div class="staff__image">
+                            <img src="http://www.stlshipping.se/wp_2015/wp-content/uploads/2011/12/profilbilder_v2_0011_JohanJohansson.png">    
+                        </div>
+                        <div class="staff__information">
+                            <h3 class="staff__name">Johan Johansson</h3>
+                            <span class="staff__title">Marketing Director</span>
+                            <span class="staff__label">Direct Phone</span>
+                            <span class="staff__info">
+                                <a href="tel:+46 31 10 73 67">+46 31 10 73 67</a>
+                            </span>
+                            <span class="staff__label">Mobile Phone</span>
+                            <span class="staff__info">
+                                <a href="tel:+46 739 80 63 00">+46 739 80 63 00</a>
+                            </span>
+                            <span class="staff__label">Email</span>
+                            <span class="staff__info">
+                                <a href="mailto:johan.johansson@stlshipping.se">johan.johansson@stlshipping.se</a>
+                            </span> 
+                        </div>
+                    </div>  
+                    <div class="staff">
+                        <div class="staff__image">
+                            <img src="http://www.stlshipping.se/wp_2015/wp-content/uploads/2011/12/profilbilder_v2_0011_JohanJohansson.png">    
+                        </div>
+                        <div class="staff__information">
+                            <h3 class="staff__name">Johan Johansson</h3>
+                            <span class="staff__title">Marketing Director</span>
+                            <span class="staff__label">Direct Phone</span>
+                            <span class="staff__info">
+                                <a href="tel:+46 31 10 73 67">+46 31 10 73 67</a>
+                            </span>
+                            <span class="staff__label">Mobile Phone</span>
+                            <span class="staff__info">
+                                <a href="tel:+46 739 80 63 00">+46 739 80 63 00</a>
+                            </span>
+                            <span class="staff__label">Email</span>
+                            <span class="staff__info">
+                                <a href="mailto:johan.johansson@stlshipping.se">johan.johansson@stlshipping.se</a>
+                            </span> 
+                        </div>
+                    </div>  
+                    <div class="staff">
+                        <div class="staff__image">
+                            <img src="http://www.stlshipping.se/wp_2015/wp-content/uploads/2011/12/profilbilder_v2_0011_JohanJohansson.png">    
+                        </div>
+                        <div class="staff__information">
+                            <h3 class="staff__name">Johan Johansson</h3>
+                            <span class="staff__title">Marketing Director</span>
+                            <span class="staff__label">Direct Phone</span>
+                            <span class="staff__info">
+                                <a href="tel:+46 31 10 73 67">+46 31 10 73 67</a>
+                            </span>
+                            <span class="staff__label">Mobile Phone</span>
+                            <span class="staff__info">
+                                <a href="tel:+46 739 80 63 00">+46 739 80 63 00</a>
+                            </span>
+                            <span class="staff__label">Email</span>
+                            <span class="staff__info">
+                                <a href="mailto:johan.johansson@stlshipping.se">johan.johansson@stlshipping.se</a>
+                            </span> 
+                        </div>
+                    </div>  
+                    <div class="staff">
+                        <div class="staff__image">
+                            <img src="http://www.stlshipping.se/wp_2015/wp-content/uploads/2011/12/profilbilder_v2_0011_JohanJohansson.png">    
+                        </div>
+                        <div class="staff__information">
+                            <h3 class="staff__name">Johan Johansson</h3>
+                            <span class="staff__title">Marketing Director</span>
+                            <span class="staff__label">Direct Phone</span>
+                            <span class="staff__info">
+                                <a href="tel:+46 31 10 73 67">+46 31 10 73 67</a>
+                            </span>
+                            <span class="staff__label">Mobile Phone</span>
+                            <span class="staff__info">
+                                <a href="tel:+46 739 80 63 00">+46 739 80 63 00</a>
+                            </span>
+                            <span class="staff__label">Email</span>
+                            <span class="staff__info">
+                                <a href="mailto:johan.johansson@stlshipping.se">johan.johansson@stlshipping.se</a>
+                            </span> 
+                        </div>
+                    </div>  
+                    <div class="staff">
+                        <div class="staff__image">
+                            <img src="http://www.stlshipping.se/wp_2015/wp-content/uploads/2011/12/profilbilder_v2_0011_JohanJohansson.png">    
+                        </div>
+                        <div class="staff__information">
+                            <h3 class="staff__name">Johan Johansson</h3>
+                            <span class="staff__title">Marketing Director</span>
+                            <span class="staff__label">Direct Phone</span>
+                            <span class="staff__info">
+                                <a href="tel:+46 31 10 73 67">+46 31 10 73 67</a>
+                            </span>
+                            <span class="staff__label">Mobile Phone</span>
+                            <span class="staff__info">
+                                <a href="tel:+46 739 80 63 00">+46 739 80 63 00</a>
+                            </span>
+                            <span class="staff__label">Email</span>
+                            <span class="staff__info">
+                                <a href="mailto:johan.johansson@stlshipping.se">johan.johansson@stlshipping.se</a>
+                            </span> 
+                        </div>
+                    </div>         
                 </div>
             </div>
-            <div class="row lunch">
-                <div class="col-md-12">
-                    <span class="time">13:00h - 14:00h</span>
-                    <span class="name">LUNCH BREAK</span>
-                </div>
-            </div>
-            <div class="row after-lunch">
-                <div class="col-md-6 first"></div>
-                <div class="col-md-6 second">
-                    <ul>
-                        <li>
-                            <span class="half l">-</span>
-                            <span class="half r">AFTER LUNCH</span>
-                        </li>
-                        <li>
-                            <span class="half l">9:30 - 10:30h</span>
-                            <span class="half r">Turning leads into guest with content & Ux</span>
-                        </li>
-                        <li>
-                            <span class="half l">9:30 - 10:30h</span>
-                            <span class="half r">Turning leads into guest with content & Ux</span>
-                        </li>
-                        <li>
-                            <span class="half l">9:30 - 10:30h</span>
-                            <span class="half r">Turning leads into guest with content & Ux</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div> -->
-        <!-- <div id="contact-us" class="contact-us-panels">
-            <div class="row contact-us-button-wrapper">
-                <div class="col-md-24">
-                    <a href="#" class="call-up-contact-us"  id="contact-us-button-link">
-                        <span id="contact-button">Contact-Us now!
-                        </span>     
-                    </a>
-                </div>   
-            </div>
-        </div> -->
-        <div id="location-wrapper" class="location-panels">
+        </div>
+
+
+
+
+        <div id="location-wrapper" class="panels">
             <span class="full-map id" rel="3°44'55.6|8°46'17.5" style="overflow:hidden; transform:translateZ(0px); background-color:rgb(229, 227, 223);">
                 <div class="gm-style" style="position: absolute; left: 0px; top: 0px;overflow: hidden; width: 100%; height: 100%; z-index: 0;">
-                    <map zoom="15" center="3°44'55.6, 8°46'17.5"> 
-                        <info-window id="1" position="3°44'55.6, 8°46'17.5" visible="true">
-                          <div ng-non-bindable="">
-                            Caracolas, Malabo<br>
-                            <i>Oris Education Center</i>
-                          </div>
-                        </info-window>
-  
-                    </map>  
-                    <br>
-                    <map center="current-location" zoom="14">
-                        <info-window position="current-location" visible="true">
-                          <span>YOUR CURRENT LOCATION</span>
-                        </info-window>
-                    </map>
+                    <br><br><br>
+                    <div>
+                        <ng-map default-style="true" center="3°44'55.6,8°46'17.5" zoom="15">
+                              <marker id="foo" position="3°44'55.6,8°46'17.5"
+                                on-click="map.showInfoWindow('bar')">
+                              </marker>
+                              <info-window id="bar" visible-on-marker="foo">
+                                <div ng-non-bindable>
+                                    <p id="firstHeading" class="firstHeading">
+                                        <i>Oris Education Center</i>
+                                    </p>
+                                    <div id="bodyContent">
+                                        <!-- <p>Home</p> -->
+                                    </div>
+                                </div>
+                            </info-window>
+                        </ng-map>
+                    </div>
+                    <br><br>
+                    <ng-map zoom="15" center="[0,0]">
+                        <shape id="circle" name="circle" centered="true"
+                          stroke-color='#FF0000' stroke-opacity="0.8" stroke-weight="2"
+                          center="current-position" radius="4000" editable="true" >
+                        </shape>
+                    </ng-map>
+                       
                 </div>
             </span>
             <div class="row" >
@@ -342,11 +423,11 @@
                     <br><br><br>
                     <span class="note">
                         <i class="nbr">
-                            "06" "Where you can find us" </i> 
+                            #07 {{translation.SEVEN}} </i> 
                     </span>
                     <br><br>
                     <h2 class="title">
-                            Location
+                            {{translation.LOCATION}}
                     </h2>
                     <span class="text"> All classes are held at ORIS EDUCATION CENTER,<br>Opposite the Republic of Guinea Embassy,<br> Caracolas,Malabo, Equitorial Guinea </span>
                     
@@ -362,43 +443,48 @@
                 <li></li>
                 <li></li>
                 <li>
-                    <a href="#">Home</a>
+                    <a href="#">{{translation.HOME}}</a>
                 </li>
                 <li></li>
                 <li>
-                    <a href="#">Contact-Us</a>
+                    <a href="#">{{translation.CONTACT_US}}</a>
                 </li>
-                <li></li>
+                 <li></li>
+                 <li></li>
                 <li>
-                    <a href="#">Services</a>
+                    <a href="#">{{translation.SERVICES}}</a>
                 </li>
                 <li></li>
                  <li></li>
                 <li>
-                    <a href="#">Testimonies</a>
+                    <a href="#">{{translation.TESTIMONY}}</a>
                 </li>
                 <li></li>
-                <li>
-                    <a href="#">Articles</a>
-                </li>
                 <li></li>
                 <li>
-                    <a href="#">FAQS</a>
+                    <a href="#">{{translation.INTERN}}</a>
                 </li>
                 <li></li>
+                 <li></li>
                 <li>
-                    <a href="#">Privacy & Policy</a>  
+                    <a href="#">{{translation.ARTICLES}}</a>
                 </li>
                 <li></li>
+                <li></li>
                 <li>
-                    <a href="#">Terms</a>  
+                    <a href="#">{{translation.CONDITIONS}}</a>  
                 </li>
             </ul>
         </div>
         <div id="footer" class="footer-panels">
-        
-            <!-- <a href="#" class="footer-logo"></a> -->
-                <ul>
+                <div class="language-select" id="footer-lang-select">
+                      <h4 id="select-title">English / Portuguese</h4>
+                       <select class="form-control" ng-change="translate()" ng-model="selectedLanguage">
+                            <option value="en">English</option>
+                            <option value="por">Portuguese</option>
+                        </select>
+                </div>
+                <ul id="footer-img">
                 <li></li>
                 <li></li>
                 <li></li>
@@ -419,6 +505,6 @@
                 </ul>
         </div>
     </div>
-</div>
+</section>
 
                 
