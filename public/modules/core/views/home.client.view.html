@@ -25,15 +25,7 @@
                     </div>>
                         
                 </div>
-                <!-- <div class="row lectures-button-wrapper">
-                    <div class="col-md-12">
-                        <a href="#school-time-table" class="call-upcomes-lectures"  id="button-link">
-                            <span id="lectures">Our Services
-                            </span>
-                                
-                        </a>
-                    </div>   
-                </div> -->
+               
             </div>
         </div>
         <div id="about-us" class="about-us-panels">
@@ -92,15 +84,7 @@
                             </ul>
                         </span> -->
                         
-                    <div class="row enrol-button-wrapper">
-                        <div class="col-md-12">
-                            <a href="#contact-us" class="call-about-us" id="enrol-link">
-                                <span id="enrol-button">
-                                {{translation.CONTACT_USB}}
-                                </span>      
-                            </a>
-                        </div>  
-                    </div>
+                    
                 </div>
             </div> 
         </div>
@@ -119,35 +103,41 @@
                 </h2>
                  <br><br><br><br><br>
 
-                <div id="oris-serve-wrapper">
-                    <div class="circle" id="circle-one">
-                        <div ng-click="viewMontessori()" class="lecture-link">
-                            <p>Linguistic Center</p>
-                            <p class="link-text">click for more details++ </p>
-                        </div>
-                    </div>
-                    <div class="circle" id="circle-two"></div>
-                    <div class="circle" id="circle-three"></div>
-                    <div class="circle" id="circle-four"></div>
-                </div>
 
-                        <!-- <div class="lectures-box">
-                            <button ng-click="viewMontessori()" class="lecture-link" name="Vew more details" value="view more details">
-                            <span class="lecture-title">Linguistic Center</span><br><br>
-                              <span class="lecture-foot">View more details +</span> 
-                            </button>
+                 <ul class="ch-grid">
+                    <li>
+                        <div class="ch-item ch-img-0" ng-click="viewMontessori()">
+                            <div class="ch-info">
+                                <h3>Professional Communication Center</h3>
+                                <p>click for more details++</p>
+                            </div>
                         </div>
-                        <div class="lectures-box" data-box="googleAnalyticsAdvanced" data-modal="modal-9">
-                            <span class="lecture-title">American Corner</span>
-                            <span class="lecture-link">Vew more details <span> +</span></span>
+                    </li>
+                    <li>
+                        <div class="ch-item ch-img-1" ng-click="viewMontessori()">
+                            <div class="ch-info">
+                                <h3>GMAT, TOEFL &amp ACCA PREP</h3>
+                                <p>click for more details++</p>
+                            </div>
                         </div>
-                        <div class="lectures-box" data-box="newsletterMarketing" data-modal="modal-10">
-                            <span class="lecture-title">GMAT, TOEFL &amp ACCA PREP</span>
-                            <span class="lecture-link">Vew more details <span> +</span></span>
+                    </li>
+                    <li>
+                        <div class="ch-item ch-img-2" ng-click="viewMontessori()">
+                            <div class="ch-info">
+                                <h3>American Corner</h3>
+                                <p>click for more details++</p>
+                            </div>
                         </div>
-                        <div class="lectures-box" data-box="remarketing" data-modal="modal-11">
-                            <span class="lecture-title">Professional Communication Center</span>
-                            <span class="lecture-link">Vew more details <span> +</span></span> -->
+                    </li>
+                    <li>
+                        <div class="ch-item ch-img-3" ng-click="viewMontessori()">
+                            <div class="ch-info">
+                                <h3>Linguistic Center</h3>
+                                <p>click for more details++ </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
                 </div>
             </div>
         </div>
@@ -393,52 +383,50 @@
 
 
         <div id="location-wrapper" class="panels">
-            <span class="full-map id" rel="3°44'55.6|8°46'17.5" style="overflow:hidden; transform:translateZ(0px); background-color:rgb(229, 227, 223);">
-                <div class="gm-style" style="position: absolute; left: 0px; top: 0px;overflow: hidden; width: 100%; height: 100%; z-index: 0;">
-                    <br><br><br>
-                    <div>
-                        <ng-map default-style="true" center="3°44'55.6,8°46'17.5" zoom="15">
-                              <marker id="foo" position="3°44'55.6,8°46'17.5"
-                                on-click="map.showInfoWindow('bar')">
-                              </marker>
-                              <info-window id="bar" visible-on-marker="foo">
-                                <div ng-non-bindable>
-                                    <p id="firstHeading" class="firstHeading">
-                                        <i>Oris Education Center</i>
-                                    </p>
-                                    <div id="bodyContent">
-                                        <!-- <p>Home</p> -->
-                                    </div>
-                                </div>
-                            </info-window>
-                        </ng-map>
+                 <div class="container" id="location-container">
+                    <div class="row">
+                        <br><br>
+                        <span class="note">
+                            <i class="nbr">
+                            #6 {{translation.EIGH}} </i> 
+                        </span>
+                        <br><br>
+                        <h2 class="title">
+                              {{translation.CONTACT_USB}}
+                        </h2>
+                    </div>
+                    <br>
+                    <br>
+                    <div style="width: 68%; float:left; height: 100%">
+
+                          <ng-map zoom="14" center="" style="height:90%" >
+                            <directions
+                              draggable="true"
+                              panel="directions-panel"
+                              travel-mode="DRIVING"
+                              origin="Carretera del Aeropuerto, Malabo, Equatorial Guinea"
+                              destination="Caracolas, Malabo, Equatorial Guinea">
+                            </directions>
+                          </ng-map>
+                          <!-- <div>Directions path length:
+                            {{map.directionsRenderers[0].directions.routes[0].overview_path.length}}</div> -->
                     </div>
                     <br><br>
-                    <ng-map zoom="15" center="[0,0]">
-                        <shape id="circle" name="circle" centered="true"
-                          stroke-color='#FF0000' stroke-opacity="0.8" stroke-weight="2"
-                          center="current-position" radius="4000" editable="true" >
-                        </shape>
-                    </ng-map>
-                       
-                </div>
-            </span>
-            <div class="row" >
-                <div class="col-md-5 col-md-offset-1 left">
-                    <br><br><br>
                     <span class="note">
                         <i class="nbr">
-                            #07 {{translation.SEVEN}} </i> 
+                            #07 {{translation.EIGHT}} </i> 
                     </span>
                     <br><br>
                     <h2 class="title">
-                            {{translation.LOCATION}}
-                    </h2>
-                    <span class="text"> All classes are held at ORIS EDUCATION CENTER,<br>Opposite the Republic of Guinea Embassy,<br> Caracolas,Malabo, Equitorial Guinea </span>
-                    
+                            {{translation.CONTACT_USB}}
+                    </h2> 
+                     
                 </div>
-            </div>
-             <br><br>
+
+                <div class="col-md-15 col-md-offset-1 left" >
+                   <div id="directions-panel" style="width: 28%; float:left; height: 100%; overflow: auto; padding: 0px 5px">
+                    </div> 
+                </div>  
         </div>
         <div id="link" class="link-panels">
             <ul>

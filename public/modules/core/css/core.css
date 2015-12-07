@@ -27,6 +27,196 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+
+
+.test{
+    width:100%;
+    height:100%;
+    background:#f5f5f5;
+    position:relative;
+}
+.test:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width:0;
+    height:0;
+    border:450px solid rgba(255, 255, 255, 0);
+    border-right:1050px solid rgba(255, 255, 255, 0.3);
+    /*border-right:650px solid #bbb;*/
+    border-top:250px solid  rgba(255,255, 255, 0.29);
+}
+
+#location-wrapper div {
+    position:relative;
+    /*height:100%;*/
+    /*float:left;*/
+}
+
+.gm-style {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    text-decoration: none;
+}
+/*#one {
+    background:#bbb; 
+}*/
+/*#one:after {
+    content:"";
+    position:absolute;
+    right:0;
+    border-right:30px solid #fff;
+    border-top:100px solid transparent;
+    display: block;
+    top:0;
+    left: 0;
+    width:0;
+    height:0;
+    border:350px solid rgba(255, 255, 255, 0);
+    border-left:550px solid rgba(255,255, 255, 0.29);
+    border-top:350px solid rgba(255,255, 255, 0.29) ;
+}*/
+
+/*#two {
+    background:#bbb;
+}*/
+
+/*#two:after {
+    content:"";
+    position:absolute;
+    right:0;
+    border-right:30px solid #fff ;
+    border-top:100px solid transparent;
+    display: block;
+    top:0;
+    left: 0;
+    width:0;
+    height:0;
+    border:350px solid rgba(255, 255, 255, 0);
+    border-left:350px solid rgba(255, 255, 255, 0.3);
+    border-top:350px solid  rgba(255,255, 255, 0.29);
+}*/
+
+.ch-grid {
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.ch-grid:after,
+.ch-item:before {
+    content: '';
+    display: table;
+}
+
+.ch-grid:after {
+    clear: both;
+}
+
+.ch-grid li {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.ch-item {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    box-shadow: 
+        inset 0 0 0 16px rgba(255,255,255,0.6),
+        0 1px 2px rgba(0,0,0,0.1);
+    transition: all 0.4s ease-in-out;
+}
+
+.ch-img-0 { 
+    background: url('/modules/core/img/brand/road6.jpg') no-repeat;   
+
+}
+
+.ch-img-1 { 
+    background: url('/modules/core/img/brand/foucs.jpg') no-repeat;   
+
+}
+
+.ch-img-2 { 
+    background: url('/modules/core/img/brand/exam.jpg') no-repeat;   
+
+}
+
+.ch-img-3 { 
+    background: url('/modules/core/img/brand/students.jpg') no-repeat;   
+    background-size: cover;
+}
+
+.ch-info {
+    position: absolute;
+    background: rgba(63,147,147, 0.8);
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    transform: scale(0);
+}
+
+.ch-info h3 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin: 0 30px;
+    padding: 45px 0 0 0;
+    height: 140px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    text-shadow: 
+        0 0 1px #fff, 
+        0 1px 2px rgba(0,0,0,0.3);
+}
+.ch-info p {
+    color: #fff;
+    padding: 10px 5px;
+    font-style: italic;
+    margin: 0 30px;
+    font-size: 12px;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    opacity: 0;
+    transition: all 1s ease-in-out 0.4s;
+}
+.ch-item:hover {
+    box-shadow: 
+        inset 0 0 0 1px rgba(255,255,255,0.1),
+        0 1px 2px rgba(0,0,0,0.1);
+}
+.ch-item:hover .ch-info {
+    transform: scale(1);
+    opacity: 1;
+}
+.ch-item:hover .ch-info p {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
 #wrapper{
     position: absolute;
     height: 100%;
@@ -59,8 +249,8 @@ body {
 .location-panels{
     position: relative;
     width: 100%;
-    min-height: 700px;
-    height: 700px;
+    min-height: 900px;
+    height: 900px;
     z-index: 1000;
     overflow: visible;
 }
@@ -118,7 +308,7 @@ body {
 }
 #training-services{
     background: #BCC6CC !important;
-    /*background-color: #f5f5f5;  */
+    /*background-color: #fff;  */
     /*background: url('/modules/core/img/brand/foucs.jpg') no-repeat;  
     background-size: cover; */  
 }
@@ -234,8 +424,8 @@ body {
     /*background-color:rgb(229, 227, 223);*/
     background-color:#f5f5f5 ;  
     overflow: visible;
-    min-height: 700px;
-    height: 700px;
+    min-height: 900px;
+    height: 900px;
     display:relative;
 }
 #location-wrapper, #contact-us, #trainigs, #time-table, #about-us, #training-services{
@@ -660,18 +850,12 @@ a {
     margin-top: 25px;
 }
 #location-wrapper .full-map {
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    right: 0px;
+    width: 650px !important;
+    /*height: 800px !important;*/
+    position: relative;
     background: #f5f5f5 !important;
-}
-.gm-style {
-    font-family: Roboto, Arial, sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-    text-decoration: none;
+    overflow: hidden;
+    margin-top: 350px;
 }
 .location-subtitle{
 	line-height: 1.2em !important;
@@ -855,44 +1039,7 @@ p:last-of-type {
 #oris-serve-wrapper{
     min-width: 100%;
 }
-#circle-one:hover{
-    border-color: #728C00 !important;
-}
-#circle-two{
-    border-color: #ff4500!important;   
-}
-#circle-two:hover{
-    border-color: #3EA055 !important;
-}
-#circle-three{
-    border-color: #e91e63 !important;
-}
-#circle-three:hover{
-    border-color: #9F000F !important;
-}
-#circle-four{
-    border-color: #1ee9a4!important;
-}
-#circle-four:hover{
-    border-color: #7F525D!important;
-}
-.circle{
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 20px;
-    width: 200px;
-    height: 200px;
-    background: #fff;
-    border: 4px solid #ab86d2;
-}
-#oris-serve-wrapper .circle{
-    float:left;
-    color:#fff;
-    text-align:left;
-    margin-left:5px;
-    padding:20px;
-    display: inline;
-}
+
 
 #link ul li a
 {
