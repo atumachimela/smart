@@ -1,11 +1,24 @@
 'use strict';
 
-angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authentication', '$compile', '$log', 'Translations',
-	function($scope, $modal, Authentication, $compile, $log, Translations) {
+angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authentication', 'Menus', '$compile', '$log', 'Translations',
+	function($scope, $modal, Authentication, Menus, $compile, $log, Translations) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
+		$scope.isCollapsed = false;
+		$scope.menu = Menus.getMenu('topbar');
+
+		$scope.toggleCollapsibleMenu = function() {
+			$scope.isCollapsed = !$scope.isCollapsed;
+		};
+
+		// Collapsing the menu after navigation
+		$scope.$on('$stateChangeSuccess', function() {
+			$scope.isCollapsed = false;
+		});
+			//Run translation if selected language changes
+		
 		$scope.viewMontessori = function(){
-			// console.log('test');
+			console.log('test');
 			triggerModal();
 		};
 
@@ -20,7 +33,9 @@ angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authen
 	              $modalInstance.dismiss('cancel');
 	            };
 	          },
-	          size: 'lg',
+	          windowClass: 'modal-fit',
+
+	          // size: 'lg',
 	          resolve: {
 	            listData: function() {
 	              return true;

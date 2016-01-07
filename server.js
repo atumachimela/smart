@@ -32,4 +32,4 @@ app.listen(config.port);
 exports = module.exports = app;
 
 // Logging initialization
-console.log('ORIS started at ' + config.port);
+console.log('PRO SERVICE started at ' + config.port);

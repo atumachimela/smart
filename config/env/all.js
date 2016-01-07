@@ -2,9 +2,9 @@
 
 module.exports = {
 	app: {
-		title: 'Oris Education Center',
-		description: 'ORIS EDUCATION CENTER WEBSITE',
-		keywords: 'MongoDB, Express, AngularJS, Node.js'
+		title: 'PRO SERVICE',
+		description: 'PRO SERVICE WEBSITE',
+		keywords: 'PROCUREMENT, SAFETY MATERIALS, EQUIPMENTS, FABRICATION'
 	},
 	port: process.env.PORT || 3000,
 	templateEngine: 'swig',
@@ -25,11 +25,11 @@ module.exports = {
 				'public/lib/angular-sanitize/angular-sanitize.js', 
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-				'public/lib/ngmap/build/scripts/ng-map.min.js',
-				'http://maps.google.com/maps/api/js',
-				'http://rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js'
-			]
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js'
+				// 'public/lib/ngmap/build/scripts/ng-map.min.js',
+				// 'public/lib/ngmap/build/scripts/ng-map.js',
+				// 'https://maps.google.com/maps/api/js'
+			]			
 		},
 		css: [
 			'public/modules/**/css/*.css'
