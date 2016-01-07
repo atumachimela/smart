@@ -601,7 +601,7 @@ a
 }
 ul .app-title{
     display: inline-block;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bolder;
 
 }
@@ -1005,7 +1005,7 @@ p:last-of-type {
     min-width: 100%;
 }
 
-#link ul li h4, #link-mod ul li a, #mod-footer ul li a
+#link ul li h4, #link-mod ul li .arcor, #mod-footer ul .arcora
 {
     float:left;
     color:#bbb;
