@@ -44,8 +44,183 @@ a:hover .header-profile-image {
     color: inherit;
     background-color: #fff; 
 }
+.angular-google-map {
+    display: block;
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 1px;
+  word-spacing: 0.15em;
+  font-size: 3em;
+  margin-top: 5em;
+  line-height: 1.2;
+}
+.menu-name{
+    color: #990000;
+    /*padding-top: 70px;*/
+    margin-top: 25px;
+    /*margin-right: 120px;*/
+    font-weight: lighter;
+    float: right;
+    font-size: 1.8em;
+    font-family: "HelveticaNeueW02-ThinEx 739247";
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    right: 115px;
+}
+
+#toggle {
+  display: none;
+}
+
+/**
+  Hamburger
+**/
+.hamburger {
+  position: absolute;
+  top: 5em;
+  right: 5%;
+  margin-left: -2em;
+  margin-top: -45px;
+  width: 2em;
+  height: 45px;
+  z-index: 5000;
+}
+
+.hamburger div {
+  position: relative;
+  width: 3em;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #990000;
+  margin-top: 8px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.9
+}
+
+/**
+Nav Styles
+**/
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  top: -100%; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+}
+.nav-wrapper {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+nav {
+  text-align: left;
+  margin-left: 25%;
+}
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #6ecddd;
+  font-size: 2em;
+  display: inline-block;
+  margin-top: 1.25em;
+  transition: color 0.2s ease-in-out;
+  letter-spacing: 1px;
+}
+nav a:before {
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 0.25em;
+  background-color: white;
+  left: -0.5em;
+  transition: all 0.2s ease-in-out;
+}
+nav a:hover {
+  color: white;
+}
+nav a:hover:before {
+  height: 100%;
+}
+
+/**
+Animations
+**/
+#toggle:checked + .hamburger .top-bun {
+  transform: rotate(-45deg);
+  margin-top: 25px;
+}
+#toggle:checked + .hamburger .bottom-bun {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+#toggle:checked + .hamburger .meat {
+  transform: rotate(45deg);
+  margin-top: -7px;
+}
+
+#toggle:checked + .hamburger + .nav {
+  top: 0;
+  transform: scale(1);
+}
 
 
+/*#toggle {
+  display: none;
+}
+*/
+/**
+  Hamburger
+**/
+/*.hamburger {
+  position: absolute;
+  top: 4em;
+  right: 5%;
+  margin-left: -2em;
+  margin-top: -45px;
+  width: 2em;
+  height: 45px;
+  z-index: 5;
+}
+
+.hamburger div {
+  position: relative;
+  width: 3.7em;
+  height: 7px;
+  border-radius: 3px;
+  background-color: #f8982b;
+  margin-top: 8px;
+  transition: all 0.3s ease-in-out;
+}*/
+
+/**
+Animations
+**/
+/*#toggle:checked + .hamburger .top-bun {
+  transform: 500ms ease-in;
+  margin-top: 25px;
+}
+#toggle:checked + .hamburger .bottom-bun {
+  opacity: 0;
+  transform: 500ms ease-in;
+}
+#toggle:checked + .hamburger .meat {
+  transform: 500ms ease-in;
+  margin-top: -7px;
+}
+
+#toggle:checked + .hamburger + .nav {
+  top: 0;
+  transform: scale(1);
+}
+*/
 
 
 
@@ -105,11 +280,6 @@ body {
     border-top:250px solid  rgba(255,255, 255, 0.29);
 }
 
-#location-wrapper div {
-    position:relative;
-    height:100%;
-    /*float:left;*/
-}
 
 .gm-style {
     font-family: Roboto, Arial, sans-serif;
@@ -182,7 +352,7 @@ body {
     margin: 10px;
 }
 
-.ch-item {
+.ch-item{
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -194,24 +364,33 @@ body {
         0 1px 2px rgba(0,0,0,0.1);
     transition: all 0.4s ease-in-out;
 }
-
+.logo-wrapper{
+    padding-top: 10px;
+    min-width: 100%;
+    min-height: 100%;
+}
+.logo-wrapper .client-logo{
+    position: relative;
+    min-height: 50%;
+    min-width: 50%;
+}
 .bg-one{
   min-width: 100%;
     height: 100%;
     margin: 0 auto;
-    opacity: 0.7;
+    /*opacity: 0.6;*/
 }
-.menu-name{
-    color: #444;
-    padding-top: 170px;
-    padding-left: 25px;
-    font-weight: bold;
 
-}
+
 .bg-one {
   background: url('/modules/core/img/brand/tahitianpearls.jpg') no-repeat;
   background-size: cover!important;
-  opacity: 0.9;
+  /*opacity: 0.5;*/
+}
+#staff{
+  background: url('/modules/core/img/brand/clients.png') no-repeat;
+  background-size: cover!important;
+  opacity: 0.8;
 }
 #mod-container{
     background-color: #fff !important;
@@ -254,10 +433,15 @@ body {
     overflow: visible;
     /*display: block;*/
 }
+
 #logo .menu-logo:hover{
     /*opacity: 0.3;*/
     background-color: #fff !important;
 
+}
+.perenco{
+    background: url('/modules/core/img/brand/perenco.jpg') no-repeat;   
+    background-size: cover;
 }
 #logo .menu-logo{
     background: url('/modules/core/img/brand/menubtn.png') no-repeat;   
@@ -279,7 +463,7 @@ body {
 }
 
 .ch-img-3 { 
-    background: url('/modules/core/img/brand/.jpg') no-repeat;   
+    background: url('/modules/core/img/brand/sect.jpg') no-repeat;   
     background-size: cover;
 }
 
@@ -349,16 +533,16 @@ body {
 .testimonial-panels{
     position: relative;
     width: 100%;
-    min-height: 900px;
-    height: 900px;
+    min-height: 100%;
+    height: 100%;
     z-index: 1000;
     overflow: hidden;
 }
 .staff-panels{
     position: relative;
     width: 100%;
-    min-height: 1200px;
-    height: 1200px;
+    min-height: 60%;
+    height: 60%;
     z-index: 1000;
     overflow: hidden;
 }
@@ -384,7 +568,7 @@ body {
 }
 #about-us{ 
     color: #fff;
-    margin-top: 60%;
+    /*margin-top: 60%;*/
     background-color: #f0f8ff!important;  
     min-height: 60%;
     height:60%;
@@ -432,15 +616,16 @@ a
     background-color: #fff;  
 }
 #training-services{
-    /*background: #BCC6CC !important;*/
-    background-color: #fff;  
-    background: url('/modules/core/img/brand/pearls.jpg') no-repeat;  
-    background-size: cover;   
+    background: #fff9f5 !important;
+    /*background-color: #fff;  */
+    /*background: url('/modules/core/img/brand/pearls.jpg') no-repeat;  */
+    /*background-size: cover;   */
 }
 #staff{
-    background-color: #fff; 
-    min-height: 1200px !important;
-    height: 1200px !important;
+    /*background-color: #ebefe8 ; */
+    min-height: 60% !important;
+    height: 60% !important;
+    color: #444 !important;
 }
 .section-wrapper {
     width: 100%;
@@ -534,32 +719,33 @@ a
 }
 
 #testimonials{
-    /*background-color: #fff;*/
-    background: url('/modules/core/img/brand/pearls.jpg') no-repeat;
-    background-size: cover;
+    background-color: #fff;
+    /*background: url('/modules/core/img/brand/pearls.jpg') no-repeat;*/
+    /*background-size: cover;*/
     position: relative;
-    min-height: 950px;
-    height:950px;
+    min-height: 100%;
+    height: 100%x;
+    /*opacity: 0.9;*/
 }
 #contact-us{
     /*background-color:rgb(229, 227, 223);*/
     background-color:#fff; 
 }
-.location-panels{
-    position: fixed;
+/*.location-panels{
+    position: relative;
     width: 100%;
     min-height: 900px;
     height: 900px;
     z-index: 1000;
     overflow: visible;
-}
+}*/
 #location-wrapper{
-    background-color:rgb(229, 227, 223);
-    /*background-color:#f5f5f5 ;  */
+    /*background-color:#e7ecee;*/
+    background-color:#f5f5f5 ;  
     overflow: visible;
-    min-height: 900px;
-    height: 900px;
-    position: fixed;
+    min-height:500px;
+    height: 500px;
+    width: 500px;
 }
 #location-wrapper, #contact-us, #trainigs, #time-table, #about-us, #training-services{
     min-width: 100%;
@@ -616,8 +802,8 @@ ul .app-title{
 #coy-name{
   text-align: center;
   /*margin: 0 auto;*/
-  padding-top: 200px;
   padding-right: 150px;
+  padding-top: 120px;
 }
 #logo {
   margin-top: 4em;
@@ -630,10 +816,11 @@ ul .app-title{
 
 #trade-mark{
   font-size: 1.5em;
-  color: #794044;
+  color: #fff;
   font-weight: bolder;
   line-height: 0.8em;
   padding: 0.4em;
+  left: 60px;
   text-transform: lowercase;
 }
 #mod-trade-mark{
@@ -873,8 +1060,8 @@ a {
     position: relative;
 }
 .et_pb_column_1_3 {
-    width: 23%;
-    padding: 10px;
+    width: 33%;
+    padding: 5px;
 }
 .et_pb_column_1_3:hover {
     background: #ECECEC !important;
@@ -884,8 +1071,8 @@ a {
 }
 .et_pb_column {
     float: left;
-    margin-right: 55px;
-    margin-left: 85px;
+    /*padding-right: 45px;*/
+    padding-left: 85px;
 }
 .et_pb_text_align_left {
     text-align: left;
@@ -1004,9 +1191,8 @@ p:last-of-type {
 #oris-serve-wrapper{
     min-width: 100%;
 }
-
-#link ul li h4, #link-mod ul li .arcor, #mod-footer ul .arcora
-{
+#link ul li h4, #link-mod ul li .arcor, #mod-footer ul .arcora {
+    
     float:left;
     color:#bbb;
     text-align:left;

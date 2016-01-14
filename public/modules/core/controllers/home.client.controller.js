@@ -5,6 +5,8 @@ angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authen
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 		$scope.isCollapsed = false;
+		// $scope.hideMrk = true;
+
 		$scope.menu = Menus.getMenu('topbar');
 
 		$scope.toggleCollapsibleMenu = function() {
@@ -15,7 +17,22 @@ angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authen
 		$scope.$on('$stateChangeSuccess', function() {
 			$scope.isCollapsed = false;
 		});
-			//Run translation if selected language changes
+
+		//Run google maps
+		$scope.map = {
+		  center: [39, -121],
+		  options: function() {
+		      return {
+		        streetViewControl: false,
+		        scrollwheel: false
+		      }
+		  },
+		  events: {
+		    click: function(e, map) {
+		      alert(e.latLng.lat() + " " + e.latLng.lng());
+		    }
+		  }
+		};
 		
 		$scope.viewMontessori = function(){
 			console.log('test');
@@ -43,13 +60,34 @@ angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authen
 	          }
 	        });
 		};
-
+		// $scope.hidePage = function(){
+		// 	$scope.hideMrk = false;
+		// 	console.log('ree');
+		// };
 			//Run translation if selected language changes
+
 		$scope.translate = function(){
 			console.log('testing');
 	       Translations.getTranslation($scope, $scope.selectedLanguage);
 		};   
-		$scope.selectedLanguage = 'en';
-		$scope.translate();		
+			$scope.selectedLanguage = 'en';
+			$scope.translate();	
+
+		function ExampleController ($scope) {
+			angular.extend($scope, {
+				centerProperty: {
+					lat: 45,
+					lng: -73
+				},
+				zoomProperty: 12,
+				markersProperty: [ {
+						latitude: 45,
+						longitude: -74
+					}],
+				clickedLatitudeProperty: null,	
+				clickedLongitudeProperty: null,
+			});
+		}
+
 	}
 ]);

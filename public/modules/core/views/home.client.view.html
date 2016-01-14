@@ -1,16 +1,100 @@
 <section data-ng-controller="HomeController">
   <div id="wrapper">
     <div id="landing-page" class="panels">
-      <div class="bg-one">
-        <div class="col-md-10 col-md-offset-10"> 
-            <a href="#" id="logo">
+      <div class="bg-one">        
+        <div>  
+          <!-- <input id="toggle" type="checkbox" data-ng-click="viewMontessori()" ></input>
+
+            <label for="toggle" class="hamburger">
+              <div class="top-bun"></div>
+              <div class="meat"></div>
+              <div class="bottom-bun"></div>
+            </label> -->
+            <!-- <h1><span style="font-size:2.75em;">100% CSS</span><br>Hamburger Animation</h1> -->
+
+            <input id="toggle" type="checkbox" ng-click="hideMrk = !hideMrk" ></input>
+
+            <label for="toggle" class="hamburger">
+              <div class="top-bun"></div>
+              <div class="meat"></div>
+              <div class="bottom-bun"></div>
+            </label>
+
+            <div class="nav">
+              <div class="nav-wrapper">
+                <nav>
+                  <div id="link-mod">      
+                    <ul>
+                      <li>
+                          <div id="logo-mod">
+                            <a href="/"><img src="/modules/core/img/brand/logo.png" alt="PRO SERVICE" data-pin-nopin="true" class="mod-logo">
+                            </a>
+                          </div>   
+                      </li>   
+                      <li class="mnu-hed"><a href="#!" class="arcor">Home</a></li>
+                      <li><a href="/" class="arcor">About Us</a></li>
+                      <li class="mnu-hed"><a href="/about-cis/" class="arcor">Services</a></li>
+                      <li><a href="/about-cis/welcome/" class="arcor">Mission</a></li>
+                      <li><a href="/about-cis/history/" class="arcor">Clients</a></li>
+                      <li><a href="/about-cis/testimonials/" class="arcor">Locate-Us</a></li>
+                  </ul>  
+                </div> 
+                </nav>
+
+              <div> 
+                  <div id="mod-footer">
+                      <ul>
+                          <li>
+                              <div id="in-bt-lf">
+                                  <div class="padd">
+                                      
+                                      <div class="in-bt-lf-txt"><p><strong></strong></p>
+                                      <!-- <p><strong>Sales enquiry email:</strong> 
+                                      <strong>tel.</strong><span>: +44 (0) 1223 </span><span class="s1">778290</span></p> -->
+                                          <table border="0" width="100%" min-height="800px">
+                                              <tbody>   
+                                                  <tr><th> Contact Us</th></tr>
+                                                  <tr>
+                                                      <td style="vertical-align: top;">
+                                                          <p style="text-align: justify;"><strong>Sales enquiry</strong><br></p>
+                                                          <p style="text-align: left;"><strong>Email:</strong><a href="mailto:admissions@cischool.co.uk">admissions@cischool.co.uk</a> </p>
+                                                          <p style="text-align: left;"><strong>Tel:</strong> +44 (0) 1223 416938</p>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td style="vertical-align: top;">
+                                                          <p style="text-align: justify;"><strong>General enquiry</strong><br> Cherry Hinton Hall<br> Cherry Hinton Road<br> Cambridge<br> CB1 8DW</p>
+                                                          <p style="text-align: left;"><strong>Email:</strong><a href="mailto:admissions@cischool.co.uk">admissions@cischool.co.uk</a> </p>
+                                                          <p style="text-align: justify;"><strong>Tel:</strong> +44 (0) 1223 416938</p>
+                                                      </td>
+                                                      <td>    
+                                                      </td>  
+                                                  </tr>
+                                              </tbody>
+                                          </table>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                      </ul> 
+                  </div>
+              </div>
+              </div>
+            </div>
+            <div class="menu-name" ng-hide="hideMrk">MENU</div>
+            <div class="menu-name" ng-hide="!hideMrk">CLOSE</div>
+
+
+
+
+           
+            <!-- <a href="#" id="logo">
                 <div class="menu-logo" data-ng-click="viewMontessori()"></div>
-            </a>
-             <div class="menu-name">Menu</div>
+            </a> -->
         </div>
        
 
-        <div class="row" id="coy-name">
+        <div class="row" id="coy-name" ng-hide="hideMrk">
           <h1 class="col-md-10 home-title col-md-offset-1">
             <span>
                 <ul>
@@ -133,8 +217,8 @@
           </div>
       </div>
       <div id="testimonials" class="testimonial-panels">
-        <div class="row" style="background-color:#fff;">
-          <div class="col-md-5 col-md-offset-1 left">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-2">
           <br><br>
               <span class="note">
                   <i class="nbr">
@@ -147,188 +231,122 @@
           </div>
         </div>
         <br><br>
-        <div>
+        <div class="col-md-10 col-md-offset-1">
           <div class="et_pb_section et_section_regular et_section_transparent">
             <div class="et_pb_row">
-                <div class="et_pb_column et_pb_column_1_3">
-                  <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #fff;">  
+            <div class="et_pb_column et_pb_column_1_3">
+                  <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;"> -->
                       <div class="et_pb_testimonial_description">
-                          <p align="justify">
-                          {{translation.TESTIMONIALF}}
-                          </p>
-                          <strong class="et_pb_testimonial_author">PERENCO OIL AND GAS, GABON</strong>
-                      </div>    
-                  </div>
-                </div>
-                <div class="et_pb_column et_pb_column_1_3">
-                  <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
-                      <div class="et_pb_testimonial_description">
-                          <p align="justify">
-                          {{translation.TESTIMONIALF}}
-                          </p>
-                          <strong class="et_pb_testimonial_author">VAN OORD</strong>
-                      </div>
-                  </div> 
-                </div>
-                <div class="et_pb_column et_pb_column_1_3">
-                  <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
-                      <div class="et_pb_testimonial_description">
-          
-                          <p align="justify">
-                          {{translation.TESTIMONIALF}}
-                          </p>
-                      <strong class="et_pb_testimonial_author">KCA-DEUTAG DRILLING</strong>
+                        <div class="logo-wrapper">
+                            <img src="/modules/core/img/brand/kca.jpg" class="client-logo"/>
+                        </div>   
+                      <!-- <strong class="et_pb_testimonial_author">KCA-DEUTAG DRILLING</strong> -->
                       </div> 
+                  <!-- </div>  -->
+                </div>
+                <div class="et_pb_column et_pb_column_1_3">
+                <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;"> -->
+                  <div class="et_pb_testimonial_description">
+                    <div class="logo-wrapper">
+                      <img src="/modules/core/img/brand/ieg.jpg" class="client-logo"/>
+                    </div>
+                    <!-- <strong class="et_pb_testimonial_author">IEG</strong> --> 
                   </div> 
-                </div>
+                <!-- </div> -->
+              </div>
+              <div class="et_pb_column et_pb_column_1_3">
+                <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;"> -->
+                  <div class="et_pb_testimonial_description">
+                    <div class="logo-wrapper">
+                      <img src="/modules/core/img/brand/shelfdrilling1.png" class="client-logo"/>
+                    </div>
+                    <!-- <strong class="et_pb_testimonial_author">SHELF DRILLING</strong>  -->
+                  </div> 
+                <!-- </div> -->
+              </div>
+              <div class="et_pb_column et_pb_column_1_3">
+                <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #fff;">   -->
+                    <div class="et_pb_testimonial_description">
+                        <div class="logo-wrapper">
+                          <img src="/modules/core/img/brand/perenco.jpg" class="client-logo" />
+                        </div>
+                        <!-- <strong class="et_pb_testimonial_author">PERENCO OIL AND GAS, GABON</strong> -->
+                    </div>    
+                <!-- </div> -->
+              </div>
                 <div class="et_pb_column et_pb_column_1_3">
-                  <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #fff;">  
+                  <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;"> -->
                       <div class="et_pb_testimonial_description">
-                          <p align="justify">
-                              {{translation.TESTIMONIALF}}
-                          </p>
-                          <strong class="et_pb_testimonial_author">EGYPTIAN DRILLING COMPANY</strong>
-                      </div>    
-                  </div>
-                </div>
-                <div class="et_pb_column et_pb_column_1_3">
-                  <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
-                      <div class="et_pb_testimonial_description">
-                          <p align="justify">
-                          {{translation.TESTIMONIALF}}
-                          </p>
-                          <strong class="et_pb_testimonial_author">WEATHERFORD, GABON</strong>
+                          <div class="logo-wrapper">
+                            <img src="/modules/core/img/brand/logo-vanoord.png" class="client-logo"/>
+                          </div>
+                          <!-- <strong class="et_pb_testimonial_author">VAN OORD</strong> -->
                       </div>
-                  </div> 
+                  <!-- </div>  -->
+                </div>
+                
+                <div class="et_pb_column et_pb_column_1_3">
+                  <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;"> -->
+                      <div class="et_pb_testimonial_description">
+                          <div class="logo-wrapper">
+                            <img src="/modules/core/img/brand/Weatherford.jpg" class="client-logo"/>
+                          </div>
+                          <!-- <strong class="et_pb_testimonial_author">WEATHERFORD, GABON</strong> -->
+                      </div>
+                  <!-- </div>  -->
                 </div>
                 <div class="et_pb_column et_pb_column_1_3">
-                  <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
+                  <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;"> -->
                         <div class="et_pb_testimonial_description">
-                            <p align="justify">
-                            {{translation.TESTIMONIALF}}
-                            </p>
-                        <strong class="et_pb_testimonial_author">PONTICELLI GABON</strong> 
+                            <div class="logo-wrapper">
+                            <img src="/modules/core/img/brand/piontecelli.jpg" class="client-logo"/>
+                          </div>
+                        <!-- <strong class="et_pb_testimonial_author">PONTICELLI GABON</strong>  -->
                     </div> 
-                </div>
+                <!-- </div> -->
               </div>
               <div class="et_pb_column et_pb_column_1_3">
-                <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
+                <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;"> -->
                   <div class="et_pb_testimonial_description">
-                    <p align="justify">
-                    {{translation.TESTIMONIALF}}
-                    </p>
-                    <strong class="et_pb_testimonial_author">FORASERV</strong> 
+                    <div class="logo-wrapper">
+                      <img src="/modules/core/img/brand/Foraserve.jpg" class="client-logo"/>
+                    </div>
+                    <!-- <strong class="et_pb_testimonial_author">FORASERV</strong>  -->
                   </div> 
-                </div>
+                <!-- </div> -->
               </div>
               <div class="et_pb_column et_pb_column_1_3">
-                <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
-                  <div class="et_pb_testimonial_description">
-                    <p align="justify">
-                    {{translation.TESTIMONIALF}}
-                    </p>
-                    <strong class="et_pb_testimonial_author">IEG</strong> 
-                  </div> 
+                  <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix"> -->  
+                      <div class="et_pb_testimonial_description">
+                          <div class="logo-wrapper">
+                            <img src="/modules/core/img/brand/EDC1.png" class="client-logo"/>
+                          </div>
+                          <!-- <strong class="et_pb_testimonial_author">EGYPTIAN DRILLING COMPANY</strong> -->
+                      </div>    
+                  <!-- </div> -->
                 </div>
-              </div>
-              <div class="et_pb_column et_pb_column_1_3">
-                <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
-                  <div class="et_pb_testimonial_description">
-                        <p align="justify">
-                        {{translation.TESTIMONIALF}}
-                        </p>
-                    <strong class="et_pb_testimonial_author">SHELF DRILLING</strong> 
-                  </div> 
-                </div>
-              </div>
-
             </div>
           </div>  
         </div>
       </div>
       <div class="staff-panels" id="staff">
-          <div class="row">
-              <div class="col-md-5 col-md-offset-1 left">
-              <br><br>
-                  <span class="note">
-                      <i class="nbr">
-                      #6 {{translation.SIX}} </i> 
-                  </span>
-                  <br><br><br>
-                  <h2 class="title">
-                        {{translation.TEAM}}
-                  </h2>
-              </div>
-          </div>
+        <div class="row">
+            <div class="staff-wrapper">
+                <div class="col-md-5 col-md-offset-1 left">
+                    <p style="text-align: justify;margin-top:200px;font-size:2em;position: absolute;font-weight: bold;color: #fff;"><strong>PRO-Team</strong><br>"A team of awesome people<br> make up Pro Service"</p>
+                </div>
+                <div class="col-md-5 col-md-offset-1 right">
+                    <p style="text-align: justify;font-size:2em;font-color:#fff;">They are client-satisfaction oriented<br> Very apt, professional and friendly<br>Very awesome people</p>
+                </div>
+            </div>
+        </div>
           <br><br>
-          <div class="section-wrapper">
-            <div class="staff-holder">
-                <div class="staff">
-                    <div class="staff__image">
-                        <img src="http://www.stlshipping.se/wp_2015/wp-content/uploads/2011/12/profilbilder_v2_0011_JohanJohansson.png">    
-                    </div>
-                    <div class="staff__information">
-                        <h3 class="staff__name">Johan Johansson</h3>
-                        <span class="staff__title">{{translation.POSITION}}</span>
-                        <span class="staff__label">Mobile Phone</span>
-                        <span class="staff__info">
-                            <a href="tel:+46 739 80 63 00">+46 739 80 63 00</a>
-                        </span>
-                        <span class="staff__label">Email</span>
-                        <span class="staff__info">
-                            <a href="mailto:johan.johansson@stlshipping.se">johan.johansson@stlshipping.se</a>
-                        </span> 
-                    </div>
-                </div> 
-            </div> 
-          </div>
       </div>
 
-      <div id="location-wrapper" class="panels">
-               <div id="location-container">
-                  <div class="row">
-                      <br>
-                      <span class="note">
-                          <i class="nbr">
-                          #6 {{translation.SEVEN}} </i> 
-                      </span>
-                      <br><br>
-                      <h2 class="title">
-                            {{translation.LOCATION}}
-                      </h2>
-                  </div>
-                  <br>
-                  <br>
-                  <div style="width: 68%; float:left; height: 100%">
-                  <!-- <p>0.7167°, 8.7833°</p>
-                        <ng-map zoom="14" center="" style="height:90%" >
-                          <directions
-                            draggable="true"
-                            panel="directions-panel"
-                            travel-mode="DRIVING"
-                            origin="Port-Gentil International Airport"
-                            destination="Eglise ste barbe">
-                          </directions>
-                        </ng-map>
-                        <!<div>Directions path length:
-                          {{map.directionsRenderers[0].directions.routes[0].overview_path.length}}</div> -->
-                  </div>
-                  <br><br>
-                  <!-- <span class="note">
-                      <i class="nbr">
-                          #07 {{translation.EIGHT}} </i> 
-                  </span>
-                  <br><br>
-                  <h2 class="title">
-                          {{translation.CONTACT_USB}}
-                  </h2>  -->
-                   
-              </div>
-
-              <!-- <div class="col-md-15 col-md-offset-1 left" >
-                 <div id="directions-panel" style="width: 28%; float:left; height: 100%; overflow: auto; padding: 0px 5px">
-                  </div> 
-              </div>   -->
+      <div id="location-wrapper" class="location-panels">
+         <div id="location-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.4927532797024!2d8.781482514322812!3d-0.7319547854780628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a83b771a6f4f7b5%3A0x90f670714d51f67!2s%C3%89glise+Ste+Barbe%2C+Port-Gentil%2C+Gabon!5e0!3m2!1sen!2s!4v1452812455097" width="1500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>     
+        </div>   
       </div>
       <div id="footer" class="footer-panels">
           <div class="language-select" id="footer-lang-select">
