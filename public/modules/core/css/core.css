@@ -57,7 +57,7 @@ h1 {
   line-height: 1.2;
 }
 .menu-name{
-    color: #990000;
+    color: #00216e;
     /*padding-top: 70px;*/
     margin-top: 25px;
     /*margin-right: 120px;*/
@@ -95,7 +95,7 @@ h1 {
   width: 3em;
   height: 3px;
   border-radius: 3px;
-  background-color: #990000;
+  background-color: #00216e;
   margin-top: 8px;
   transition: all 0.3s ease-in-out;
   opacity: 0.9
@@ -106,23 +106,25 @@ Nav Styles
 **/
 .nav {
   position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  top: -100%; left: 0; right: 0; bottom: 0;
+  width: 20%;
+  height: 70%;
+  background-color: #ccd7f0;
+  /*top: -100%; left: 0; right: 0; bottom: 0;*/
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   transform: scale(0);
+  left: 1200px;
 }
 .nav-wrapper {
   position: relative;
   overflow: hidden;
-  overflow-y: auto;
+  /*overflow-y: auto;*/
   height: 100%;
+  /*width: 40%;*/
 }
 nav {
   text-align: left;
-  margin-left: 25%;
+  /*margin-left: 25%;*/
 }
 nav a {
   position: relative;
@@ -170,8 +172,92 @@ Animations
   top: 0;
   transform: scale(1);
 }
+/**
+  Hamburger for pop-up
+**/
+.hammer {
+  position: absolute;
+  top: 5em;
+  right: 5%;
+  margin-left: -2em;
+  margin-top: -45px;
+  width: 2em;
+  height: 45px;
+  z-index: 5000;
+}
 
+.hammer div {
+  position: relative;
+  width: 3em;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #00216e;
+  margin-top: 8px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.9
+}
+.hammer .top-buna {
+  transform: rotate(-45deg);
+  margin-top: 25px;
+}
+.hammer .bottom-buna {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+.hammer .middle-buna {
+  transform: rotate(45deg);
+  margin-top: -7px;
+}
+.hammer + .nav {
+  top: 0;
+  transform: scale(1);
+}
+/**
+Animations for pop-up
+**/
+#toggle:checked + .hammer .top-buna {
+  transform: rotate(360deg);
+  margin-top: 25px;
+}
+#toggle:checked + .hammer .bottom-buna {
+  opacity: 0;
+  transform: rotate(360deg);
+}
+#toggle:checked + .hammer .middle-buna {
+  transform: rotate(360deg);
+  margin-top: -7px;
+}
 
+#toggle:checked + .hammer + .nav {
+  top: 0;
+  transform: scale(1);
+}
+/**
+
+Navi Styles
+**/
+.navi {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #ccd7f0;
+  /*top: -100%; left: 0; right: 0; bottom: 0;*/
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+  left: 1200px;
+}
+.navi-wrapper {
+  position: relative;
+  overflow: hidden;
+  /*overflow-y: auto;*/
+  height: 100%;
+  /*width: 40%;*/
+}
+nav {
+  text-align: left;
+  /*margin-left: 25%;*/
+}
 /*#toggle {
   display: none;
 }
@@ -424,6 +510,12 @@ body {
     overflow: visible;
     display: block;
 }
+#logo-mod .mod-logo1{
+     width: 20%;
+    height: 20%;
+    overflow: visible;
+    display: block;
+}
 #logo .menu-logo{
     /*position: absolute;*/
     /*top: 0%;
@@ -458,7 +550,7 @@ body {
 }
 
 .ch-img-2 { 
-    background: url('/modules/core/img/brand/gasoil.jpg') no-repeat;   
+    background: url('/modules/core/img/brand/lloyds.jpg') no-repeat;   
     background-size: cover;
 }
 
@@ -546,7 +638,9 @@ body {
     z-index: 1000;
     overflow: hidden;
 }
-
+.contact-wrapper{
+    margin-top: 150px;
+}
 #our-goal{
     position: relative;
     background-color: #fff;  
@@ -575,11 +669,7 @@ body {
     /*background: url('/modules/core/img/brand/lloyds.jpg') no-repeat;  */
     /*background-size: cover;*/
 }
-.contact-us-panels{
-  height: 20% !important;
-  min-height: 20% !important;
-    position: fixed;
-}
+
 .link-panels{
     position: fixed;
     height: 40% !important;
@@ -650,12 +740,12 @@ a
     display: inline-block;
     vertical-align: top;
     padding: 1em;
-}
+}    font-size: 1.5em;
+
 .staff__image img {
     width: 60%;
 }
 .staff__name {
-    font-size: 1.5em;
 }
 .staff__title {
     font-weight: bold;
@@ -728,8 +818,15 @@ a
     /*opacity: 0.9;*/
 }
 #contact-us{
-    /*background-color:rgb(229, 227, 223);*/
-    background-color:#fff; 
+    background-color:#b2c3e9; 
+    height: 100%;
+    min-height:100%; 
+    position: relative;
+}
+.contact-us-panels{
+  height: 100% !important;
+  min-height: 100% !important;
+  position: relative;
 }
 /*.location-panels{
     position: relative;
@@ -766,30 +863,49 @@ a
 }
 
 .home-title {
-    font-weight: bolder;
+    font-weight: lighter;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 .home-title span{
   letter-spacing: -0.03em;
     text-transform: uppercase;
-    font-family: 'futura-pt';
-    display: block;
   line-height: 0.9em;
-  text-align: left;
-  font-size: 4rem;
+  text-align: center;
+/*font-family: "HelveticaNeueW02-UltLtE 739241" !important;*/
+
   
     /*color: #fff;*/
 
 }
 .home-title span .tion{
-    color: #990000;
+color: #990000;
 }
 ul .app-title{
-    display: inline-block;
-    font-size: 3em;
+    font-size: 4em;
+    font-weight: normal;
+    /*font-family: 'Dorsa', sans-serif;    */
+    font-family: 'BenchNine', sans-serif;
+    color:#00216e;
+    text-transform: uppercase;
+  letter-spacing: 0.6em;
+}
+#coy-name .home-title ul li .nuggets{
+    float:left;
+    color: #000b24;
+    text-align:left;
+    margin-left:5px;
+    top:50px;
+    padding-left:10px;
+    text-decoration: none;
     font-weight: bolder;
-
+    font-size: 1em;
+    font-family: 'Dosis', sans-serif;
+    /*font-family: 'Dorsa', sans-serif;  */
+    /*line-height: 1.4em;*/
+}
+#nuggets-2{
+    font-weight: lighter;
 }
 .time-table-title{
     color: #202021;
@@ -802,8 +918,8 @@ ul .app-title{
 #coy-name{
   text-align: center;
   /*margin: 0 auto;*/
-  padding-right: 150px;
-  padding-top: 120px;
+  /*padding-right: 150px;*/
+  top: 60px;
 }
 #logo {
   margin-top: 4em;
@@ -1191,7 +1307,7 @@ p:last-of-type {
 #oris-serve-wrapper{
     min-width: 100%;
 }
-#link ul li h4, #link-mod ul li .arcor, #mod-footer ul .arcora {
+#link ul li h4, #mod-footer ul .arcora {
     
     float:left;
     color:#bbb;
@@ -1204,6 +1320,23 @@ p:last-of-type {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 14px;
     /*line-height: 1.4em;*/
+}
+#link-mod ul{
+    height: 60%;
+}
+
+#link-mod ul li .arcor{
+    /*float:left;*/
+    display: block;
+    color:#00216e;
+    text-align:left;
+    left:0;
+    top: 120px;
+    /*padding:20px 20px 20px 20px;*/
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 0.8em;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 #link ul li a:active{

@@ -18,30 +18,25 @@ angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authen
 			$scope.isCollapsed = false;
 		});
 
-		//Run google maps
-		$scope.map = {
-		  center: [39, -121],
-		  options: function() {
-		      return {
-		        streetViewControl: false,
-		        scrollwheel: false
-		      }
-		  },
-		  events: {
-		    click: function(e, map) {
-		      alert(e.latLng.lat() + " " + e.latLng.lng());
-		    }
-		  }
+
+		$scope.viewFabricator = function(){
+			triggerFabModal();
 		};
-		
-		$scope.viewMontessori = function(){
-			console.log('test');
-			triggerModal();
+		$scope.viewProcurer = function(){
+			triggerProcureModal();
+		};
+		$scope.viewSafetyMat = function(){
+			triggerSafetyModal();
+		};
+		$scope.viewRental = function(){
+			triggerRentalModal();
+			console.log('rent');
 		};
 
-		var triggerModal = function(){
+
+		var triggerFabModal = function(){
 			var contentModal = $modal.open({
-	          templateUrl: '/modules/core/views/montessoriModalContent.client.view.html',
+	          templateUrl: '/modules/core/views/faabricationModalContent.client.view.html',
 	          controller: function($scope, $modalInstance) {
 	            $scope.ok = function(data) {
 	              $modalInstance.close();
@@ -50,9 +45,74 @@ angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authen
 	              $modalInstance.dismiss('cancel');
 	            };
 	          },
-	          windowClass: 'modal-fit',
+	          // windowClass: 'modal-fit',
 
-	          // size: 'lg',
+	          size: 'lg',
+	          resolve: {
+	            listData: function() {
+	              return true;
+	            }
+	          }
+	        });
+		};
+		var triggerProcureModal = function(){
+			var contentModal = $modal.open({
+	          templateUrl: '/modules/core/views/procurementModalContent.client.view.html',
+	          controller: function($scope, $modalInstance) {
+	            $scope.ok = function(data) {
+	              $modalInstance.close();
+	            };
+	            $scope.cancel = function() {
+	              $modalInstance.dismiss('cancel');
+	            };
+	          },
+	          // windowClass: 'modal-fit',
+
+	          size: 'lg',
+	          resolve: {
+	            listData: function() {
+	              return true;
+	            }
+	          }
+	        });
+		};
+
+		var triggerSafetyModal = function(){
+			var contentModal = $modal.open({
+	          templateUrl: '/modules/core/views/safetyMaterialsModalContent.client.view.html',
+	          controller: function($scope, $modalInstance) {
+	            $scope.ok = function(data) {
+	              $modalInstance.close();
+	            };
+	            $scope.cancel = function() {
+	              $modalInstance.dismiss('cancel');
+	            };
+	          },
+	          // windowClass: 'modal-fit',
+
+	          size: 'lg',
+	          resolve: {
+	            listData: function() {
+	              return true;
+	            }
+	          }
+	        });
+		};
+		
+		var triggerRentalModal = function(){
+			var contentModal = $modal.open({
+	          templateUrl: '/modules/core/views/rentalModalContent.client.view.html',
+	          controller: function($scope, $modalInstance) {
+	            $scope.ok = function(data) {
+	              $modalInstance.close();
+	            };
+	            $scope.cancel = function() {
+	              $modalInstance.dismiss('cancel');
+	            };
+	          },
+	          // windowClass: 'modal-fit',
+
+	          size: 'lg',
 	          resolve: {
 	            listData: function() {
 	              return true;
