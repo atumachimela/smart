@@ -474,7 +474,7 @@ body {
   /*opacity: 0.5;*/
 }
 #staff{
-  background: url('/modules/core/img/brand/clients.png') no-repeat;
+  background: url('/modules/core/img/brand/metalfabricator.jpg') no-repeat;
   background-size: cover!important;
   opacity: 0.8;
 }
@@ -639,7 +639,7 @@ body {
     overflow: hidden;
 }
 .contact-wrapper{
-    margin-top: 150px;
+    margin-top: 5%;
 }
 #our-goal{
     position: relative;
@@ -706,10 +706,10 @@ a
     background-color: #fff;  
 }
 #training-services{
-    background: #fff9f5 !important;
-    /*background-color: #fff;  */
-    /*background: url('/modules/core/img/brand/pearls.jpg') no-repeat;  */
-    /*background-size: cover;   */
+    /*background: #fff9f5 !important;*/
+    color: #fff;  
+    background: url('/modules/core/img/brand/nature.jpg') no-repeat;  
+    background-size: cover;   
 }
 #staff{
     /*background-color: #ebefe8 ; */
@@ -818,7 +818,8 @@ a
     /*opacity: 0.9;*/
 }
 #contact-us{
-    background-color:#b2c3e9; 
+    /*background-color:#b2c3e9; */
+    background-color: #fff;
     height: 100%;
     min-height:100%; 
     position: relative;
@@ -1180,10 +1181,10 @@ a {
     padding: 5px;
 }
 .et_pb_column_1_3:hover {
-    background: #ECECEC !important;
+    /*background: #ECECEC !important;*/
 }
 .et_pb_testimonial:hover {
-    background: #ECECEC !important;
+    /*background: #ECECEC !important;*/
 }
 .et_pb_column {
     float: left;

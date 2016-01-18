@@ -160,9 +160,172 @@
                   </li>
               </ul>
               </div>
-            <!-- </div> -->
+            
             </div>
-          <!-- </div> -->
+            <script type="text/ng-template" id="myModalSafetyMaterailsContent.html">
+              <div class="modal-header">
+                <div id="mod-header">
+                    <span class="glyphicon glyphicon-remove pull-right" data-ng-click="cancel()" style="margin:10px">
+                    </span>
+                    <ul>
+                        <li>
+                            <div class="heading">
+                                <div id="logo-mod"><a href="/"><img src="/modules/core/img/brand/logo.png" alt="PRO SERVICE" data-pin-nopin="true" class="mod-logo"></a></div>   
+                            </div></li>
+                                </ul>   
+                            </div> </li>
+                    </ul>      
+                </div>
+              </div>
+              <div class="modal-footer" data-ng-controller="HomeController"> 
+                  <div id="mod-footer">
+                    <ul>
+                        <li>
+                            <div id="in-bt-lf">
+                                <div class="padd">
+                                      <div class="in-bt-lf-txt"><p><strong>{{translation.SAFETY_MATERIAL}}</strong></p>
+                                          <table border="0" width="100%" height="547">
+                                              <tbody>
+                                                  <tr>
+                                                      <td style="vertical-align: top;">
+                                                          <p style="text-align: justify;"><strong>Safety Materials/Tools/Equipments/Devices</strong><br> We supply the following: </p>
+                                                          <p style="text-align: left;"><strong>Materials</strong></p>
+                                                          <p style="text-align: justify;">Coveralls</p>
+                                                          <p style="text-align: justify;">Boots</p>
+                                                          <p style="text-align: justify;">Gloves</p>
+                                                          <p style="text-align: justify;">Caps</p>
+                                                          <p style="text-align: justify;">Life JAckets</p>
+                                                          <p style="text-align: justify;">Belts</p>
+                                                      </td>  
+                                                  </tr>
+                                                  <tr>
+                                                      <td style="vertical-align: top;">
+                                                          <p style="text-align: justify;"><strong>Tools</strong><br></p>
+                                                          <p style="text-align: justify;"></p>
+                                                      </td>  
+                                                  </tr>
+                                                  <tr>
+                                                      <td style="vertical-align: top;">
+                                                          <p style="text-align: justify;"><strong>Equipments</strong><br></p>
+                                                          <p style="text-align: justify;"></p>
+                                                      </td>  
+                                                  </tr>
+                                                  <tr>
+                                                      <td style="vertical-align: top;">
+                                                          <p style="text-align: justify;"><strong>Devices</strong><br></p>
+                                                          <p style="text-align: justify;"></p>
+                                                      </td>  
+                                                  </tr>
+                                              </tbody>
+                                          </table>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                      </ul> 
+                  </div>
+              </div> 
+            </script>
+            <script type="text/ng-template" id="myModalProcurementContent.html">
+              <div class="modal-header">
+                  <div id="mod-header">
+                      <span class="glyphicon glyphicon-remove pull-right" data-ng-click="cancel()" style="margin:10px">
+                      </span>
+                      <ul>
+                          <li>
+                              <div class="heading">
+                                  <div id="logo-mod"><a href="/"><img src="/modules/core/img/brand/logo.png" alt="PRO SERVICE" data-pin-nopin="true" class="mod-logo"></a></div>   
+                              </div></li>
+                                  </ul>   
+                              </div> </li>
+                      </ul>      
+                  </div>
+              </div>
+              <div class="modal-footer" data-ng-controller="HomeController"> 
+                  <div id="mod-footer">
+                      <ul>
+                          <li>
+                              <div id="in-bt-lf">
+                                  <div class="padd">
+                                      
+                                      <div class="in-bt-lf-txt"><p><strong></strong></p>
+                                          <table border="0" width="100%" height="547">
+                                              <tbody>
+                                                  <tr>
+                                                      <td style="vertical-align: top;">
+                                                          <p style="text-align: justify;"><strong>{{translation.PROCUREMENT}}</strong><br> We procure the following </p>
+                                                          <p style="text-align: left;"><strong>Drilling Tools & Equipments</strong>
+                                                      </td>  
+                                                  </tr>
+                                                  <tr>
+                                                      <td style="vertical-align: top;">
+                                                          <p style="text-align: justify;"><strong>Chemicals</strong><br> We procure chemicals of all forms</p>
+                                                      </td>  
+                                                  </tr>
+                                              </tbody>
+                                          </table>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                      </ul> 
+                  </div>
+              </div>
+            </script>
+            <script type="text/ng-template" id="myModalRentalContent.html">
+                <div class="modal-header">
+                  <div id="mod-header">
+                  
+
+
+                      <span class="glyphicon glyphicon-remove pull-right" data-ng-click="cancel()" style="margin:10px">
+                      </span>
+                      <ul>
+                          <li>
+                              <div class="heading">
+                                  <div id="logo-mod"><a href="/"><img src="/modules/core/img/brand/logo.png" alt="PRO SERVICE" data-pin-nopin="true" class="mod-logo"></a></div>   
+                              </div></li>
+                                  </ul>   
+                              </div> </li>
+                      </ul>      
+                  </div>
+                </div>
+                <div class="modal-footer" > 
+                    <div id="mod-footer">
+                        <ul>
+                            <li>
+                                <div id="in-bt-lf">
+                                    <div class="padd" data-ng-controller="HomeController">
+                                        
+                                        <div class="in-bt-lf-txt"><p><strong></strong></p>
+                                            <table border="0" width="100%" height="547">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="vertical-align: top;">
+                                                            <p style="text-align: justify;"><strong data-ng-bind="translation.RENTALS">{{translation.RENTALS}}</strong><br> We provide the following rental services</p>
+                                                            <p style="text-align: left;"><strong>Home Apartment Rental</strong></p>
+                                                        </td>  
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="vertical-align: top;">
+                                                            <p style="text-align: left;"><strong>Office Space Rental</strong></p>
+                                                        </td>  
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="vertical-align: top;">
+                                                            <p style="text-align: justify;"><strong>Vehicles Rental</strong></p>
+                                                        </td>  
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul> 
+                    </div>
+                  </div>
+            </script>   
       </div>
       <div id="testimonials" class="testimonial-panels">
         <div class="row">
@@ -284,7 +447,7 @@
                     <p style="text-align: justify;margin-top:200px;font-size:2em;position: absolute;font-weight: bold;color: #000b24;"><strong>PRO-Team</strong><br>"A team of awesome people<br> make up Pro Service"</p>
                 </div>
                 <div class="col-md-5 col-md-offset-1 right">
-                    <p style="text-align: justify;font-size:2em;color:#000b24;">They are client-satisfaction oriented<br> Very apt, professional and friendly<br>An awesome people</p>
+                    <p style="text-align: justify;font-size:2em;color:#fff;">They are client-satisfaction oriented<br> Very apt, professional and friendly<br>An awesome people</p>
                 </div>
             </div>
         </div>

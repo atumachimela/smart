@@ -57,7 +57,7 @@ angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authen
 		};
 		var triggerProcureModal = function(){
 			var contentModal = $modal.open({
-	          templateUrl: '/modules/core/views/procurementModalContent.client.view.html',
+	          templateUrl: 'myModalProcurementContent.html',
 	          controller: function($scope, $modalInstance) {
 	            $scope.ok = function(data) {
 	              $modalInstance.close();
@@ -79,7 +79,7 @@ angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authen
 
 		var triggerSafetyModal = function(){
 			var contentModal = $modal.open({
-	          templateUrl: '/modules/core/views/safetyMaterialsModalContent.client.view.html',
+	          templateUrl: 'myModalSafetyMaterailsContent.html',
 	          controller: function($scope, $modalInstance) {
 	            $scope.ok = function(data) {
 	              $modalInstance.close();
@@ -101,7 +101,7 @@ angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authen
 		
 		var triggerRentalModal = function(){
 			var contentModal = $modal.open({
-	          templateUrl: '/modules/core/views/rentalModalContent.client.view.html',
+	          templateUrl: 'myModalRentalContent.html',
 	          controller: function($scope, $modalInstance) {
 	            $scope.ok = function(data) {
 	              $modalInstance.close();
