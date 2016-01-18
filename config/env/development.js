@@ -3,7 +3,7 @@
 module.exports = {
 	db: 'mongodb://localhost/e-amity-dev',
 	app: {
-		title: 'Oris Education Center- Development Environment'
+		title: 'PRO SERVICE - Development Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',
