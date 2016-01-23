@@ -48,6 +48,45 @@ a:hover .header-profile-image {
     display: block;
 }
 
+/*  SECTIONS  */
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0 auto;
+}
+
+/*  COLUMN SETUP  */
+.col {
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 1%; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+    width: 100%;
+}
+.span_3_of_4 {
+    width: 74.6%;
+}
+.span_2_of_4 {
+    width: 49.2%;
+}
+.span_1_of_4 {
+    width: 23.8%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+    .col {  margin: 1% 0 1% 0%; }
+    .span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+}
 h1 {
   text-align: center;
   letter-spacing: 1px;
@@ -83,7 +122,7 @@ h1 {
   position: absolute;
   top: 5em;
   right: 5%;
-  margin-left: -2em;
+  /*margin-left: -2em;*/
   margin-top: -45px;
   width: 2em;
   height: 45px;
@@ -179,7 +218,7 @@ Animations
   position: absolute;
   top: 5em;
   right: 5%;
-  margin-left: -2em;
+  /*margin-left: -2em;*/
   margin-top: -45px;
   width: 2em;
   height: 45px;
@@ -412,7 +451,7 @@ body {
     border-top:350px solid  rgba(255,255, 255, 0.29);
 }*/
 
-.ch-grid {
+.ch-grid, .chi-grid {
     margin: 20px 0 0 0;
     padding: 0;
     list-style: none;
@@ -426,8 +465,12 @@ body {
     content: '';
     display: table;
 }
-
-.ch-grid:after {
+.chi-grid:after,
+.chi-item:before {
+    content: '';
+    display: table;
+}
+.ch-grid:after, .chi-grid:after {
     clear: both;
 }
 
@@ -436,6 +479,14 @@ body {
     height: 200px;
     display: inline-block;
     margin: 10px;
+    margin-top: 50px !important;
+}
+.chi-grid li {
+    width: 250px;
+    height: 200px;
+    display: inline-block;
+    margin: 30px;
+    /*margin-bottom: 2px !important;*/
 }
 
 .ch-item{
@@ -450,6 +501,37 @@ body {
         0 1px 2px rgba(0,0,0,0.1);
     transition: all 0.4s ease-in-out;
 }
+.chi-item{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    box-shadow: 
+        inset 0 0 0 5px rgba(255,255,255,0.6),
+        0 1px 2px rgba(0,0,0,0.1);
+    transition: all 0.4s ease-in-out;
+}
+.chi-bot{
+    width: 45% !important;
+    height: 20% !important;
+    background-color: #fff !important;
+    color: #5F9EA0;
+    border: 3px solid #5CB85C;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 0.5em;
+
+}
+.chi-bot a{
+    line-height: 2.4em;
+    font-size: 1.4em !important;
+}
+.chi-bot a:hover, .chi-bot a:active, .chi-bot a:visited{
+    text-decoration: none;
+}
 .logo-wrapper{
     padding-top: 10px;
     min-width: 100%;
@@ -457,21 +539,20 @@ body {
 }
 .logo-wrapper .client-logo{
     position: relative;
-    min-height: 50%;
-    min-width: 50%;
+    height: 50%;
+    width: 50%;
 }
 .bg-one{
   min-width: 100%;
     height: 100%;
     margin: 0 auto;
-    /*opacity: 0.6;*/
+    /*opacity: 0.4;*/
 }
 
 
 .bg-one {
   background: url('/modules/core/img/brand/tahitianpearls.jpg') no-repeat;
   background-size: cover!important;
-  /*opacity: 0.5;*/
 }
 #staff{
   background: url('/modules/core/img/brand/metalfabricator.jpg') no-repeat;
@@ -570,6 +651,17 @@ body {
     transition: all 0.4s ease-in-out;
     transform: scale(0);
 }
+.chi-info {
+    position: absolute;
+    background: #333;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-out-in;
+    transform: scale(0);
+}
 
 .ch-info h3 {
     color: #fff;
@@ -584,7 +676,20 @@ body {
         0 0 1px #fff, 
         0 1px 2px rgba(0,0,0,0.3);
 }
-.ch-info p {
+.chi-item h3{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 17px;
+    margin-top: 65px;
+    /*padding-top: 35px;*/
+    height: 140px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    text-shadow: 
+        0 0 1px #fff, 
+        0 1px 2px rgba(0,0,0,0.3);
+}
+.ch-info p{
     color: #fff;
     padding: 10px 5px;
     font-style: italic;
@@ -594,16 +699,17 @@ body {
     opacity: 0;
     transition: all 1s ease-in-out 0.4s;
 }
-.ch-item:hover {
+
+.ch-item:hover, .chi-item:hover {
     box-shadow: 
         inset 0 0 0 1px rgba(255,255,255,0.1),
         0 1px 2px rgba(0,0,0,0.1);
 }
-.ch-item:hover .ch-info {
+.ch-item:hover .ch-info, .chi-item:hover #chi-p p{
     transform: scale(1);
     opacity: 1;
 }
-.ch-item:hover .ch-info p {
+.ch-item:hover .ch-info p, .chi-item:hover .chi-info p {
     opacity: 1;
 }
 
@@ -611,8 +717,6 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    /*background: url('/modules/core/client/img/brand/metalfabrication.jpg') no-repeat;  
-    background-size: cover;*/
 }
 .panels{
     position: relative;
@@ -622,14 +726,7 @@ body {
     z-index: 1000;
     overflow: hidden;
 }
-.testimonial-panels{
-    position: relative;
-    width: 100%;
-    min-height: 100%;
-    height: 100%;
-    z-index: 1000;
-    overflow: hidden;
-}
+
 .staff-panels{
     position: relative;
     width: 100%;
@@ -697,9 +794,21 @@ body {
 }
 #landing-page{
     position: relative;
-    /*top:0;*/
+    top:0;
     width: 100%;
-    /*z-index: -99;*/
+    z-index: -99;
+}
+.overlay {
+    background-color: #fff;
+    min-height: 600px;
+    opacity: 0.85;
+    border-bottom: 5px solid #333;
+}
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 a
 #time-table {
@@ -807,15 +916,90 @@ a
     color:#FF2400!important;
     cursor: progress;
 }
-
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    margin-top: 70px;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 1000px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+.close {
+    background: #bbb;
+    color: #000;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    /*border-radius: 12px;*/
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
+}
 #testimonials{
-    background-color: #fff;
+    background-color: #f5f5f5;
     /*background: url('/modules/core/img/brand/pearls.jpg') no-repeat;*/
-    /*background-size: cover;*/
+    background-size: cover;
+    position: relative;
+    min-height: 555px;
+    height: 555px;
+    color: #000;
+    /*opacity: 0.9;*/
+}
+#clients{
+   background-color: #fff;
     position: relative;
     min-height: 100%;
-    height: 100%x;
-    /*opacity: 0.9;*/
+    height: 100%;
+    color: #fff;
+}
+.clients-panels{
+    position: relative;
+    width: 100%;
+    min-height:100%;
+    height: 100%;
+    z-index: 1000;
+    overflow: hidden;
+}
+.testimonial-panels{
+    position: relative;
+    width: 100%;
+    min-height: 555px;
+    height: 555px;
+    z-index: 1000;
+    overflow: hidden;
 }
 #contact-us{
     /*background-color:#b2c3e9; */
@@ -829,17 +1013,17 @@ a
   min-height: 100% !important;
   position: relative;
 }
-/*.location-panels{
+.location-panels{
     position: relative;
     width: 100%;
-    min-height: 900px;
-    height: 900px;
+    min-height: 100%;
+    height: 100%;
     z-index: 1000;
     overflow: visible;
-}*/
+}
 #location-wrapper{
     /*background-color:#e7ecee;*/
-    background-color:#f5f5f5 ;  
+    background-color:#f5f5f5;  
     overflow: visible;
     min-height:500px;
     height: 500px;
@@ -887,13 +1071,13 @@ ul .app-title{
     font-weight: normal;
     /*font-family: 'Dorsa', sans-serif;    */
     font-family: 'BenchNine', sans-serif;
-    color:#00216e;
+    color:#990000;
     text-transform: uppercase;
-  letter-spacing: 0.6em;
+    letter-spacing: 0.6em;
 }
 #coy-name .home-title ul li .nuggets{
     float:left;
-    color: #000b24;
+    color: #990000;
     text-align:left;
     margin-left:5px;
     top:50px;
@@ -986,7 +1170,7 @@ a {
     display: block;
     font-family: 'proxima-nova';
     font-weight:bolder;
-    font-size: 1.5em;
+    font-size: 1em;
     line-height: 1.5em;
     color: #797979;
     text-align: justify;
@@ -1189,14 +1373,14 @@ a {
 .et_pb_column {
     float: left;
     /*padding-right: 45px;*/
-    padding-left: 85px;
+    /*padding-left: 85px;*/
 }
 .et_pb_text_align_left {
     text-align: left;
 }
 .et_pb_testimonial {
     position: relative;
-    padding: 30px 30px 34px;
+    /*padding: 30px 30px 34px;*/
     line-height: 1.5;
     margin-bottom: 30px;
 }
@@ -1293,7 +1477,7 @@ p:last-of-type {
     height: 50px;
     background: url("../img/sprite.png") no-repeat 0 0;
     float: left;
-    margin-left: 90px;
+    /*margin-left: 90px;*/
     position: relative;
 }
 

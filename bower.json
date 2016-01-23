@@ -15,6 +15,8 @@
     "angular-ui-utils": "~0.1.1",
     "angular-ui-router": "~0.2.10",
     "angular-simple-logger": "~0.1.5",
-    "angular-google-maps": "~2.2.1"
+    "angular-google-maps": "~2.2.1",
+    "angular-material": "~1.0.3",
+    "angular-aria": "~1.4.9"
   }
 }
