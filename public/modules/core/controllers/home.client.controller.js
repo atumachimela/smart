@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authentication', 'Menus', '$compile', '$log', 'Translations',
-	function($scope, $modal, Authentication, Menus, $compile, $log, Translations) {
+angular.module('core').controller('HomeController', ['$scope','$http', '$mdToast', '$animate', '$modal', 'Authentication', 'Menus', '$compile', '$log', 'Translations',
+	function($scope, $http, $mdToast, $animate, $modal, Authentication, Menus, $compile, $log, Translations) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 		$scope.isCollapsed = false;
@@ -17,114 +17,72 @@ angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authen
 		$scope.$on('$stateChangeSuccess', function() {
 			$scope.isCollapsed = false;
 		});
-
-
-		$scope.viewFabricator = function(){
-			triggerFabModal();
-		};
-		$scope.viewProcurer = function(){
-			triggerProcureModal();
-		};
-		$scope.viewSafetyMat = function(){
-			triggerSafetyModal();
-		};
-		$scope.viewRental = function(){
-			triggerRentalModal();
-			console.log('rent');
-		};
-
-
-		var triggerFabModal = function(){
-			var contentModal = $modal.open({
-	          templateUrl: '/modules/core/views/faabricationModalContent.client.view.html',
-	          controller: function($scope, $modalInstance) {
-	            $scope.ok = function(data) {
-	              $modalInstance.close();
-	            };
-	            $scope.cancel = function() {
-	              $modalInstance.dismiss('cancel');
-	            };
-	          },
-	          // windowClass: 'modal-fit',
-
-	          size: 'lg',
-	          resolve: {
-	            listData: function() {
-	              return true;
-	            }
-	          }
-	        });
-		};
-		var triggerProcureModal = function(){
-			var contentModal = $modal.open({
-	          templateUrl: 'myModalProcurementContent.html',
-	          controller: function($scope, $modalInstance) {
-	            $scope.ok = function(data) {
-	              $modalInstance.close();
-	            };
-	            $scope.cancel = function() {
-	              $modalInstance.dismiss('cancel');
-	            };
-	          },
-	          // windowClass: 'modal-fit',
-
-	          size: 'lg',
-	          resolve: {
-	            listData: function() {
-	              return true;
-	            }
-	          }
-	        });
-		};
-
-		var triggerSafetyModal = function(){
-			var contentModal = $modal.open({
-	          templateUrl: 'myModalSafetyMaterailsContent.html',
-	          controller: function($scope, $modalInstance) {
-	            $scope.ok = function(data) {
-	              $modalInstance.close();
-	            };
-	            $scope.cancel = function() {
-	              $modalInstance.dismiss('cancel');
-	            };
-	          },
-	          // windowClass: 'modal-fit',
-
-	          size: 'lg',
-	          resolve: {
-	            listData: function() {
-	              return true;
-	            }
-	          }
-	        });
-		};
 		
-		var triggerRentalModal = function(){
-			var contentModal = $modal.open({
-	          templateUrl: 'myModalRentalContent.html',
-	          controller: function($scope, $modalInstance) {
-	            $scope.ok = function(data) {
-	              $modalInstance.close();
-	            };
-	            $scope.cancel = function() {
-	              $modalInstance.dismiss('cancel');
-	            };
-	          },
-	          // windowClass: 'modal-fit',
+		$scope.toggle = false;
+		$scope.toggleMap = false;
+		$scope.toggleClient = false;
+		
 
-	          size: 'lg',
-	          resolve: {
-	            listData: function() {
-	              return true;
-	            }
-	          }
-	        });
-		};
-		// $scope.hidePage = function(){
-		// 	$scope.hideMrk = false;
-		// 	console.log('ree');
-		// };
-			//Run translation if selected language changes
+		// Expose view variables
+ 
+        $scope.toastPosition = {
+            bottom: false,
+            top: true,
+            left: false,
+            right: true
+        };
+        $scope.getToastPosition = function () {
+            return Object.keys($scope.toastPosition)
+                .filter(function (pos) {
+                    return $scope.toastPosition[pos];
+                })
+                .join(' ');
+        };
+ 
+        $scope.sendMail = function () {
+ 
+            var mailData = ({
+                contactName : this.contactName,
+                contactEmail : this.contactEmail,
+                contactMsg : this.contactMsg
+            });
+
+ 			console.log('hello', mailData);
+            // Simple POST request example (passing data) :
+            $http.post('/', mailData).success(function(response) {
+                    // this callback will be called asynchronously
+                    // when the response is available
+                    console.log('response', response);
+ 					// mailData = '';
+                }).error(function() {
+                    // $scope.error = response.message; 
+                });
+        };
+        //3. we decide where the toast will display on the view
+            $scope.toastPosition = {
+                bottom: false,
+                top: true,
+                left: false,
+                right: true
+            };
+ 
+            //2. the method looks for the position that we want to display the toast
+            $scope.getToastPosition = function() {
+                return Object.keys($scope.toastPosition)
+                    .filter(function(pos) { return $scope.toastPosition[pos]; })
+                    .join(' ');
+            };
+ 
+            //1. The send button will call this method
+            this.sendMail = function() {
+                $mdToast.show(
+                    $mdToast.simple()
+                        .content('Thanks for your Message ' + this.contactName + ' You Rock!')
+                        .position($scope.getToastPosition())
+                        .hideDelay(3000)
+                );
+            };
+		//Run translation if selected language changes
 
 		$scope.translate = function(){
 			console.log('testing');
@@ -132,22 +90,5 @@ angular.module('core').controller('HomeController', ['$scope', '$modal', 'Authen
 		};   
 			$scope.selectedLanguage = 'en';
 			$scope.translate();	
-
-		function ExampleController ($scope) {
-			angular.extend($scope, {
-				centerProperty: {
-					lat: 45,
-					lng: -73
-				},
-				zoomProperty: 12,
-				markersProperty: [ {
-						latitude: 45,
-						longitude: -74
-					}],
-				clickedLatitudeProperty: null,	
-				clickedLongitudeProperty: null,
-			});
-		}
-
 	}
 ]);

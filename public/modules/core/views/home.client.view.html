@@ -1,7 +1,7 @@
 <section data-ng-controller="HomeController">
   <div id="wrapper">
-    <div id="landing-page" class="panels">
-      <div class="bg-one">        
+    <div id="landing-page" class="panels bg-one">
+      <div class="container-fluid overlay">        
         <div>  
             <input id="toggle" type="checkbox" ng-click="hideMrk = !hideMrk" ></input>
             <label for="toggle" class="hamburger">
@@ -25,17 +25,13 @@
                   </ul>  
                 </div> 
                 </nav>
-
-              <div> 
-                  <!--  -->
-                </div>
               </div>
             </div>
             <div class="menu-name" ng-hide="hideMrk">MENU</div>
             <div class="menu-name" ng-hide="!hideMrk">CLOSE</div>
         </div>
         <div id="logo-mod">
-          <a href="/"><img src="/modules/core/img/brand/logo.png" alt="PRO SERVICE" class="mod-logo1">
+          <a href="/"><img src="/modules/core/img/brand/logo.png" alt="PRO SERVICES" class="mod-logo1">
           </a>
         </div>   
         <div class="row" id="coy-name" ng-hide="hideMrk">
@@ -51,412 +47,39 @@
             </span>
           </h1>
         </div>
-        <!-- <div class="row">
-          <div class="col-md-10 home-title col-md-offset-1">
-            <span class="col-md-12 home-subtitle has-line-top" id="trade-mark">
-            
-                
-            </span>
-          </div>
-        </div> -->
       </div>       
-    </div>     
-
-
-
-    <div id="about-us" class="about-us-panels">
-      <div class="row">
-          <div class="col-md-10 col-md-offset-2">
-            <br><br><br>
-              <span class="note">
-                <i class="nbr">
-                  #02 {{translation.TWO}}</i> 
-              </span>
-              <br><br><br>
-              <h2 class="title">
-                  {{translation.ABOUT_US}}
-              </h2>
-                  <br><br><br><br><br>
-                <span class="about-text">
-                  <p>{{translation.ABOUT_TEXTA}}
-                    <br>
-                     {{translation.ABOUT_TEXTB}}   
-                 </p>
-                </span>  
-            </div>  
-        </div>
-      </div>
-
-      <div id="our-goal" class="panels">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2 ">
-          <br><br><br>
-            <!-- <span class="note">
-              <i class="nbr">
-                    #03 {{translation.OUR_GOAL}} </i> 
-            </span>
-                <br><br>
-              <h2 class="title">
-                     {{translation.THREE}}   
-              </h2> -->
-                <br>
-              <span class="about-text">
-                    <p>
-                     {{translation.ABOUT_TEXTC}}  
-                     <br>
-                    {{translation.OUR_GOALS}} </p>
-              </span>
-          </div>
-        </div> 
-      </div>
-
-      <div id="training-services" class="panels">
-          <div class="row">
-              <div class="col-md-8 col-md-offset-2">
-              <br><br>
-              <span class="note">
-                  <i class="nbr">
-                      #04 {{translation.FOUR}}</i> 
-              </span>
-              <br><br>
-              <h2 class="title">
-                  {{translation.OUR_SERVICES}}
-              </h2>
-               <br><br><br><br><br>
-
-
-               <ul class="ch-grid">
-                  <li>
-                      <div class="ch-item ch-img-0" ng-click="viewFabricator()">
-                          <div class="ch-info">
-                              <h3>{{translation.FABRICATION}}</h3>
-                              <p>click for more details++</p>
-                          </div>   
-                      </div>
-                  </li>
-                  <li>
-                      <div class="ch-item ch-img-1" ng-click="viewSafetyMat()">
-                          <div class="ch-info">
-                              <h3>{{translation.SAFETY_MATERIAL}}</h3>
-                              <p>click for more details++</p>
-                          </div>
-                      </div>
-                  </li>
-                  <li>
-                      <div class="ch-item ch-img-2" ng-click="viewProcurer()">
-                          <div class="ch-info">
-                              <h3>{{translation.PROCUREMENT}}</h3>
-                              <p>click for more details++</p>
-                          </div>
-                      </div>
-                  </li>
-                  <li>
-                      <div class="ch-item ch-img-3" ng-click="viewRental()">
-                          <div class="ch-info">
-                              <h3>{{translation.RENTALS}}</h3>
-                              <p>click for more details++ </p>
-                          </div>
-                      </div>
-                  </li>
-              </ul>
-              </div>
-            
+    </div>      
+    <div class="contact-us-panels" id="contact-us" ng-show="toggle" ng-animate="'box'">
+        <button ng-click="toggle = !toggle">X</button>
+        <div flex layout="row" layout-align="center center">
+        <div flex-sm="100" flex-gt-sm="90" flex-gt-md="70" flex-gt-lg="50" class="md-whiteframe-z2">
+        <md-content class="md-padding">
+            <div flex-sm="100" flex-gt-sm="80" layout-sm="column">
+                <form name="contactForm" data-ng-submit="sendMail()">
+                    <md-input-container>
+                        <label>Name:</label>
+                        <input ng-model="contactName" required>
+                    </md-input-container>
+                    <md-input-container flex>
+                        <label>Email:</label>
+                        <input type="email" ng-model="contactEmail" required>
+                    </md-input-container>
+ 
+                    <md-input-container>
+                        <label>Message:</label>
+                        <textarea ng-model="contactMsg" columns="1" md-maxlength="150" required></textarea>
+                    </md-input-container>
+ 
+                    <md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1': (contactForm.$dirty && contactForm.$valid) }"
+                    aria-label="Save Project">Send</md-button>
+                </form>
             </div>
-            <script type="text/ng-template" id="myModalSafetyMaterailsContent.html">
-              <div class="modal-header">
-                <div id="mod-header">
-                    <span class="glyphicon glyphicon-remove pull-right" data-ng-click="cancel()" style="margin:10px">
-                    </span>
-                    <ul>
-                        <li>
-                            <div class="heading">
-                                <div id="logo-mod"><a href="/"><img src="/modules/core/img/brand/logo.png" alt="PRO SERVICE" data-pin-nopin="true" class="mod-logo"></a></div>   
-                            </div></li>
-                                </ul>   
-                            </div> </li>
-                    </ul>      
-                </div>
-              </div>
-              <div class="modal-footer" data-ng-controller="HomeController"> 
-                  <div id="mod-footer">
-                    <ul>
-                        <li>
-                            <div id="in-bt-lf">
-                                <div class="padd">
-                                      <div class="in-bt-lf-txt"><p><strong>{{translation.SAFETY_MATERIAL}}</strong></p>
-                                          <table border="0" width="100%" height="547">
-                                              <tbody>
-                                                  <tr>
-                                                      <td style="vertical-align: top;">
-                                                          <p style="text-align: justify;"><strong>Safety Materials/Tools/Equipments/Devices</strong><br> We supply the following: </p>
-                                                          <p style="text-align: left;"><strong>Materials</strong></p>
-                                                          <p style="text-align: justify;">Coveralls</p>
-                                                          <p style="text-align: justify;">Boots</p>
-                                                          <p style="text-align: justify;">Gloves</p>
-                                                          <p style="text-align: justify;">Caps</p>
-                                                          <p style="text-align: justify;">Life JAckets</p>
-                                                          <p style="text-align: justify;">Belts</p>
-                                                      </td>  
-                                                  </tr>
-                                                  <tr>
-                                                      <td style="vertical-align: top;">
-                                                          <p style="text-align: justify;"><strong>Tools</strong><br></p>
-                                                          <p style="text-align: justify;"></p>
-                                                      </td>  
-                                                  </tr>
-                                                  <tr>
-                                                      <td style="vertical-align: top;">
-                                                          <p style="text-align: justify;"><strong>Equipments</strong><br></p>
-                                                          <p style="text-align: justify;"></p>
-                                                      </td>  
-                                                  </tr>
-                                                  <tr>
-                                                      <td style="vertical-align: top;">
-                                                          <p style="text-align: justify;"><strong>Devices</strong><br></p>
-                                                          <p style="text-align: justify;"></p>
-                                                      </td>  
-                                                  </tr>
-                                              </tbody>
-                                          </table>
-                                      </div>
-                                  </div>
-                              </div>
-                          </li>
-                      </ul> 
-                  </div>
-              </div> 
-            </script>
-            <script type="text/ng-template" id="myModalProcurementContent.html">
-              <div class="modal-header">
-                  <div id="mod-header">
-                      <span class="glyphicon glyphicon-remove pull-right" data-ng-click="cancel()" style="margin:10px">
-                      </span>
-                      <ul>
-                          <li>
-                              <div class="heading">
-                                  <div id="logo-mod"><a href="/"><img src="/modules/core/img/brand/logo.png" alt="PRO SERVICE" data-pin-nopin="true" class="mod-logo"></a></div>   
-                              </div></li>
-                                  </ul>   
-                              </div> </li>
-                      </ul>      
-                  </div>
-              </div>
-              <div class="modal-footer" data-ng-controller="HomeController"> 
-                  <div id="mod-footer">
-                      <ul>
-                          <li>
-                              <div id="in-bt-lf">
-                                  <div class="padd">
-                                      
-                                      <div class="in-bt-lf-txt"><p><strong></strong></p>
-                                          <table border="0" width="100%" height="547">
-                                              <tbody>
-                                                  <tr>
-                                                      <td style="vertical-align: top;">
-                                                          <p style="text-align: justify;"><strong>{{translation.PROCUREMENT}}</strong><br> We procure the following </p>
-                                                          <p style="text-align: left;"><strong>Drilling Tools & Equipments</strong>
-                                                      </td>  
-                                                  </tr>
-                                                  <tr>
-                                                      <td style="vertical-align: top;">
-                                                          <p style="text-align: justify;"><strong>Chemicals</strong><br> We procure chemicals of all forms</p>
-                                                      </td>  
-                                                  </tr>
-                                              </tbody>
-                                          </table>
-                                      </div>
-                                  </div>
-                              </div>
-                          </li>
-                      </ul> 
-                  </div>
-              </div>
-            </script>
-            <script type="text/ng-template" id="myModalRentalContent.html">
-                <div class="modal-header">
-                  <div id="mod-header">
-                  
-
-
-                      <span class="glyphicon glyphicon-remove pull-right" data-ng-click="cancel()" style="margin:10px">
-                      </span>
-                      <ul>
-                          <li>
-                              <div class="heading">
-                                  <div id="logo-mod"><a href="/"><img src="/modules/core/img/brand/logo.png" alt="PRO SERVICE" data-pin-nopin="true" class="mod-logo"></a></div>   
-                              </div></li>
-                                  </ul>   
-                              </div> </li>
-                      </ul>      
-                  </div>
-                </div>
-                <div class="modal-footer" > 
-                    <div id="mod-footer">
-                        <ul>
-                            <li>
-                                <div id="in-bt-lf">
-                                    <div class="padd" data-ng-controller="HomeController">
-                                        
-                                        <div class="in-bt-lf-txt"><p><strong></strong></p>
-                                            <table border="0" width="100%" height="547">
-                                                <tbody>
-                                                    <tr>
-                                                        <td style="vertical-align: top;">
-                                                            <p style="text-align: justify;"><strong data-ng-bind="translation.RENTALS">{{translation.RENTALS}}</strong><br> We provide the following rental services</p>
-                                                            <p style="text-align: left;"><strong>Home Apartment Rental</strong></p>
-                                                        </td>  
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="vertical-align: top;">
-                                                            <p style="text-align: left;"><strong>Office Space Rental</strong></p>
-                                                        </td>  
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="vertical-align: top;">
-                                                            <p style="text-align: justify;"><strong>Vehicles Rental</strong></p>
-                                                        </td>  
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul> 
-                    </div>
-                  </div>
-            </script>   
-      </div>
-      <div id="testimonials" class="testimonial-panels">
-        <div class="row">
-          <div class="col-md-10 col-md-offset-2">
-          <br><br>
-              <span class="note">
-                  <i class="nbr">
-                    #05 {{translation.FIVE}}</i> 
-              </span>
-              <br><br><br>
-              <h2 class="title">
-                      {{translation.CLIENTS_PRO}}
-              </h2>
-          </div>
+        </md-content>
+    </div>
         </div>
-        <br><br>
-        <div class="col-md-10 col-md-offset-1">
-          <div class="et_pb_section et_section_regular et_section_transparent">
-            <div class="et_pb_row">
-            <div class="et_pb_column et_pb_column_1_3">
-                  <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;"> -->
-                      <div class="et_pb_testimonial_description">
-                        <div class="logo-wrapper">
-                            <img src="/modules/core/img/brand/kca.jpg" class="client-logo"/>
-                        </div>   
-                      <!-- <strong class="et_pb_testimonial_author">KCA-DEUTAG DRILLING</strong> -->
-                      </div> 
-                  <!-- </div>  -->
-                </div>
-                <div class="et_pb_column et_pb_column_1_3">
-                <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;"> -->
-                  <div class="et_pb_testimonial_description">
-                    <div class="logo-wrapper">
-                      <img src="/modules/core/img/brand/ieg.jpg" class="client-logo"/>
-                    </div>
-                    <!-- <strong class="et_pb_testimonial_author">IEG</strong> --> 
-                  </div> 
-                <!-- </div> -->
-              </div>
-              <div class="et_pb_column et_pb_column_1_3">
-                <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;"> -->
-                  <div class="et_pb_testimonial_description">
-                    <div class="logo-wrapper">
-                      <img src="/modules/core/img/brand/shelfdrilling1.png" class="client-logo"/>
-                    </div>
-                    <!-- <strong class="et_pb_testimonial_author">SHELF DRILLING</strong>  -->
-                  </div> 
-                <!-- </div> -->
-              </div>
-              <div class="et_pb_column et_pb_column_1_3">
-                <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #fff;">   -->
-                    <div class="et_pb_testimonial_description">
-                        <div class="logo-wrapper">
-                          <img src="/modules/core/img/brand/perenco.jpg" class="client-logo" />
-                        </div>
-                        <!-- <strong class="et_pb_testimonial_author">PERENCO OIL AND GAS, GABON</strong> -->
-                    </div>    
-                <!-- </div> -->
-              </div>
-                <div class="et_pb_column et_pb_column_1_3">
-                  <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;"> -->
-                      <div class="et_pb_testimonial_description">
-                          <div class="logo-wrapper">
-                            <img src="/modules/core/img/brand/logo-vanoord.png" class="client-logo"/>
-                          </div>
-                          <!-- <strong class="et_pb_testimonial_author">VAN OORD</strong> -->
-                      </div>
-                  <!-- </div>  -->
-                </div>
-                
-                <div class="et_pb_column et_pb_column_1_3">
-                  <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;"> -->
-                      <div class="et_pb_testimonial_description">
-                          <div class="logo-wrapper">
-                            <img src="/modules/core/img/brand/Weatherford.jpg" class="client-logo"/>
-                          </div>
-                          <!-- <strong class="et_pb_testimonial_author">WEATHERFORD, GABON</strong> -->
-                      </div>
-                  <!-- </div>  -->
-                </div>
-                <div class="et_pb_column et_pb_column_1_3">
-                  <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;"> -->
-                        <div class="et_pb_testimonial_description">
-                            <div class="logo-wrapper">
-                            <img src="/modules/core/img/brand/piontecelli.jpg" class="client-logo"/>
-                          </div>
-                        <!-- <strong class="et_pb_testimonial_author">PONTICELLI GABON</strong>  -->
-                    </div> 
-                <!-- </div> -->
-              </div>
-              <div class="et_pb_column et_pb_column_1_3">
-                <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;"> -->
-                  <div class="et_pb_testimonial_description">
-                    <div class="logo-wrapper">
-                      <img src="/modules/core/img/brand/Foraserve.jpg" class="client-logo"/>
-                    </div>
-                    <!-- <strong class="et_pb_testimonial_author">FORASERV</strong>  -->
-                  </div> 
-                <!-- </div> -->
-              </div>
-              <div class="et_pb_column et_pb_column_1_3">
-                  <!-- <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix"> -->  
-                      <div class="et_pb_testimonial_description">
-                          <div class="logo-wrapper">
-                            <img src="/modules/core/img/brand/EDC1.png" class="client-logo"/>
-                          </div>
-                          <!-- <strong class="et_pb_testimonial_author">EGYPTIAN DRILLING COMPANY</strong> -->
-                      </div>    
-                  <!-- </div> -->
-                </div>
-            </div>
-          </div>  
-        </div>
-      </div>
-      <div class="staff-panels" id="staff">
-        <div class="row">
-            <div class="staff-wrapper">
-                <div class="col-md-5 col-md-offset-1 left">
-                    <p style="text-align: justify;margin-top:200px;font-size:2em;position: absolute;font-weight: bold;color: #000b24;"><strong>PRO-Team</strong><br>"A team of awesome people<br> make up Pro Service"</p>
-                </div>
-                <div class="col-md-5 col-md-offset-1 right">
-                    <p style="text-align: justify;font-size:2em;color:#fff;">They are client-satisfaction oriented<br> Very apt, professional and friendly<br>An awesome people</p>
-                </div>
-            </div>
-        </div>
-          <br><br>
-      </div>
-      <div class="contact-us-panels" id="contact-us">
         <div class="row">
             <div class="contact-wrapper">
-                <div class="col-md-5 col-md-offset-1 left">
+                <div class="col-md-8 col-md-offset-1">
                     <div id="in-bt-lf">
                       <div class="padd"> 
                           <div class="in-bt-lf-txt"><p><strong></strong></p>
@@ -468,9 +91,10 @@
                                             <p style="text-align: left;"><strong>Email:</strong><a href="mailto:sales@proservice.com">sales@proservice.com</a> </p>
                                             <p style="text-align: left;"><strong>Tel:</strong> +241 (0) 1-56-89-06 <br> +241 (0) 07-38-82-58</p>
                                             <p style="text-align: left;"><strong>Mob:</strong>+241 (0) 07-38-82-58 <br> +241 (0) 05-82-50-01 </p>
+                                            <p style="text-align: left;"><strong>Skype:</strong><a href="mailto:sales@proservice.com">sales@proservice.com</a> </p>
                                         </td>
-                                      </tr>
-                                      <tr>
+                                      <!-- </tr> -->
+                                      <!-- <tr> -->
                                         <td style="vertical-align: top;">
                                           <p style="text-align: justify;"><strong>General enquiry</strong><br> <br> Opp. Eglise<br> St Barbe<br>PB 594</p>
                                           <p style="text-align: left;"><strong>Email:</strong><a href="mailto:desk@proservice.com">desk@proservice.com</a></p>
@@ -484,44 +108,148 @@
                       </div>
                     </div>          
                 </div>
-                <div class="col-md-5 col-md-offset-1 right">
-                    <div id="in-bt-lf">
-                      <div class="padd"> 
-                          <div class="in-bt-lf-txt"><p><strong></strong></p>
-                              <table border="0" width="100%" min-height="80%">
-                                <tbody>   
-                                    <tr>
-                                        <td style="vertical-align: top;">
-                                            <p style="text-align: justify;"><strong>Meet us here</strong><br></p>
-                                            <p style="text-align: left;"><strong>Skype:</strong><a href="mailto:sales@proservice.com">sales@proservice.com</a> </p>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td style="vertical-align: top;">
-                                            <p style="text-align: left;"><strong>WhatsApp:</strong><a href="mailto:sales@proservice.com">sales@proservice.com</a> </p>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td style="vertical-align: top;">
-                                            <p style="text-align: left;"><strong>Viber:</strong><a href="mailto:sales@proservice.com">sales@proservice.com</a> </p>
-                                        </td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                          </div>
-                      </div>
-                    </div>          
-                </div>
             </div>
         </div>
-          <br><br>
       </div>
-      <div id="location-wrapper" class="location-panels">
-         <div id="location-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.4927532797024!2d8.781482514322812!3d-0.7319547854780628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a83b771a6f4f7b5%3A0x90f670714d51f67!2s%C3%89glise+Ste+Barbe%2C+Port-Gentil%2C+Gabon!5e0!3m2!1sen!2s!4v1452812455097" width="1500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>     
-        </div>   
+      <div class="location-panels" id="location-wrapper" ng-show="toggleMap" ng-animate="'box'">
+        <button ng-click="toggleMap = !toggleMap">X</button>
+        <div class="container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.4927532797024!2d8.781482514322812!3d-0.7319547854780628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a83b771a6f4f7b5%3A0x90f670714d51f67!2s%C3%89glise+Ste+Barbe%2C+Port-Gentil%2C+Gabon!5e0!3m2!1sen!2s!4v1452812455097" width="100%" height="400px" frameborder="0" style="border:0;" allowfullscreen>
+          </iframe>     
+        </div>
       </div>
-      
+      <div class="clients-panel" id="clients" ng-show="toggleClient" ng-animate="'box'">
+        <button ng-click="toggleClient = !toggleClient">X</button>
+        <div class="col-md-10 col-md-offset-1">
+          <div class="et_pb_section et_section_regular et_section_transparent">
+            <div class="et_pb_row">  
+                <div class="et_pb_column et_pb_column_1_3">
+                  <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">  
+                    <div class="et_pb_testimonial_description">
+                      <div class="logo-wrapper">
+                        <img src="/modules/core/img/brand/noble.jpg" class="client-logo"/>
+                      </div>
+                    </div>    
+                  </div>
+                </div>                       
+                <div class="et_pb_column et_pb_column_1_3">
+                  <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
+                    <div class="et_pb_testimonial_description">
+                      <div class="logo-wrapper">
+                          <img src="/modules/core/img/brand/kca.jpg" class="client-logo"/>
+                      </div>   
+                    <strong class="et_pb_testimonial_author">KCA-DEUTAG DRILLING</strong>
+                    </div> 
+                  </div> 
+                </div>
+                <div class="et_pb_column et_pb_column_1_3">
+                <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
+                      <div class="et_pb_testimonial_description">
+                          <div class="logo-wrapper">
+                          <img src="/modules/core/img/brand/piontecelli.jpg" class="client-logo"/>
+                        </div>
+                      <strong class="et_pb_testimonial_author">PONTICELLI GABON</strong> 
+                  </div> 
+              </div>
+            </div>
+            <div class="et_pb_column et_pb_column_1_3">
+              <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
+                <div class="et_pb_testimonial_description">
+                  <div class="logo-wrapper">
+                    <img src="/modules/core/img/brand/Foraserve.jpg" class="client-logo"/>
+                  </div>
+                  <strong class="et_pb_testimonial_author">FORASERV</strong> 
+                </div> 
+              </div>
+            </div>
+            <div class="et_pb_column et_pb_column_1_3">
+                <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
+                    <div class="et_pb_testimonial_description">
+                        <div class="logo-wrapper">
+                          <img src="/modules/core/img/brand/logo-vanoord.png" class="client-logo"/>
+                        </div>
+                        <strong class="et_pb_testimonial_author">VAN OORD</strong>
+                    </div>
+                </div> 
+              </div>
+              <div class="et_pb_column et_pb_column_1_3">
+                <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">  
+                    <div class="et_pb_testimonial_description">
+                        <div class="logo-wrapper">
+                          <img src="/modules/core/img/brand/perenco.jpg" class="client-logo"/>
+                        </div>
+                        <strong class="et_pb_testimonial_author">PERENCO OIL AND GAS, GABON</strong>
+                    </div>    
+                </div>
+              </div>
+            <div class="et_pb_column et_pb_column_1_3">
+                <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
+                  <div class="et_pb_testimonial_description">
+                    <div class="logo-wrapper">
+                      <img src="/modules/core/img/brand/shelfdrilling1.png" class="client-logo"/>
+                    </div>
+                    <strong class="et_pb_testimonial_author">SHELF DRILLING</strong> 
+                  </div> 
+                </div>
+              </div>
+              
+            
+              <div class="et_pb_column et_pb_column_1_3">
+                <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
+                    <div class="et_pb_testimonial_description">
+                        <div class="logo-wrapper">
+                          <img src="/modules/core/img/brand/Weatherford.jpg" class="client-logo"/>
+                        </div>
+                        <strong class="et_pb_testimonial_author">WEATHERFORD, GABON</strong>
+                    </div>
+                </div> 
+              </div>
+              
+            
+          </div>
+        </div>
+      </div>
+    </div>  
+    <div id="testimonials" class="testimonial-panels">
+        <div class="container">
+              <div>
+               <ul class="chi-grid">
+                  <li>
+                    <div class="chi-item">
+                      <div class="chi-info">
+                            <h3>ABOUT US</h3>      
+                      </div>   
+                    </div> 
+                    <div class="chi-bot"><a  ng-click="openAboutTeam = !openAboutTeam">#who we are</a></div>
+                  </li>
+                  <li>
+                      <div class="chi-item">
+                          <div class="chi-info">
+                              <h3>CONTACT US</h3>
+                          </div>    
+                      </div>
+                      <div class="chi-bot"><a ng-click="toggle = !toggle">say hello!</a></div>
+                  </li>
+                  <li>
+                      <div class="chi-item">
+                          <div class="chi-info">
+                              <h3>CLIENTS</h3>
+                          </div>
+                      </div>
+                      <div class="chi-bot"><a ng-click="toggleClient = !toggleClient">client list</a></div>  
+                  </li>
+                  <li>
+                      <div class="chi-item">
+                          <div class="chi-info">
+                              <h3>LOCATE US</h3>
+                          </div>    
+                      </div>
+                      <div class="chi-bot"><a data-ng-click="toggleMap = !toggleMap">find Us</a></div>
+                  </li>
+                </ul>
+              </div>
+        </div>  
+      </div>
       <div id="footer" class="footer-panels">
           <div class="language-select" id="footer-lang-select">
                 <h4 id="select-title">English / French</h4>
