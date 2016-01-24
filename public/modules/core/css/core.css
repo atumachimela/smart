@@ -474,13 +474,14 @@ body {
     clear: both;
 }
 
-.ch-grid li {
+.ch-grid li,.ch-grid li div{
     width: 200px;
     height: 200px;
     display: inline-block;
     margin: 10px;
     margin-top: 50px !important;
 }
+
 .chi-grid li {
     width: 250px;
     height: 200px;
@@ -490,8 +491,8 @@ body {
 }
 
 .ch-item{
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -532,6 +533,98 @@ body {
 .chi-bot a:hover, .chi-bot a:active, .chi-bot a:visited{
     text-decoration: none;
 }
+
+.gmail-page h2 {
+    text-align: center;
+}
+
+.gmail-page {
+    color: #444 !important;
+    margin-top: 30px;
+    padding-bottom: 100px;
+}
+#subheading{
+  margin: 6% 0;
+}
+#maia-main {
+    -moz-box-shadow: initial;
+    -webkit-box-shadow: initial;
+    box-shadow: initial;
+    font: 400 16px/1.667 "Open Sans",sans-serif;
+    margin-top: 117px;
+    max-width: 1222px;
+}
+div .dii {
+  float: left;
+  display: inline;
+  padding: 20px;
+}
+.maia-cols:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.gmail-feature-set {
+    position: relative;
+}
+.maia-col-6{
+  float: left;
+  margin: 0 1.4880952381% 20px;
+}
+.maia-col-6{
+    width: 47.0238095238%;
+}
+.maia-cols>div>img{
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 20%;
+}
+.gmail-feature-set img {
+    height: 144px;
+    width: 144px;
+}
+.gmail-feature-set img, .gmail-feature-set div {
+    float: left;
+}
+.maia-cols img {
+    max-width: 100%;
+}
+.storage-folder-about {
+    font-size: 24px;
+    left: 65px;
+    position: absolute;
+    top: 95px;
+}
+.storage-folder-text {
+    font-size: 14px;
+    margin-left: 3px;
+    padding-right: 3px;
+}
+h4+p{
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .logo-wrapper{
     padding-top: 10px;
     min-width: 100%;
@@ -726,7 +819,14 @@ body {
     z-index: 1000;
     overflow: hidden;
 }
-
+.training-panels{
+  position: relative;
+    width: 100%;
+    /*min-height: 900px;*/
+    min-height: 1000px !important;
+    z-index: 1000;
+    overflow: hidden;
+}
 .staff-panels{
     position: relative;
     width: 100%;
@@ -752,21 +852,39 @@ body {
     position: relative;
     width: 100%;
     min-height: 60%;
-    height: 80%;
+    height: 100%;
     z-index: 1000;
     overflow: hidden;
-    /*background-color: #fff !important;*/
 }
 #about-us{ 
     color: #fff;
-    /*margin-top: 60%;*/
+    margin-top: 60%;
     background-color: #f0f8ff!important;  
-    min-height: 60%;
+    min-height: 100%;
     height:60%;
-    /*background: url('/modules/core/img/brand/lloyds.jpg') no-repeat;  */
-    /*background-size: cover;*/
+    background-color: #967;
 }
-
+#about-us-wrapper{
+  margin-top: 15%;
+}
+#axis:hover .move-down {
+    transform: translate(0,350px);
+    -webkit-transform: translate(0,350px);
+    -o-transform: translate(0,350px); 
+    -moz-transform: translate(0,350px);
+}
+.about-content{
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  border: 2px solid #001;
+}
+#about-us .about-content{
+  float: left;
+  display: inline;
+  margin: 20px;
+  text-align: center; 
+}
 .link-panels{
     position: fixed;
     height: 40% !important;
@@ -793,7 +911,7 @@ body {
     z-index: 1000;
 }
 #landing-page{
-    position: relative;
+    position: fixed;
     top:0;
     width: 100%;
     z-index: -99;
@@ -815,10 +933,11 @@ a
     background-color: #fff;  
 }
 #training-services{
-    /*background: #fff9f5 !important;*/
+    background: #fff!important;
     color: #fff;  
-    background: url('/modules/core/img/brand/nature.jpg') no-repeat;  
-    background-size: cover;   
+    /*background: url('/modules/core/img/brand/nature.jpg') no-repeat;  */
+    background-size: cover;  
+    position: relative; 
 }
 #staff{
     /*background-color: #ebefe8 ; */
@@ -1073,7 +1192,7 @@ ul .app-title{
     font-family: 'BenchNine', sans-serif;
     color:#990000;
     text-transform: uppercase;
-    letter-spacing: 0.6em;
+    letter-spacing: 0.4em;
 }
 #coy-name .home-title ul li .nuggets{
     float:left;
@@ -1639,7 +1758,30 @@ strong {
     margin: 0 0px 0 0;
     }
 }
+@media screen, projection{
+.maia-cols {
+    margin: 0 -1.53374233129%;
+    width: 103.067484663%;
+  }
+}
+@media screen, projection{
+.maia-col-6 {
+    width: 47.0238095238%;
+  }
+}
+@media screen, projection{
+.maia-col-1, .maia-col-2, .maia-col-3, .maia-col-4, .maia-col-5, .maia-col-6, .maia-col-7, .maia-col-8, .maia-col-9, .maia-col-10, .maia-col-11, .maia-col-12 {
+    float: left;
+    margin: 0 1.4880952381% 20px;
+  }
+}
 
+@media screen, projection{
+  #maia-main, .maia-aux {
+    margin: auto;
+    max-width: 978px;
+  }
+}
 @media (min-width: 1200px){
 
   .location-wrapper .inner {

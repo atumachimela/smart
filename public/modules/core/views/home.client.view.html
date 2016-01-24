@@ -3,13 +3,13 @@
     <div id="landing-page" class="panels bg-one">
       <div class="container-fluid overlay">        
         <div>  
-            <input id="toggle" type="checkbox" ng-click="hideMrk = !hideMrk" ></input>
+            <!-- <input id="toggle" type="checkbox" ng-click="hideMrk = !hideMrk" ></input>
             <label for="toggle" class="hamburger">
               <div class="top-bun"></div>
               <div class="meat"></div>
               <div class="bottom-bun"></div>
-            </label>
-            <div class="nav">
+            </label> -->
+            <!-- <div class="nav">
               <div class="nav-wrapper">
                 <nav>
                   <div id="link-mod">      
@@ -28,7 +28,7 @@
               </div>
             </div>
             <div class="menu-name" ng-hide="hideMrk">MENU</div>
-            <div class="menu-name" ng-hide="!hideMrk">CLOSE</div>
+            <div class="menu-name" ng-hide="!hideMrk">CLOSE</div> -->
         </div>
         <div id="logo-mod">
           <a href="/"><img src="/modules/core/img/brand/logo.png" alt="PRO SERVICES" class="mod-logo1">
@@ -48,7 +48,137 @@
           </h1>
         </div>
       </div>       
-    </div>      
+    </div>   
+    <div  class="about-us-panels" id="about-us">
+        <div class="col-md-8 col-md-offset-2" id="about-us-wrapper">
+          <div id="axis" class="four">
+            <div class="about-content object coin move-down"></div>
+          </div>
+            <div class="about-content"></div>
+            <div class="about-content"></div>
+        </div>
+    </div>
+      <div class="training-panels" id="training-services">
+        <div class="gmail-page">
+          <div class="maia-aux">
+            <h2 id="subheading">
+              Our Services
+            </h2>
+            <div class="maia-cols">
+              <div class="maia-col-6 gmail-feature-set">
+              <div>
+                <div class="dii">
+                  <img alt="" src="/modules/core/img/brand/LinkedInIcon.png">
+                    <h4>
+                      Experience Gmail on any device
+                    </h4>
+                    <p>
+                      The best of Gmail is available wherever you are, from any device.
+                      <a data-g-action="Learn more: Gmail for mobile" data-g-event="Carousel"
+                      data-g-label="about.html" href="mobile.html">More about Gmail for mobile</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="maia-col-6 gmail-feature-set">
+                <div>
+                <div class="dii">
+                  <img alt="" src="/modules/core/img/brand/LinkedInIcon.png">
+                  
+                    <h4>
+                      Experience Gmail on any device
+                    </h4>
+                    <p>
+                      The best of Gmail is available wherever you are, from any device.
+                      <a data-g-action="Learn more: Gmail for mobile" data-g-event="Carousel"
+                      data-g-label="about.html" href="mobile.html">More about Gmail for mobile</a>
+                    </p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="maia-cols">
+              <div class="maia-col-6 gmail-feature-set">
+                <div>
+                <div class="dii">
+                  <img alt="" src="/modules/core/img/brand/LinkedInIcon.png">
+                  
+                    <h4>
+                      Experience Gmail on any device
+                    </h4>
+                    <p>
+                      The best of Gmail is available wherever you are, from any device.
+                      <a data-g-action="Learn more: Gmail for mobile" data-g-event="Carousel"
+                      data-g-label="about.html" href="mobile.html">More about Gmail for mobile</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="maia-col-6 gmail-feature-set">
+                <div>
+                <div class="dii">
+                  <img alt="" src="/modules/core/img/brand/LinkedInIcon.png">
+                  
+                    <h4>
+                      Experience Gmail on any device
+                    </h4>
+                    <p>
+                      The best of Gmail is available wherever you are, from any device.
+                      <a data-g-action="Learn more: Gmail for mobile" data-g-event="Carousel"
+                      data-g-label="about.html" href="mobile.html">More about Gmail for mobile</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="maia-cols">
+              <div class="maia-col-6 gmail-feature-set">
+                <div>
+                <div class="dii">
+                  <img alt="" src="/modules/core/img/brand/LinkedInIcon.png">
+                  
+                    <h4>
+                      Experience Gmail on any device
+                    </h4>
+                    <p>
+                      The best of Gmail is available wherever you are, from any device.
+                      <a data-g-action="Learn more: Gmail for mobile" data-g-event="Carousel"
+                      data-g-label="about.html" href="mobile.html">More about Gmail for mobile</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="maia-col-6 gmail-feature-set">
+                <div>
+                <div class="dii">
+                  <img alt="" src="/modules/core/img/brand/LinkedInIcon.png">
+                  
+                    <h4>
+                      Experience Gmail on any device
+                    </h4>
+                    <p>
+                      The best of Gmail is available wherever you are, from any device.
+                      <a data-g-action="Learn more: Gmail for mobile" data-g-event="Carousel"
+                      data-g-label="about.html" href="mobile.html">More about Gmail for mobile</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+
+              
+
+
+
+
+
+
     <div class="contact-us-panels" id="contact-us" ng-show="toggle" ng-animate="'box'">
         <button ng-click="toggle = !toggle">X</button>
         <div flex layout="row" layout-align="center center">
@@ -118,8 +248,7 @@
           </iframe>     
         </div>
       </div>
-      <div class="clients-panel" id="clients" ng-show="toggleClient" ng-animate="'box'">
-        <button ng-click="toggleClient = !toggleClient">X</button>
+      <div class="clients-panel" id="clients" ng-animate="'box'">
         <div class="col-md-10 col-md-offset-1">
           <div class="et_pb_section et_section_regular et_section_transparent">
             <div class="et_pb_row">  
@@ -192,8 +321,6 @@
                   </div> 
                 </div>
               </div>
-              
-            
               <div class="et_pb_column et_pb_column_1_3">
                 <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
                     <div class="et_pb_testimonial_description">
@@ -204,8 +331,6 @@
                     </div>
                 </div> 
               </div>
-              
-            
           </div>
         </div>
       </div>
