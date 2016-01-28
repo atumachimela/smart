@@ -377,12 +377,6 @@ Animations
     margin-left: 0 !important;
 }
 
-body {
-    font-family: 'proxima-nova',sans-serif;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-}
-
 .test{
     width:100%;
     height:100%;
@@ -513,27 +507,36 @@ body {
         0 1px 2px rgba(0,0,0,0.1);
     transition: all 0.4s ease-in-out;
 }
-.chi-bot{
-    width: 45% !important;
-    height: 20% !important;
+
+#locate-title p{
+  margin-top: 20%;
+  text-align: center;
+  color: #fff;
+  font-family: "HelveticaNeueW02-ThinEx 739247";
+  /*padding: 10px;*/
+  font-size: 1.6em;
+}
+
+.chi-bot {
     background-color: #fff !important;
     color: #5F9EA0;
-    border: 3px solid #5CB85C;
+    border: 0 solid #5CB85C;
     text-align: center;
     margin: 0 auto;
-    margin-top: 15px;
-    font-weight: bold;
-    font-size: 0.5em;
-
+    margin-top: 10%;
+    cursor: pointer;
+    width:155px !important;
+    height: 45px !important;
 }
-.chi-bot a{
-    line-height: 2.4em;
-    font-size: 1.4em !important;
+#locate-title .chi-bot a{
+    line-height: 1.4em;
+    font-size: 1.3em !important;
+    font-weight: bold;
+    cursor: pointer;
 }
 .chi-bot a:hover, .chi-bot a:active, .chi-bot a:visited{
     text-decoration: none;
 }
-
 .gmail-page h2 {
     text-align: center;
 }
@@ -559,6 +562,14 @@ div .dii {
   display: inline;
   padding: 20px;
 }
+.gmail-feature-set img{
+  /*-moz-box-sizing: border-box;
+  box-sizing: border-box;*/
+  border-radius: 50%;
+  border: 2px solid #fff;
+  height: 100px;
+  width: 144px;
+}
 .maia-cols:after {
     clear: both;
     content: " ";
@@ -575,15 +586,6 @@ div .dii {
 }
 .maia-col-6{
     width: 47.0238095238%;
-}
-.maia-cols>div>img{
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  max-width: 20%;
-}
-.gmail-feature-set img {
-    height: 144px;
-    width: 144px;
 }
 .gmail-feature-set img, .gmail-feature-set div {
     float: left;
@@ -642,7 +644,6 @@ h4+p{
     /*opacity: 0.4;*/
 }
 
-
 .bg-one {
   background: url('/modules/core/img/brand/tahitianpearls.jpg') no-repeat;
   background-size: cover!important;
@@ -677,18 +678,22 @@ h4+p{
 .modal-fit .modal-body {
   overflow: auto;
 }
-
+#logo-mod{
+  position: fixed;
+}
 #logo-mod .mod-logo{
-     width: 10%;
-    height: 10%;
+     width: 100%;
+    height: 100%;
     overflow: visible;
     display: block;
 }
 #logo-mod .mod-logo1{
-     width: 20%;
-    height: 20%;
+     width: 45%;
+    height: 30%;
     overflow: visible;
     display: block;
+    margin: 20px;
+
 }
 #logo .menu-logo{
     /*position: absolute;*/
@@ -819,11 +824,198 @@ h4+p{
     z-index: 1000;
     overflow: hidden;
 }
-.training-panels{
+
+
+
+.carousel{
+  width:100%;
+}
+.panes{
+  width:500%;
+}
+
+/*------------------------------------*\
+    $CAROUSEL
+\*------------------------------------*/
+.carousel{
+    overflow:hidden;
+    width:100%;
+}
+.panes{
+    list-style:none;
+    position:relative;
+    width:500%; /* Number of panes * 100% */
+    overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
+        
+    -moz-animation:carousel 30s infinite;
+    -webkit-animation:carousel 30s infinite;
+    animation:carousel 30s infinite;
+}
+.panes > li{
+    position:relative;
+    float:left;
+    width:20%; /* 100 / number of panes */
+}
+.carousel img{
+    display:block;
+    width:100%;
+    max-width:100%;
+}
+.carousel h2{
+    font-size:1em;
+    padding:0.5em;
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    left:10px;
+    text-align:right;
+    color:#fff;
+    background-color:rgba(0,0,0,0.75);
+}
+
+@keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
+
+
+
+
+/*slideshow styles*/
+
+.slideshow {
+  margin-top: 160px;
+  width: 625px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 4px solid #fff;
+}
+
+.slideshow-container {
+  width: 2500px;
+  font-size: 0;
+  transition: 0s ease;
+  height: 225px;
+}
+
+.slideshow-container:hover {
+  animation-play-state: paused;
+}
+
+.text-container {
+  width: 625px;
+  height: auto;
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  padding: 120px;
+}
+
+.text-container {
+  height: 225px;
+  position: relative;
+}
+
+
+.text-container p{
+  /*position: relative;*/
+  padding: 15px;
+}
+
+.slide {
+  animation: slide 7s ease infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  
+  12.5% {
+    transform: translateX(0%);
+  }
+  
+  25% {
+    transform: translateX(-25%);
+  }
+  
+  37.5% {
+    transform: translateX(-25%);
+  }
+  
+  50% {
+    transform: translateX(-50%);
+  }
+  
+  62.5% {
+    transform: translateX(-50%);
+  }
+  
+  75% {
+    transform: translateX(-75%);
+  }
+  
+  87.5% {
+    transform: translateX(-75%);
+  }
+  
+  99% {
+    transform: translateX(-75%);
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#video-background {
+/*  making the video fullscreen  */
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+
+article {
+/*  just a fancy border  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*border: 10px solid rgba(255, 255, 255, 0.5);*/
+  margin: 10px;
+}
+#services{
+  position: relative;
+  height: 100%;
+  background-color:#983e6b !important;
+  /*background: url('/modules/core/img/brand/tahitianpearls.jpg') no-repeat;*/
+  background-size: cover;
+}
+.services-panels{
   position: relative;
     width: 100%;
-    /*min-height: 900px;*/
-    min-height: 1000px !important;
+    height: 100%;
     z-index: 1000;
     overflow: hidden;
 }
@@ -842,17 +1034,14 @@ h4+p{
     position: relative;
     background-color: #fff;  
     /*background-color: rgb(229, 227, 223);  */
-    min-height: 50%;
-    height:50%;
-    /*background: url('/modules/core/client/img/brand/team.jpg') no-repeat;  */
+    min-height: 100%;
     background-size: cover ;
     /*opacity: 0.2;*/
 }
 .about-us-panels{
     position: relative;
     width: 100%;
-    min-height: 60%;
-    height: 100%;
+    min-height: 100%;
     z-index: 1000;
     overflow: hidden;
 }
@@ -861,7 +1050,6 @@ h4+p{
     margin-top: 60%;
     background-color: #f0f8ff!important;  
     min-height: 100%;
-    height:60%;
     background-color: #967;
 }
 #about-us-wrapper{
@@ -877,13 +1065,34 @@ h4+p{
   height: 250px;
   width: 250px;
   border-radius: 50%;
-  border: 2px solid #001;
+  border: 2px solid #999;
+  margin-top:20px;
+  background-color: #19020e;
 }
-#about-us .about-content{
+.about-content h4{
+  margin-top: 40px;
+  font-weight:bold;
+  font-family: 'Poiret One', 'Merriweather' !important;
+}
+.about-content p{
+    position: relative;
+    display: block;
+    font-family: 'Poiret One', 'proxima-nova';
+    font-size: 1.3em;
+    line-height: 1.8em;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+#about-us .about-content, #contact-us .contact-content{
   float: left;
   display: inline;
   margin: 20px;
   text-align: center; 
+}
+#contact-us .contact-content p{
+  color: #fff !important;
 }
 .link-panels{
     position: fixed;
@@ -906,7 +1115,7 @@ h4+p{
   position: fixed;
     bottom: 0 !important;
     height: 10% !important;
-    min-height: 10% !important;
+    min-height: 13% !important;
     width: 100%;
     z-index: 1000;
 }
@@ -931,13 +1140,6 @@ h4+p{
 a
 #time-table {
     background-color: #fff;  
-}
-#training-services{
-    background: #fff!important;
-    color: #fff;  
-    /*background: url('/modules/core/img/brand/nature.jpg') no-repeat;  */
-    background-size: cover;  
-    position: relative; 
 }
 #staff{
     /*background-color: #ebefe8 ; */
@@ -1098,17 +1300,15 @@ a
     /*opacity: 0.9;*/
 }
 #clients{
-   background-color: #fff;
-    position: relative;
-    min-height: 100%;
-    height: 100%;
-    color: #fff;
+  background-color:#fff;
+  position: relative;
+  min-height: 30%;
+  color: #fff;
 }
-.clients-panels{
+.clients-panelos{
     position: relative;
-    width: 100%;
-    min-height:100%;
-    height: 100%;
+    min-width: 100%;
+    min-height:30%;
     z-index: 1000;
     overflow: hidden;
 }
@@ -1121,41 +1321,35 @@ a
     overflow: hidden;
 }
 #contact-us{
-    /*background-color:#b2c3e9; */
-    background-color: #fff;
-    height: 100%;
-    min-height:100%; 
+    background-color:#ca5151;
+    height: 70%;
+    min-height:70%; 
     position: relative;
 }
 .contact-us-panels{
-  height: 100% !important;
-  min-height: 100% !important;
+  height: 70% !important;
+  min-height: 70% !important;
   position: relative;
 }
 .location-panels{
     position: relative;
-    width: 100%;
+    min-width: 100%;
     min-height: 100%;
-    height: 100%;
     z-index: 1000;
     overflow: visible;
 }
 #location-wrapper{
-    /*background-color:#e7ecee;*/
-    background-color:#f5f5f5;  
+    background:url('/modules/core/img/brand/.jpg') no-repeat;
+    background-size: cover;
+    background-color:#388;  
     overflow: visible;
-    min-height:500px;
-    height: 500px;
-    width: 500px;
+    min-height:100%;
 }
 #location-wrapper, #contact-us, #trainigs, #time-table, #about-us, #training-services{
     min-width: 100%;
 }
-#time-table, #training-services{
-  position: relative;
-  min-height: 700px;
-  height:700px;
-}
+
+
 #time-table{
   height: 1000px !important;
 }
@@ -1223,7 +1417,8 @@ ul .app-title{
   text-align: center;
   /*margin: 0 auto;*/
   /*padding-right: 150px;*/
-  top: 60px;
+  top: 160px;
+  position: fixed;
 }
 #logo {
   margin-top: 4em;
@@ -1283,13 +1478,13 @@ a {
     padding-top: 80px;
 }
 
-.about-text p , 
+.about-text p,
 .about-text ul li{
     position: relative;
     display: block;
     font-family: 'proxima-nova';
     font-weight:bolder;
-    font-size: 1em;
+    font-size: 0.8em;
     line-height: 1.5em;
     color: #797979;
     text-align: justify;
@@ -1373,15 +1568,13 @@ a {
 .note {
     font-family: 'proxima-nova';
     font-weight: 600;
-    font-size: 0.8em;
-    line-height: 2.7em;
+    font-size: 1em;
+    line-height: 1.8em;
     color: #bbbbbb;
-    color:#444;
     text-transform: capitalize;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 .nbr {
-    position: absolute;
     font-family: 'Merriweather';
     font-size: 1.4em;
     line-height: 1.3em;
@@ -1424,12 +1617,12 @@ a {
     margin-top: 25px;
 }
 #location-wrapper .full-map {
-    width: 650px !important;
-    height: 800px !important;
+    min-width: 1000px !important;
+    min-height: 500px !important;
     position: relative;
-    background: #f5f5f5 !important;
+    /*background: #f5f5f5 !important;*/
     overflow: hidden;
-    margin-top: 350px;
+    margin-top: 30px;
 }
 .location-subtitle{
   line-height: 1.2em !important;
@@ -1480,7 +1673,7 @@ a {
     position: relative;
 }
 .et_pb_column_1_3 {
-    width: 33%;
+    width: 23%;
     padding: 5px;
 }
 .et_pb_column_1_3:hover {
@@ -1585,18 +1778,18 @@ p:last-of-type {
 }
 #footer {
     padding-bottom:10px;
-    background: #28282e;
+    background: #3f0723;
     position: fixed;
     bottom:0;
     height: 10% !important;
 }
 
-#footer .footer-logo {
+/*#footer .footer-logo {
     width: 143px;
     height: 50px;
     background: url("../img/sprite.png") no-repeat 0 0;
     float: left;
-    /*margin-left: 90px;*/
+    /*margin-left: 90px;
     position: relative;
 }
 
@@ -1608,9 +1801,7 @@ p:last-of-type {
 }*/
 
 
-#oris-serve-wrapper{
-    min-width: 100%;
-}
+
 #link ul li h4, #mod-footer ul .arcora {
     
     float:left;
@@ -1651,23 +1842,40 @@ p:last-of-type {
     color: #fff;
     text-decoration: none;
 }
-.form-control{
+.language-select .form-control{
   width: 15%;
   font-weight: bold;
   font-size: 1em;
+  outline:none;
+  border: none;
+  overflow: hidden;
 }
  .language-select #select-title{
     color: #fff;
     font-weight: bolder;
-    line-height: 2.6em;
+    line-height: 2.8em;
  }
-#footer #footer-img li a {
+
+#footer #footer-img li a{
     float:right;
     color:#fff;
     text-align:right;
     margin-left:5px;
     padding:10px;
-    padding:0 20px 50px 20px;
+    padding:10 10px 10px 10px;
+}
+#footer #footer-nav li a{
+    float:left;
+    color:#fff;
+    text-align:center;
+    margin-left:70px;
+    padding:15px 5px 5px 10px;
+}
+#clients #clients-nav li img{
+    float:left;
+    padding:5px;
+    padding-left: 10px;
+    width: 10%;
 }
 #footer #footer-lang-select h4,
 #footer #footer-lang-select select,#footer-lang-select select option{
@@ -1675,15 +1883,65 @@ p:last-of-type {
     text-align:right;
     margin-left:35px;
     padding:0; 
-    margin-top: 23px;
+    margin-top: 35px;
+    border: none;
+}
+#footer #footer-lang-select select:focus, #footer-lang-select select option:focus{
+  outline: none;
+  border:none;
 }
 #footer #footer-img li:hover{
     opacity: 0.3;
 }
 #footer ul li a img{
-    width: 55px;
-    height: 55px;
+    width: 35px;
+    height: 35px;
 }
+#footer #footer-nav li a img{
+  width: 35px !important;
+  height: 35px !important;
+}
+
+.hover {
+    position:relative;
+    /*top:50px;
+    left:50px;*/
+}
+
+.tooltip, .tooltip1, .tooltip2, .tooltip3, .tooltip4 { /* hide and position tooltip */
+  top: -10px;
+  /*background-color:#fee;*/
+  color:#bbb;
+  border-radius:5px;
+  opacity:0;
+  position:absolute;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  left:480px;
+  font-weight: bolder;
+  font-size: 0.8em;
+}
+.tooltip1{
+  left:580px;
+} 
+.tooltip2{
+  left:690px
+} 
+.tooltip3{
+  left:800px
+} 
+.tooltip4{
+  left:920px
+}
+.hover:hover .tooltip, .hover:hover .tooltip1, .hover:hover .tooltip2, .hover:hover .tooltip3, .hover:hover .tooltip4 { /* display tooltip on hover */
+    opacity:1;
+}
+
+
+
 ul{
     display: block;
     list-style-type: disc;

@@ -4,7 +4,7 @@
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'e-amity';
-	var applicationModuleVendorDependencies = ['ngAria', 'ngResource', 'ngCookies', 'ngAnimate', 'ngMaterial', 'ngSanitize', 'ui.router', 'ui.bootstrap', 'ui.utils'];
+	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies', 'ngAnimate', 'ngSanitize', 'ui.router', 'ui.bootstrap', 'ui.utils'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {
