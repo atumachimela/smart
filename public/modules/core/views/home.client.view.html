@@ -1,263 +1,176 @@
 <section data-ng-controller="HomeController">
   <div id="wrapper">
-    <div id="landing-page" class="panels bg-one">
-      <div class="container-fluid overlay">        
-        <div>  
-            <input id="toggle" type="checkbox" ng-click="hideMrk = !hideMrk" ></input>
-            <label for="toggle" class="hamburger">
-              <div class="top-bun"></div>
-              <div class="meat"></div>
-              <div class="bottom-bun"></div>
-            </label>
-            <div class="nav">
-              <div class="nav-wrapper">
-                <nav>
-                  <div id="link-mod">      
-                    <ul>
-                      <li>
-                      </li>   
-                      <li><a href="#!" class="arcor">Home</a></li>
-                      <li><a href="/" class="arcor">About Us</a></li>
-                      <li><a href="/about-cis/" class="arcor">Services</a></li>
-                      <li><a href="/about-cis/welcome/" class="arcor">Mission</a></li>
-                      <li><a href="/about-cis/history/" class="arcor">Clients</a></li>
-                      <li><a href="/about-cis/testimonials/" class="arcor">Locate-Us</a></li>
-                  </ul>  
-                </div> 
-                </nav>
-              </div>
+    <!-- <div id="landing-page" class="panels bg-one"> -->
+    <div class="container-fluid overlay">  
+      <div id="logo-mod">
+        <a href="/"><img src="/modules/core/img/brand/prologo.png" alt="PRO SERVICES" class="mod-logo1">
+        </a>
+      </div>
+      <div class="row" id="coy-name">
+        <h1 class="col-md-10 home-title col-md-offset-1">
+          <span>
+            <ul>
+              <li class="app-title">Reliable</li>
+              <li><p class="nuggets">professionalism</li>
+              <li><p class="nuggets" id="nuggets-2">in</li>
+              <li><p class="nuggets">quality Service &</p></li>
+              <li><p class="nuggets">client-satisfaction</p></li>
+            </ul>
+          </span>
+        </h1>
+      </div>
+    <!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->
+    <video autoplay loop id="video-background" muted>
+      <source src="http://static.videezy.com/system/resources/previews/000/004/053/original/Beatiful_rocks_in_the_beach.mp4" type="video/mp4">
+    </video>
+      
+<!--  Video by Phil Fried (http://vimeo.com/philfried)  -->       
+    </div>   
+    <div  class="about-us-panels" id="about-us">
+      <div class="col-md-8 col-md-offset-2" id="about-us-wrapper">
+          <div id="axis" class="four">
+            <div class="about-content">
+                <h4>Who</h4>
+                <p>{{translation.ABOUT_TEXTA}}
+               </p> 
+           </div>
+            <div class="about-content">
+                <h4>We</h4>
+                <p>
+                  {{translation.ABOUT_TEXTC}}
+                </p>
             </div>
-            <div class="menu-name" ng-hide="hideMrk">MENU</div>
-            <div class="menu-name" ng-hide="!hideMrk">CLOSE</div>
-        </div>
-        <div id="logo-mod">
-          <a href="/"><img src="/modules/core/img/brand/logo.png" alt="PRO SERVICES" class="mod-logo1">
-          </a>
-        </div>   
-        <div class="row" id="coy-name" ng-hide="hideMrk">
-          <h1 class="col-md-10 home-title col-md-offset-1">
-            <span>
-                <ul>
-                  <li class="app-title">Reliable</li>
-                  <li><p class="nuggets">professionalism</li>
-                  <li><p class="nuggets" id="nuggets-2">in</li>
-                  <li><p class="nuggets">quality Service &</p></li>
-                  <li><p class="nuggets">client-satisfaction</p></li>
-                </ul>
-            </span>
-          </h1>
-        </div>
-      </div>       
-    </div>      
-    <div class="contact-us-panels" id="contact-us" ng-show="toggle" ng-animate="'box'">
-        <button ng-click="toggle = !toggle">X</button>
-        <div flex layout="row" layout-align="center center">
-        <div flex-sm="100" flex-gt-sm="90" flex-gt-md="70" flex-gt-lg="50" class="md-whiteframe-z2">
-        <md-content class="md-padding">
-            <div flex-sm="100" flex-gt-sm="80" layout-sm="column">
-                <form name="contactForm" data-ng-submit="sendMail()">
-                    <md-input-container>
-                        <label>Name:</label>
-                        <input ng-model="contactName" required>
-                    </md-input-container>
-                    <md-input-container flex>
-                        <label>Email:</label>
-                        <input type="email" ng-model="contactEmail" required>
-                    </md-input-container>
- 
-                    <md-input-container>
-                        <label>Message:</label>
-                        <textarea ng-model="contactMsg" columns="1" md-maxlength="150" required></textarea>
-                    </md-input-container>
- 
-                    <md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1': (contactForm.$dirty && contactForm.$valid) }"
-                    aria-label="Save Project">Send</md-button>
-                </form>
+            <div class="about-content">
+              <h4>Are</h4>
+              <p>
+                {{translation.ABOUT_TEXTB}}
+              </p>
             </div>
-        </md-content>
+        </div>
+     </div>
     </div>
-        </div>
-        <div class="row">
-            <div class="contact-wrapper">
-                <div class="col-md-8 col-md-offset-1">
-                    <div id="in-bt-lf">
-                      <div class="padd"> 
-                          <div class="in-bt-lf-txt"><p><strong></strong></p>
-                              <table border="0" width="100%" min-height="80% ;">
-                                <tbody>   
-                                    <tr>
-                                        <td style="vertical-align: top;">
-                                            <p style="text-align: justify;"><strong>Sales enquiry</strong><br></p>
-                                            <p style="text-align: left;"><strong>Email:</strong><a href="mailto:sales@proservice.com">sales@proservice.com</a> </p>
-                                            <p style="text-align: left;"><strong>Tel:</strong> +241 (0) 1-56-89-06 <br> +241 (0) 07-38-82-58</p>
-                                            <p style="text-align: left;"><strong>Mob:</strong>+241 (0) 07-38-82-58 <br> +241 (0) 05-82-50-01 </p>
-                                            <p style="text-align: left;"><strong>Skype:</strong><a href="mailto:sales@proservice.com">sales@proservice.com</a> </p>
-                                        </td>
-                                      <!-- </tr> -->
-                                      <!-- <tr> -->
-                                        <td style="vertical-align: top;">
-                                          <p style="text-align: justify;"><strong>General enquiry</strong><br> <br> Opp. Eglise<br> St Barbe<br>PB 594</p>
-                                          <p style="text-align: left;"><strong>Email:</strong><a href="mailto:desk@proservice.com">desk@proservice.com</a></p>
-                                          <p style="text-align: justify;"><strong>Tel:</strong> +241 (0) 1-56-89-0 </p>
-                                          <p style="text-align: justify;"><strong>Mob:</strong> +241 (0) 5-82-50-01</p>
-                                        </td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                          </div>
-                      </div>
-                    </div>          
-                </div>
-            </div>
-        </div>
-      </div>
-      <div class="location-panels" id="location-wrapper" ng-show="toggleMap" ng-animate="'box'">
-        <button ng-click="toggleMap = !toggleMap">X</button>
-        <div class="container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.4927532797024!2d8.781482514322812!3d-0.7319547854780628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a83b771a6f4f7b5%3A0x90f670714d51f67!2s%C3%89glise+Ste+Barbe%2C+Port-Gentil%2C+Gabon!5e0!3m2!1sen!2s!4v1452812455097" width="100%" height="400px" frameborder="0" style="border:0;" allowfullscreen>
-          </iframe>     
-        </div>
-      </div>
-      <div class="clients-panel" id="clients" ng-show="toggleClient" ng-animate="'box'">
-        <button ng-click="toggleClient = !toggleClient">X</button>
-        <div class="col-md-10 col-md-offset-1">
-          <div class="et_pb_section et_section_regular et_section_transparent">
-            <div class="et_pb_row">  
-                <div class="et_pb_column et_pb_column_1_3">
-                  <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">  
-                    <div class="et_pb_testimonial_description">
-                      <div class="logo-wrapper">
-                        <img src="/modules/core/img/brand/noble.jpg" class="client-logo"/>
-                      </div>
-                    </div>    
-                  </div>
-                </div>                       
-                <div class="et_pb_column et_pb_column_1_3">
-                  <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
-                    <div class="et_pb_testimonial_description">
-                      <div class="logo-wrapper">
-                          <img src="/modules/core/img/brand/kca.jpg" class="client-logo"/>
-                      </div>   
-                    <strong class="et_pb_testimonial_author">KCA-DEUTAG DRILLING</strong>
-                    </div> 
-                  </div> 
-                </div>
-                <div class="et_pb_column et_pb_column_1_3">
-                <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
-                      <div class="et_pb_testimonial_description">
-                          <div class="logo-wrapper">
-                          <img src="/modules/core/img/brand/piontecelli.jpg" class="client-logo"/>
-                        </div>
-                      <strong class="et_pb_testimonial_author">PONTICELLI GABON</strong> 
-                  </div> 
-              </div>
-            </div>
-            <div class="et_pb_column et_pb_column_1_3">
-              <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
-                <div class="et_pb_testimonial_description">
-                  <div class="logo-wrapper">
-                    <img src="/modules/core/img/brand/Foraserve.jpg" class="client-logo"/>
-                  </div>
-                  <strong class="et_pb_testimonial_author">FORASERV</strong> 
-                </div> 
-              </div>
-            </div>
-            <div class="et_pb_column et_pb_column_1_3">
-                <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
-                    <div class="et_pb_testimonial_description">
-                        <div class="logo-wrapper">
-                          <img src="/modules/core/img/brand/logo-vanoord.png" class="client-logo"/>
-                        </div>
-                        <strong class="et_pb_testimonial_author">VAN OORD</strong>
-                    </div>
-                </div> 
-              </div>
-              <div class="et_pb_column et_pb_column_1_3">
-                <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">  
-                    <div class="et_pb_testimonial_description">
-                        <div class="logo-wrapper">
-                          <img src="/modules/core/img/brand/perenco.jpg" class="client-logo"/>
-                        </div>
-                        <strong class="et_pb_testimonial_author">PERENCO OIL AND GAS, GABON</strong>
-                    </div>    
-                </div>
-              </div>
-            <div class="et_pb_column et_pb_column_1_3">
-                <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
-                  <div class="et_pb_testimonial_description">
-                    <div class="logo-wrapper">
-                      <img src="/modules/core/img/brand/shelfdrilling1.png" class="client-logo"/>
-                    </div>
-                    <strong class="et_pb_testimonial_author">SHELF DRILLING</strong> 
-                  </div> 
-                </div>
-              </div>
-              
-            
-              <div class="et_pb_column et_pb_column_1_3">
-                <div class="et_pb_testimonial et_pb_testimonial_no_image et_pb_bg_layout_light et_pb_text_align_left clearfix" style="background-color: #ffffff;">
-                    <div class="et_pb_testimonial_description">
-                        <div class="logo-wrapper">
-                          <img src="/modules/core/img/brand/Weatherford.jpg" class="client-logo"/>
-                        </div>
-                        <strong class="et_pb_testimonial_author">WEATHERFORD, GABON</strong>
-                    </div>
-                </div> 
-              </div>
-              
-            
+      <div class="services-panels" id="services">
+        <div class="gmail-page">
+          <div class="maia-aux">
+        <!--hovering over the images will pause the slideshow -->          
+          <div class="carousel">
+            <ul class="panes">
+              <li>
+                <h2>Fabrication/Welding</h2>
+                <img src="/modules/core/img/brand/metalplatforms.jpg" />
+              </li>
+              <li>
+                <h2>Safety Wears/Equipments/Devices</h2>
+                <img src="/modules/core/img/brand/safetywears.jpg" alt="">
+              </li>
+              <li>
+                <h2>Procurement</h2>
+                <img src="/modules/core/img/brand/PurchaseOrder.jpg" alt="">
+              </li>
+              <li>
+                <div class="text-wrapper">Rentals</div>
+                <img src="/modules/core/img/brand/houses.jpg" alt="">
+              </li>
+              <li>
+                <h2>Waste Disposal</h2>
+                <img src="/modules/core/img/brand/wastedisposal.jpg" alt="">
+              </li>
+            </ul>
+          </div>
           </div>
         </div>
+      </div> 
+      <div class="clients-panel" id="clients">
+        <div class="row">
+          <ul id="clients-nav" class="content">  
+            <li>
+              <img src="/modules/core/img/brand/kca.jpg"/>
+            </li>
+            <li>
+              <img src="/modules/core/img/brand/piontecelli.jpg"/>
+            </li>
+            <li>
+              <img src="/modules/core/img/brand/vanoord.png"/>
+            </li>
+            <li>
+              <img src="/modules/core/img/brand/weatherford.png"/>
+            </li>
+            <li>
+              <img src="/modules/core/img/brand/perenco.jpg"/>
+            </li>
+            <li>
+              <img src="/modules/core/img/brand/Foraserve.jpg"/>
+            </li>
+            <li>
+              <img src="/modules/core/img/brand/vantage.jpg"/>
+            </li>
+            <li>
+              <img src="/modules/core/img/brand/shelf.png"/>
+            </li>
+            <li>
+              <img src="/modules/core/img/brand/noble.jpg"/>
+            </li>
+            <li>
+              <img src="/modules/core/img/brand/EDC.png"/>
+            </li>
+          </ul>  
+        </div>
       </div>
-    </div>  
-    <div id="testimonials" class="testimonial-panels">
-        <div class="container">
-              <div>
-               <ul class="chi-grid">
-                  <li>
-                    <div class="chi-item">
-                      <div class="chi-info">
-                            <h3>ABOUT US</h3>      
-                      </div>   
-                    </div> 
-                    <div class="chi-bot"><a  ng-click="openAboutTeam = !openAboutTeam">#who we are</a></div>
-                  </li>
-                  <li>
-                      <div class="chi-item">
-                          <div class="chi-info">
-                              <h3>CONTACT US</h3>
-                          </div>    
-                      </div>
-                      <div class="chi-bot"><a ng-click="toggle = !toggle">say hello!</a></div>
-                  </li>
-                  <li>
-                      <div class="chi-item">
-                          <div class="chi-info">
-                              <h3>CLIENTS</h3>
-                          </div>
-                      </div>
-                      <div class="chi-bot"><a ng-click="toggleClient = !toggleClient">client list</a></div>  
-                  </li>
-                  <li>
-                      <div class="chi-item">
-                          <div class="chi-info">
-                              <h3>LOCATE US</h3>
-                          </div>    
-                      </div>
-                      <div class="chi-bot"><a data-ng-click="toggleMap = !toggleMap">find Us</a></div>
-                  </li>
-                </ul>
+      <div class="contact-us-panels" id="contact-us">
+        <div class="col-md-10 col-md-offset-1">
+            <!-- <div class="contact-content">
+              <p style="text-align: justify;"><strong>Enquiry</strong><br></p>
+                <p style="text-align: left;"><strong>Email:</strong><a href="mailto:sales@proservice.com">sales@proservice.com</a> </p>
+                <p style="text-align: left;"><strong>Tel:</strong> +241 (0) 1-56-89-06 <br> +241 (0) 07-38-82-58</p>
+                <p style="text-align: left;"><strong>Mob:</strong>+241 (0) 07-38-82-58 <br> +241 (0) 05-82-50-01 </p>
+                <p style="text-align: left;"><strong>Skype:</strong><a href="mailto:sales@proservice.com">sales@proservice.com</a> </p>
+            </div> -->
+        </div>
+      </div>
+      <div id="location-wrapper" class="location-panels">
+      <div class="col-md-8 col-md-offset-2">
+        <h3>LOCATION</h3>
+        <div>
+            <!-- <div data-ng-show="toggleMap">
+              <a href="" data-ng-click="toggleMapClose()">X</a>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.4927532797024!2d8.781482514322812!3d-0.7319547854780628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a83b771a6f4f7b5%3A0x90f670714d51f67!2s%C3%89glise+Ste+Barbe%2C+Port-Gentil%2C+Gabon!5e0!3m2!1sen!2s!4v1452812455097" width="880px" height="500px" frameborder="0" style="border:0;" allowfullscreen>
+              </iframe>     
+            </div> -->
+            <div id="locate-title" ng-show="toggleMapCtrl"> 
+              <p>We are happy to have you meet with us<br>Feel free to walk into our office<br>
+              Cheers!!!</p>
+
+              <div class="chi-bot"><a data-ng-click="mapTrigger()">I want to visit</a>
               </div>
-        </div>  
+            </div>
+          </div>
+        </div>
       </div>
       <div id="footer" class="footer-panels">
           <div class="language-select" id="footer-lang-select">
-                <h4 id="select-title">English / French</h4>
+                <h4 id="select-title">English / Francais</h4>
                  <select class="form-control" ng-change="translate()" ng-model="selectedLanguage">
                       <option value="en">English</option>
-                      <option value="por">French</option>
+                      <option value="por">Francais</option>
                   </select>
           </div>
+          <ul id="footer-nav">  
+            <li class="hover">
+              <a href="#"><img src="/modules/core/img/brand/homee.png"/></a><div class="tooltip">home</div>
+            </li>
+            <li class="hover">
+              <a href="#"><img src="/modules/core/img/brand/aboutpro.png"/></a><div class="tooltip1">about-us</div>
+            </li>
+            <li class="hover">
+              <a href="#"><img src="/modules/core/img/brand/services.png"/></a><div class="tooltip2">services</div>
+            </li>
+            <li class="hover">
+              <a href="#"><img src="/modules/core/img/brand/customers.png"></a><div class="tooltip3">clients</div>
+            </li>
+            <li class="hover">
+              <a href="#"><img src="/modules/core/img/brand/contact.png"></a><div class="tooltip4">Contact-us</div>
+            </li>
+          </ul>  
           <ul id="footer-img">
               <li></li>
               <li></li>
