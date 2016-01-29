@@ -507,32 +507,42 @@ Animations
         0 1px 2px rgba(0,0,0,0.1);
     transition: all 0.4s ease-in-out;
 }
+#location-wrapper h3{
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    margin: 0 auto;
+    font-size: 1.9em;
+    position: relative;
+    text-align: center;
+    top:80px; 
+}
 
 #locate-title p{
-  margin-top: 20%;
   text-align: center;
   color: #fff;
-  font-family: "HelveticaNeueW02-ThinEx 739247";
-  /*padding: 10px;*/
+  font-family: 'Poiret One', "HelveticaNeueW02-ThinEx 739247" !important;
+  margin-top: 120px;
   font-size: 1.6em;
+  /*display: block;*/
 }
 
 .chi-bot {
-    background-color: #fff !important;
-    color: #5F9EA0;
-    border: 0 solid #5CB85C;
+    border: 3px solid #fff;
     text-align: center;
     margin: 0 auto;
     margin-top: 10%;
     cursor: pointer;
-    width:155px !important;
-    height: 45px !important;
+    width:185px !important;
+    height: 55px !important;
 }
 #locate-title .chi-bot a{
-    line-height: 1.4em;
+    color: #fff;
+    text-transform: capitalize;
+    line-height: 2.7em;
     font-size: 1.3em !important;
-    font-weight: bold;
     cursor: pointer;
+    font-family: "HelveticaNeueW02-ThinEx 739247";
 }
 .chi-bot a:hover, .chi-bot a:active, .chi-bot a:visited{
     text-decoration: none;
@@ -826,7 +836,6 @@ h4+p{
 }
 
 
-
 .carousel{
   width:100%;
 }
@@ -835,7 +844,7 @@ h4+p{
 }
 
 /*------------------------------------*\
-    $CAROUSEL
+    $CAROUSE
 \*------------------------------------*/
 .carousel{
     overflow:hidden;
@@ -859,18 +868,22 @@ h4+p{
 .carousel img{
     display:block;
     width:100%;
-    max-width:100%;
+    /*max-width:100%;*/
 }
-.carousel h2{
-    font-size:1em;
-    padding:0.5em;
+.carousel .text-wrapper, .carousel h2{
+    font-size:1.4em;
+    padding:1.5em;
     position:absolute;
     right:10px;
-    bottom:10px;
     left:10px;
-    text-align:right;
+    text-align:left;
     color:#fff;
-    background-color:rgba(0,0,0,0.75);
+    font-weight: bold;
+    width: 100%;
+    opacity: 0.75;
+    background-color:rgba(0,0,0,0.7);
+    font-family: 'Poiret One', 'Merriweather';
+    
 }
 
 @keyframes carousel{
@@ -1008,7 +1021,7 @@ article {
 #services{
   position: relative;
   height: 100%;
-  background-color:#983e6b !important;
+  background-color:#fff!important;
   /*background: url('/modules/core/img/brand/tahitianpearls.jpg') no-repeat;*/
   background-size: cover;
 }
