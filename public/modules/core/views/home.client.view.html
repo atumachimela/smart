@@ -10,11 +10,11 @@
         <h1 class="col-md-10 home-title col-md-offset-1">
           <span>
             <ul>
-              <li class="app-title">Reliable</li>
-              <li><p class="nuggets">professionalism</li>
-              <li><p class="nuggets" id="nuggets-2">in</li>
-              <li><p class="nuggets">quality Service &</p></li>
-              <li><p class="nuggets">client-satisfaction</p></li>
+              <li class="app-title">{{translation.TRADE_MARK}}</li>
+              <li><p class="nuggets">{{translation.TRADE_MARK1}}</li>
+              <li><p class="nuggets" id="nuggets-2">{{translation.TRADE_MARK4}}</li>
+              <li><p class="nuggets">{{translation.TRADE_MARK2}} &</p></li>
+              <li><p class="nuggets">{{translation.TRADE_MARK3}}</p></li>
             </ul>
           </span>
         </h1>
@@ -30,59 +30,61 @@
       <div class="col-md-8 col-md-offset-2" id="about-us-wrapper">
           <div id="axis" class="four">
             <div class="about-content">
-                <h4>Who</h4>
+                <h4>{{translation.WHO}}</h4>
                 <p>{{translation.ABOUT_TEXTA}}
                </p> 
            </div>
             <div class="about-content">
-                <h4>We</h4>
+                <h4>{{translation.WE}}</h4>
                 <p>
                   {{translation.ABOUT_TEXTC}}
                 </p>
             </div>
             <div class="about-content">
-              <h4>Are</h4>
+              <h4>{{translation.ARE}}</h4>
               <p>
-                {{translation.ABOUT_TEXTB}}
+                {{translation.OUR_GOALS}}
               </p>
             </div>
         </div>
      </div>
     </div>
       <div class="services-panels" id="services">
+          <h3>{{translation.WHAT_DO}}</h3>
+
         <div class="gmail-page">
           <div class="maia-aux">
-        <!--hovering over the images will pause the slideshow -->          
+        <!--hovering over the images will pause the slideshow -->       
           <div class="carousel">
             <ul class="panes">
               <li>
-                <div class="text-wrapper">Fabrication/Welding
-                <p>Fabricate:<br>Containers & Baskets of all sorts<br>Platforms</p>
-                <p>Weld:<br>Oil/Gas Pipelines<br>Leakages & any welding maintenance works
+                <div class="text-wrapper">{{translation.FABRICATION}}/{{translation.WELDING}}
+                <p>{{translation.FABRICATE}}:<br>{{translation.CONTAINERS}} & {{translation.BASKETS}}<br>{{translation.PLATFORMS}}</p>
+                <p>{{translation.Weld}}:<br>{{translation.OIL}}/{{translation.GAS}} {{translation.PIPELINES"<br>{{translation.ANY_OTHER}}
                 </p>
                 </div>
                 <img src="/modules/core/img/brand/metalplatforms.jpg"/>
               </li>
               <li>
-                <div class="text-wrapper">Safety Wears/Equipments/Devices
-                <p>Safety Wears(PPE's)</p><p>Safety Equipments</p><p>Safety Devices</p>
+                <div class="text-wrapper">{{translation.SAFETY_WEARS}}/{{translation.EQUIPEMENTS}}/{{translation.DEVICES}}
+                <p>{{translation.SAFETY_WEARS1}}</p><p>{{translation.SAFETY_EQIPE}}</p><p>{{translation.SAFETY_DEVICES}}</p>
                 </div>
                 <img src="/modules/core/img/brand/safetywears.jpg" alt="">
               </li>
               <li>
-                <div class="text-wrapper">Procurement
-                <p>Whatever it is trust us to handle all your procurements</p>
+                <div class="text-wrapper">{{translation.PROCUREMENT}}
+                <p>{{translation.HANDLE_PROC}}</p>
                 </div>
                 <img src="/modules/core/img/brand/PurchaseOrder.jpg" alt="">
               </li>
               <li>
-                <div class="text-wrapper">Rentals
-                  <p>Lease:</p><p>Homes</p><p>Office Space</p><p>Vehicles</p>
+                <div class="text-wrapper">{{RENTALS}}
+                  <p>{{translation.LEASE}}:</p><p>{{translation.HOMES}}</p><p>{{translation.OFFICE_SPACE}}</p><p>{{translation.VEHICLES}}</p>
                 </div>
                 <img src="/modules/core/img/brand/houses.jpg" alt="">
               </li>
               <li>
-                <div class="text-wrapper">Waste Disposal<p>Industrial wastes of any kind are disposed under the safest & enviroment-friendly manner</p></div>
+                <div class="text-wrapper">{{translation.WASTE_DISPOSAL}}<p>{{translation.INDUSTRIAL_WASTE}}</p></div>
                 <img src="/modules/core/img/brand/wastedisposal.jpg" alt="">
               </li>
             </ul>
@@ -127,13 +129,13 @@
         </div>
       </div>
       <div class="contact-us-panels" id="contact-us">
-        <h3>ASK QUESTIONS</h3>
-        <div id="contact-note" ng-show="showContactNote"> 
-            <p>You can write us <br>Call us via mobile/ telephone<br>Do a video/audio chat on Skype</p>
+        <h3 data-ng-show="hideContactHeader">{{translation.ASK_QUEST}}</h3>
+        <div id="contact-note" data-ng-show="showContactNote"> 
+            <p>{{translation.WRITE_US}}<br>{{translation.CALL_US}}<br>{{translation.VIDEO_CALL}}</p>
         </div> 
-        <ul class="col-md-8 col-md-offset-2">
-          <li data-ng-hide="showContactForm">
-          <a  id="close-Btn" href="" data-ng-click="closeContactForm()">close X</a>
+        <div class="col-md-8 contact-us-wrapper col-md-offset-2">
+          <div data-ng-hide="showContactForm">
+          <a  id="close-Btn" href="" data-ng-click="closeContactForm()">{{translation.CLOSE}}</a>
             <div id="form-main">
               <div id="form-div">
                 <form class="form" id="form1"> 
@@ -155,32 +157,32 @@
                 </form>
               </div>
             </div>
-          </li>
+          </div>
 
-          <li data-ng-show="showContactList">
+          <div data-ng-show="showContactList">
             <div id="contact-box">
-              <p class="contact-icons"><img src="/modules/core/img/brand/telephone.png"/>+241 (0) 1-56-89-06 </p>
+              <p class="contact-icons"><img src="/modules/core/img/brand/telephone.png"/>+241 (0) 1-56-89-06</p>
               <p class="contact-icons"><img src="/modules/core/img/brand/mobile.png"/>+241 (0) 07-38-82-58</p>
-              <p class="contact-icons"><img src="/modules/core/img/brand/mobile.png"/>+241 (0) 05-82-50-01 </p>
-              <p class="contact-icons"><a data-ng-click="showContactFormCtrl()"><img src="/modules/core/img/brand/email.png"/>Write Us</a></p>
+              <p class="contact-icons"><img src="/modules/core/img/brand/mobile.png"/>+241 (0) 05-82-50-01</p>
+              <p class="contact-icons"><a data-ng-click="showContactFormCtrl()"><img src="/modules/core/img/brand/email.png"/>info@proservice.com, sales@proservice.com</a></p>
             </div>  
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
       <div id="location-wrapper" class="location-panels">
       <div class="col-md-8 col-md-offset-2">
-        <h3>LOOKING FOR US?</h3>
+        <h3>{{translation.LOOKING_FOR}}</h3>
         <div>
             <div data-ng-show="toggleMap">
-              <a href="" data-ng-click="toggleMapClose()">close X</a>
+              <a href="" data-ng-click="toggleMapClose()">{{translation.CLOSE}}</a>
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.4927532797024!2d8.781482514322812!3d-0.7319547854780628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a83b771a6f4f7b5%3A0x90f670714d51f67!2s%C3%89glise+Ste+Barbe%2C+Port-Gentil%2C+Gabon!5e0!3m2!1sen!2s!4v1452812455097" width="880px" height="500px" frameborder="0" style="border:0;" allowfullscreen>
               </iframe>     
             </div>
             <div id="locate-title" ng-show="toggleMapCtrl"> 
-              <p>We are happy to have you meet with us<br>Feel free to walk into our office<br>
-              Cheers!!!</p>
+              <p>{{translation.WE_ARE}}<br>{{translation.FEEL_FREE}}<br>
+              {{translation.CHEERS}}</p>
 
-              <div class="chi-bot"><a data-ng-click="mapTrigger()">I want to visit</a>
+              <div class="chi-bot"><a data-ng-click="mapTrigger()">{{translation.VISIT}}</a>
               </div>
             </div>
           </div>
@@ -196,19 +198,19 @@
           </div>
           <ul id="footer-nav">  
             <li class="hover">
-              <a href="#"><img src="/modules/core/img/brand/homee.png"/></a><div class="tooltip">home</div>
+              <a href="#"><img src="/modules/core/img/brand/homee.png"/></a><div class="tooltip">{{translation.HOME_PRO}}</div>
             </li>
             <li class="hover">
-              <a href="#"><img src="/modules/core/img/brand/aboutpro.png"/></a><div class="tooltip1">about-us</div>
+              <a href="#"><img src="/modules/core/img/brand/aboutpro.png"/></a><div class="tooltip1">{{translation.ABOUT_US}}</div>
             </li>
             <li class="hover">
-              <a href="#"><img src="/modules/core/img/brand/services.png"/></a><div class="tooltip2">services</div>
+          <a href="#"><img src="/modules/core/img/brand/services.png"/></a><div class="tooltip2">{{translation.SERVICES_PRO}}</div>
             </li>
             <li class="hover">
-              <a href="#"><img src="/modules/core/img/brand/customers.png"></a><div class="tooltip3">clients</div>
+              <a href="#"><img src="/modules/core/img/brand/customers.png"></a><div class="tooltip3">{{translation.CLIENTS_PRO}}</div>
             </li>
             <li class="hover">
-              <a href="#"><img src="/modules/core/img/brand/contact.png"></a><div class="tooltip4">Contact-us</div>
+              <a href="#"><img src="/modules/core/img/brand/contact.png"></a><div class="tooltip4">{{translation.CONTACT_US}}</div>
             </li>
           </ul>  
           <ul id="footer-img">

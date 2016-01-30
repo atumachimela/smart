@@ -27,6 +27,7 @@ angular.module('core').controller('HomeController', ['$scope','$http', '$mdToast
      $scope.showContactForm = true;
      $scope.showContactList = true;
      $scope.showContactNote = true;
+     $scope.hideContactHeader = true;
 
     $scope.mapTrigger = function() {
         $scope.toggleMap = true;
@@ -40,12 +41,16 @@ angular.module('core').controller('HomeController', ['$scope','$http', '$mdToast
     $scope.showContactFormCtrl = function(){
         $scope.showContactForm = false;
         $scope.showContactList = false;
-        $scope.showContactNote = true;
+        $scope.showContactNote = false;
+        $scope.hideContactHeader = false;
+
     };
     $scope.closeContactForm = function(){
         $scope.showContactForm = true;
         $scope.showContactList = true;
-        $scope.showContactNote = false ;
+        $scope.showContactNote = true;
+        $scope.hideContactHeader = true;
+
     };
     //Run translation if selected language changes
 
