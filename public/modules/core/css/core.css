@@ -507,7 +507,19 @@ Animations
         0 1px 2px rgba(0,0,0,0.1);
     transition: all 0.4s ease-in-out;
 }
-#location-wrapper h3{
+#location-wrapper{
+    background-color:#388;  
+    overflow: visible;
+    min-height:100%;
+}
+#location-wrapper a, #close-Btn{
+  color: #fff;
+  font-weight: bolder;
+  font-family: 'Molengo', san-serif !important;
+  text-decoration: none;
+}
+
+#location-wrapper h3, #contact-us h3 {
     color: #fff;
     font-weight: bold;
     font-family: 'Molengo', san-serif !important;
@@ -516,17 +528,22 @@ Animations
     position: relative;
     text-align: center;
     top:80px; 
+    letter-spacing: 4px;
 }
 
-#locate-title p{
+#locate-title p, #contact-note p {
   text-align: center;
   color: #fff;
-  font-family: 'Poiret One', "HelveticaNeueW02-ThinEx 739247" !important;
-  margin-top: 120px;
+  font-family: 'Poiret One', cursive !important;
   font-size: 1.6em;
   /*display: block;*/
 }
-
+#contact-note{
+  padding-top: 80px; 
+}
+#locate-title p {
+  padding-top: 120px;
+}
 .chi-bot {
     border: 3px solid #fff;
     text-align: center;
@@ -878,14 +895,18 @@ h4+p{
     left:10px;
     text-align:left;
     color:#fff;
-    font-weight: bold;
+    /*font-weight: bold;*/
     width: 100%;
     opacity: 0.75;
     background-color:rgba(0,0,0,0.7);
-    font-family: 'Poiret One', 'Merriweather';
+    font-family: 'Molengo', san-serif !important;
     
 }
-
+.carousel .text-wrapper p{
+  font-size: 0.6em;
+  color: #fff;
+  font-family: 'Poiret One',cursive;
+}
 @keyframes carousel{
     0%    { left:0; }
     11%   { left:0; }
@@ -906,29 +927,6 @@ h4+p{
     100%  { left:0; }
 }
 
-
-
-
-/*slideshow styles*/
-
-.slideshow {
-  margin-top: 160px;
-  width: 625px;
-  margin: 0 auto;
-  overflow: hidden;
-  border: 4px solid #fff;
-}
-
-.slideshow-container {
-  width: 2500px;
-  font-size: 0;
-  transition: 0s ease;
-  height: 225px;
-}
-
-.slideshow-container:hover {
-  animation-play-state: paused;
-}
 
 .text-container {
   width: 625px;
@@ -1085,28 +1083,27 @@ article {
 .about-content h4{
   margin-top: 40px;
   font-weight:bold;
-  font-family: 'Poiret One', 'Merriweather' !important;
+  font-family: 'Molengo', san-serif !important;
 }
 .about-content p{
     position: relative;
     display: block;
-    font-family: 'Poiret One', 'proxima-nova';
+    font-family: 'Poiret One', cursive;
     font-size: 1.3em;
     line-height: 1.8em;
     color: #fff;
     text-align: center;
     margin-top: 10px;
     padding: 10px;
+
 }
-#about-us .about-content, #contact-us .contact-content{
+#about-us .about-content{
   float: left;
   display: inline;
   margin: 20px;
   text-align: center; 
 }
-#contact-us .contact-content p{
-  color: #fff !important;
-}
+
 .link-panels{
     position: fixed;
     height: 40% !important;
@@ -1304,7 +1301,6 @@ a
 }
 #testimonials{
     background-color: #f5f5f5;
-    /*background: url('/modules/core/img/brand/pearls.jpg') no-repeat;*/
     background-size: cover;
     position: relative;
     min-height: 555px;
@@ -1315,13 +1311,13 @@ a
 #clients{
   background-color:#fff;
   position: relative;
-  min-height: 30%;
+  min-height: 20%;
   color: #fff;
 }
 .clients-panelos{
     position: relative;
     min-width: 100%;
-    min-height:30%;
+    min-height:20%;
     z-index: 1000;
     overflow: hidden;
 }
@@ -1334,16 +1330,216 @@ a
     overflow: hidden;
 }
 #contact-us{
-    background-color:#ca5151;
-    height: 70%;
-    min-height:70%; 
-    position: relative;
+  background: url('/modules/core/img/brand/feedbackimg.jpg') no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-height:100%; 
+  position: relative;
+  font-family: 'Poiret One', cursive !important;
+
 }
 .contact-us-panels{
-  height: 70% !important;
-  min-height: 70% !important;
+  height: 100% !important;
+  min-height: 100% !important;
   position: relative;
 }
+#contact-us ul li {
+    text-align:center;
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 1em;
+    font-family: "HelveticaNeueW02-UltLtE 739241" !important;
+  }
+    #feedback-page{
+    text-align:center;
+}
+
+#form-main{
+  width:100%;
+  min-width: 100%;
+  /*float:left;*/
+  padding-top:0px;
+}
+
+#form-div {
+  background-color:rgba(72,72,72,0.4);
+  padding-left:35px;
+  padding-right:35px;
+  padding-top:35px;
+  padding-bottom:50px;
+  width: 50%;
+  /*float: left;*/
+  left: 2%;
+  position: absolute;
+  margin-top:30px;
+  /*margin-left: -260px;*/
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  font-family: 'Poiret One', cursive !important;
+
+}
+
+.feedback-input {
+  color:#3c3c3c;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 0;
+  line-height: 22px;
+  background-color: #fbfbfb;
+  padding: 13px 13px 13px 54px;
+  margin-bottom: 10px;
+  width:100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+}
+
+.feedback-input:focus{
+  background: #fff;
+  box-shadow: 0;
+  border: 3px solid #3498db;
+  color: #3498db;
+  outline: none;
+  padding: 13px 13px 13px 54px;
+  font-family: 'Poiret One', cursive !important;
+
+}
+
+.focused{
+  color:#30aed6;
+  border:#30aed6 solid 3px;
+}
+
+/* Icons ---------------------------------- */
+#name{
+  background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+  background-size: 30px 30px;
+  background-position: 11px 8px;
+  background-repeat: no-repeat;
+  font-family: 'Poiret One', cursive !important;
+
+}
+
+#name:focus{
+  background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+  background-size: 30px 30px;
+  background-position: 8px 5px;
+  background-position: 11px 8px;
+  background-repeat: no-repeat;
+}
+
+#email{
+  background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+  background-size: 30px 30px;
+  background-position: 11px 8px;
+  background-repeat: no-repeat;
+  font-family: 'Poiret One', cursive !important;
+
+}
+
+#email:focus{
+  background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+  background-size: 30px 30px;
+  background-position: 11px 8px;
+  background-repeat: no-repeat;
+}
+
+#comment{
+  background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+  background-size: 30px 30px;
+  background-position: 11px 8px;
+  background-repeat: no-repeat;
+  font-family: 'Poiret One', cursive !important;
+
+}
+#contact-box p a {
+  color: #990776;
+  text-decoration:none;
+}
+#contact-box p a:hover, #contact-box p a:visited{
+  text-decoration:none; 
+}
+#contact-box p a:visited{
+  color: #234567;
+}
+.contact-icons{
+  width: 100%;
+  padding: 15px;
+  background-size: 30px 30px;
+  background-position: 11px 8px;
+  background-repeat: no-repeat;
+  font-family: 'Poiret One', cursive !important;
+  text-decoration: none;
+}
+#contact-us .contact-content p{
+  color: #220513 !important;
+  font-family: 'Molengo', san-serif !important;
+  /*margin-right: 20px;*/
+}
+#contact-us .contact-content p a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  line-height: 2em;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+  background-color:white;
+}
+
+#button-blue{
+  float:left;
+  font-family: 'Poiret One', cursive !important;
+  width: 50%;
+  border: #fbfbfb solid 4px;
+  cursor:pointer;
+  background-color: #3498db;
+  color:white;
+  font-size:1em;
+  padding-top:14px;
+  padding-bottom:14px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:bold;
+}
+
+#button-blue:hover{
+  background-color: rgba(0,0,0,0);
+  color: #0493bd;
+}
+  
+.submit:hover {
+  color: #3498db;
+}
+  
+.ease {
+  width: 0px;
+  height: 54px;
+  background-color: #fbfbfb;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -o-transition: .3s ease;
+  -ms-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:50%;
+  background-color:white;
+}
+
 .location-panels{
     position: relative;
     min-width: 100%;
@@ -1351,14 +1547,9 @@ a
     z-index: 1000;
     overflow: visible;
 }
-#location-wrapper{
-    background:url('/modules/core/img/brand/.jpg') no-repeat;
-    background-size: cover;
-    background-color:#388;  
-    overflow: visible;
-    min-height:100%;
-}
+
 #location-wrapper, #contact-us, #trainigs, #time-table, #about-us, #training-services{
+  
     min-width: 100%;
 }
 
@@ -1383,7 +1574,7 @@ a
     text-transform: uppercase;
   line-height: 0.9em;
   text-align: center;
-/*font-family: "HelveticaNeueW02-UltLtE 739241" !important;*/
+/**/
 
   
     /*color: #fff;*/
@@ -2020,6 +2211,23 @@ strong {
     font-weight: 900;
 }
 
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 47.5em ) {
+  .leftColumn { margin-right: 19.5em; }
+
+  .rightColumn { position: absolute; top: 0; right: 0; width: 18.75em; }   
+}
+@media only screen and (max-width: 580px) {
+  #form-div{
+    left: 3%;
+    margin-right: 3%;
+    width: 88%;
+    margin-left: 0;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
 @media (max-width: 1500px){
     #in-bt-lf .padd {
         padding: 0 5px 0 0;
