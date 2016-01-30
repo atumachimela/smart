@@ -519,7 +519,7 @@ Animations
   text-decoration: none;
 }
 
-#location-wrapper h3, #contact-us h3 {
+#location-wrapper h3, #contact-us h3{
     color: #fff;
     font-weight: bold;
     font-family: 'Molengo', san-serif !important;
@@ -530,7 +530,22 @@ Animations
     top:80px; 
     letter-spacing: 4px;
 }
-
+#services h3{
+    color: #0064b2;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    margin: 0 auto;
+    font-size: 1.9em;
+    position: relative;
+    text-align: center;
+    top:15px; 
+    letter-spacing: 4px;
+}
+#about-us h3{
+  top: 0 !important;
+  color: #4a011f;
+  margin-top: 0 !important;
+}
 #locate-title p, #contact-note p {
   text-align: center;
   color: #fff;
@@ -1343,7 +1358,7 @@ a
   min-height: 100% !important;
   position: relative;
 }
-#contact-us ul li {
+#contact-us .contact-us-wrapper {
     text-align:center;
     text-decoration: none;
     font-weight: lighter;
@@ -1359,20 +1374,20 @@ a
   min-width: 100%;
   /*float:left;*/
   padding-top:0px;
+  z-index: 1000;
 }
 
 #form-div {
   background-color:rgba(72,72,72,0.4);
-  padding-left:35px;
+  padding-left:25px;
   padding-right:35px;
   padding-top:35px;
   padding-bottom:50px;
   width: 50%;
-  /*float: left;*/
-  left: 2%;
   position: absolute;
   margin-top:30px;
-  /*margin-left: -260px;*/
+  margin: 0 auto;
+  text-align: center;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   font-family: 'Poiret One', cursive !important;
@@ -1455,9 +1470,17 @@ a
   font-family: 'Poiret One', cursive !important;
 
 }
-#contact-box p a {
+#contact-box{
+  padding-top: 30px;
+}
+#contact-box p a{
   color: #990776;
   text-decoration:none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  padding-top:30px;
 }
 #contact-box p a:hover, #contact-box p a:visited{
   text-decoration:none; 
@@ -1466,13 +1489,16 @@ a
   color: #234567;
 }
 .contact-icons{
+  text-align: center;
+  margin: 0 auto;
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   background-size: 30px 30px;
   background-position: 11px 8px;
   background-repeat: no-repeat;
   font-family: 'Poiret One', cursive !important;
   text-decoration: none;
+  color: #fff;
 }
 #contact-us .contact-content p{
   color: #220513 !important;
