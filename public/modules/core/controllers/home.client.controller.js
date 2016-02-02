@@ -21,23 +21,25 @@ angular.module('core').controller('HomeController', ['$scope','$http', '$mdToast
     $scope.toggle = false;
     $scope.toggleMap = false;
     $scope.toggle = false;
-     $scope.toggleMap = false;
-     $scope.toggleClient = false;
-     $scope.toggleMapCtrl = true;
-     $scope.showContactForm = true;
-     $scope.showContactList = true;
-     $scope.showContactNote = true;
-     $scope.hideContactHeader = true;
+    $scope.toggleMap = false;
+    $scope.toggleClient = false;
+    $scope.showContactForm = true;
+    $scope.showContactList = true;
+    $scope.showContactNote = true;
+    $scope.hideContactHeader = true;
+    $scope.mapToggle = false;
+    $scope.mapToggle1 = false;
 
     $scope.mapTrigger = function() {
         $scope.toggleMap = true;
-        $scope.toggleMapCtrl = false;
+        $scope.mapToggle1 = true;
+        $scope.mapToggle = true;
     };
     $scope.toggleMapClose = function() {
         $scope.toggleMap = false;
-        $scope.toggleMapCtrl = true;
+        $scope.mapToggle1 = false;
+        $scope.mapToggle = false;
     };
-
     $scope.showContactFormCtrl = function(){
         $scope.showContactForm = false;
         $scope.showContactList = false;
