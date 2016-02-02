@@ -4,7 +4,7 @@
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'e-amity';
-	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies',  'ngAnimate',  'ngTouch',  'ngSanitize',  'ui.router', 'ui.bootstrap', 'ui.utils', 'ngMap'];
+	var applicationModuleVendorDependencies = ['ngAria', 'ngResource', 'ngCookies', 'ngAnimate', 'ngMaterial', 'ngSanitize', 'ui.router', 'ui.bootstrap', 'ui.utils'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {
@@ -172,126 +172,173 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		$urlRouterProvider.otherwise('/');
 
 		// Home state routing
-		$stateProvider.
-		state('home', {
+		$stateProvider
+		.state('home', {
 			url: '/',
 			templateUrl: 'modules/core/views/home.client.view.html'
 		});
 	}
 ]);
+// 'use strict';
+
+// angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus', 'Translations',
+// 	function($scope, Authentication, Menus, Translations) {
+// 		$scope.authentication = Authentication;
+// 		$scope.isCollapsed = false;
+// 		$scope.menu = Menus.getMenu('topbar');
+
+// 		$scope.toggleCollapsibleMenu = function() {
+// 			$scope.isCollapsed = !$scope.isCollapsed;
+// 		};
+
+// 		// Collapsing the menu after navigation
+// 		$scope.$on('$stateChangeSuccess', function() {
+// 			$scope.isCollapsed = false;
+// 		});
+// 			//Run translation if selected language changes
+// 		$scope.translate = function(){
+// 			console.log('testing');
+// 	       Translations.getTranslation($scope, $scope.selectedLanguage);
+// 		};   
+// 		$scope.selectedLanguage = 'en';
+// 		$scope.translate();	
+// 	}
+// ]);
 'use strict';
 
-angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus',
-	function($scope, Authentication, Menus) {
-		$scope.authentication = Authentication;
-		$scope.isCollapsed = false;
-		$scope.menu = Menus.getMenu('topbar');
+angular.module('core').controller('HomeController', ['$scope','$http', '$mdToast', '$animate', '$modal', 'Authentication', 'Menus', '$compile', '$log', 'Translations',
+  function($scope, $http, $mdToast, $animate, $modal, Authentication, Menus, $compile, $log, Translations) {
+    // This provides Authentication context.
+    $scope.authentication = Authentication;
+    $scope.isCollapsed = false;
+    // $scope.hideMrk = true;
 
-		$scope.toggleCollapsibleMenu = function() {
-			$scope.isCollapsed = !$scope.isCollapsed;
-		};
+    $scope.menu = Menus.getMenu('topbar');
 
-		// Collapsing the menu after navigation
-		$scope.$on('$stateChangeSuccess', function() {
-			$scope.isCollapsed = false;
-		});
-	}
+    $scope.toggleCollapsibleMenu = function() {
+      $scope.isCollapsed = !$scope.isCollapsed;
+    };
+
+    // Collapsing the menu after navigation
+    $scope.$on('$stateChangeSuccess', function() {
+      $scope.isCollapsed = false;
+    });
+    
+    $scope.toggle = false;
+    $scope.toggleMap = false;
+    $scope.toggle = false;
+     $scope.toggleMap = false;
+     $scope.toggleClient = false;
+     $scope.toggleMapCtrl = true;
+     $scope.showContactForm = true;
+     $scope.showContactList = true;
+     $scope.showContactNote = true;
+     $scope.hideContactHeader = true;
+
+    $scope.mapTrigger = function() {
+        $scope.toggleMap = true;
+        $scope.toggleMapCtrl = false;
+    };
+    $scope.toggleMapClose = function() {
+        $scope.toggleMap = false;
+        $scope.toggleMapCtrl = true;
+    };
+
+    $scope.showContactFormCtrl = function(){
+        $scope.showContactForm = false;
+        $scope.showContactList = false;
+        $scope.showContactNote = false;
+        $scope.hideContactHeader = false;
+
+    };
+    $scope.closeContactForm = function(){
+        $scope.showContactForm = true;
+        $scope.showContactList = true;
+        $scope.showContactNote = true;
+        $scope.hideContactHeader = true;
+
+    };
+    //Run translation if selected language changes
+
+    $scope.translate = function(){
+      console.log('testing');
+         Translations.getTranslation($scope, $scope.selectedLanguage);
+    };   
+      $scope.selectedLanguage = 'en';
+      $scope.translate(); 
+  }
 ]);
-'use strict';
+// 'use strict';
 
-angular.module('core').controller('HomeController', ['$scope', 'Authentication', '$compile', '$modal', '$log',
-	function($scope, Authentication, $compile, $modal, $log) {
-		// This provides Authentication context.
-		$scope.authentication = Authentication;
-	
-		$scope.viewMontessori = function(b) {
-			console.log('me');
-			$scope.viewMontessoriModal();
-		};
+// angular.module('core').directive('tooltip', function ($document, $compile) {
+// 		return {
+// 		    restrict: 'A',
+// 		    scope: true,
+// 		    link: function (scope, element, attrs) {
 
-		$scope.viewMontessoriModal = function() {
-			var montessoriContent = $modal.open({
-	          templateUrl: '/modules/core/views/montessoriModalContent.client.view.html',
-	          controller: ["$scope", "$modalInstance", function($scope, $modalInstance) {
-	            $scope.ok = function(){
-	              $modalInstance.close();
-	            };
-	            $scope.cancel = function() {
-	              $modalInstance.dismiss('cancel');
-	            };
-	          }],
-	          size: 'lg',
-	          resolve: {
-	            listData: function() {
-	              
-	            }
-	          }
-	        });
-		};
-		var TILE_SIZE = 256;
+// 		      var tip = $compile('<div ng-class="tipClass">{{ text }}<div class="tooltip-arrow"></div></div>')(scope),
+// 		          tipClassName = 'tooltip',
+// 		          tipActiveClassName = 'tooltip-show';
 
-	  // function bound(value, opt_min, opt_max) {
-	  //   if (opt_min !== null) value = Math.max(value, opt_min);
-	  //   if (opt_max !== null) value = Math.min(value, opt_max);
-	  //   return value;
-	  // };
+// 		      scope.tipClass = [tipClassName];
+// 		      scope.text = attrs.tooltip;
+		      
+// 		      if(attrs.tooltipPosition) {
+// 		        scope.tipClass.push('tooltip-' + attrs.tooltipPosition);
+// 		      }
+// 		      else {
+// 		       scope.tipClass.push('tooltip-down'); 
+// 		      }
+// 		      $document.find('body').append(tip);
+		      
+// 		      element.bind('mouseover', function (e) {
+// 		        tip.addClass(tipActiveClassName);
+		        
+// 		        var pos = e.target.getBoundingClientRect(),
+// 		            offset = tip.offset(),
+// 		            tipHeight = tip.outerHeight(),
+// 		            tipWidth = tip.outerWidth(),
+// 		            elWidth = pos.width || pos.right - pos.left,
+// 		            elHeight = pos.height || pos.bottom - pos.top,
+// 		            tipOffset = 10;
+		        
+// 		        if(tip.hasClass('tooltip-right')) {
+// 		          offset.top = pos.top - (tipHeight / 2) + (elHeight / 2);
+// 		          offset.left = pos.right + tipOffset;
+// 		        }
+// 		        else if(tip.hasClass('tooltip-left')) {
+// 		          offset.top = pos.top - (tipHeight / 2) + (elHeight / 2);
+// 		          offset.left = pos.left - tipWidth - tipOffset;
+// 		        }
+// 		        else if(tip.hasClass('tooltip-down')) {
+// 		          offset.top = pos.top + elHeight + tipOffset;
+// 		          offset.left = pos.left - (tipWidth / 2) + (elWidth / 2);
+// 		        }
+// 		        else {
+// 		          offset.top = pos.top - tipHeight - tipOffset;
+// 		          offset.left = pos.left - (tipWidth / 2) + (elWidth / 2);
+// 		        }
 
-	  // function degreesToRadians(deg) {
-	  //   return deg * (Math.PI / 180);
-	  // };
+// 		        tip.offset(offset);
+// 		      });
+		      
+// 		      element.bind('mouseout', function () {
+// 		        tip.removeClass(tipActiveClassName);
+// 		      });
 
-	  // function radiansToDegrees(rad) {
-	  //   return rad / (Math.PI / 180);
-	  // };
+// 		      tip.bind('mouseover', function () {
+// 		        tip.addClass(tipActiveClassName);
+// 		      });
 
-	  // function MercatorProjection() {
-	  //   this.pixelOrigin_ = new google.maps.Point(TILE_SIZE / 2, TILE_SIZE / 2);
-	  //   this.pixelsPerLonDegree_ = TILE_SIZE / 360;
-	  //   this.pixelsPerLonRadian_ = TILE_SIZE / (2 * Math.PI);
-	  // };
+// 		      tip.bind('mouseout', function () {
+// 		        tip.removeClass(tipActiveClassName);
+// 		      });
 
-	  // MercatorProjection.prototype.fromLatLngToPoint = function(latLng,
-	  //     opt_point) {
-	  //   var me = this;
-	  //   var point = opt_point || new google.maps.Point(0, 0);
-	  //   var origin = me.pixelOrigin_;
-
-	  //   point.x = origin.x + latLng.lng() * me.pixelsPerLonDegree_;
-
-	  //   // Truncating to 0.9999 effectively limits latitude to 89.189. This is
-	  //   // about a third of a tile past the edge of the world tile.
-	  //   var siny = bound(Math.sin(degreesToRadians(latLng.lat())), -0.9999,
-	  //       0.9999);
-	  //   point.y = origin.y + 0.5 * Math.log((1 + siny) / (1 - siny)) *
-	  //       -me.pixelsPerLonRadian_;
-	  //   return point;
-	  // };
-
-	  // MercatorProjection.prototype.fromPointToLatLng = function(point) {
-	  //   var me = this;
-	  //   var origin = me.pixelOrigin_;
-	  //   var lng = (point.x - origin.x) / me.pixelsPerLonDegree_;
-	  //   var latRadians = (point.y - origin.y) / -me.pixelsPerLonRadian_;
-	  //   var lat = radiansToDegrees(2 * Math.atan(Math.exp(latRadians)) -
-	  //       Math.PI / 2);
-	  //   return new google.maps.LatLng(lat, lng);
-	  // };
-
-	  // $scope.$on('mapInitialized', function(event, map) {
-	  //   var numTiles = 1 << map.getZoom();
-	  //   var projection = new MercatorProjection();
-	  //   $scope.chicago = map.getCenter();
-	  //   $scope.worldCoordinate = projection.fromLatLngToPoint($scope.chicago);
-	  //   $scope.pixelCoordinate = new google.maps.Point(
-	  //       $scope.worldCoordinate.x * numTiles,
-	  //       $scope.worldCoordinate.y * numTiles);
-	  //   $scope.tileCoordinate = new google.maps.Point(
-	  //       Math.floor($scope.pixelCoordinate.x / TILE_SIZE),
-	  //       Math.floor($scope.pixelCoordinate.y / TILE_SIZE));
-	  // });
-	}
-]);
-
+		      
+// 		    }
+// 		}
+//     }
+// ]);
 'use strict';
 
 //Menu service used for managing  menus
@@ -458,6 +505,24 @@ angular.module('core').service('Menus', [
 		this.addMenu('topbar');
 	}
 ]);
+'use strict';
+
+
+angular.module('core').service('Translations', ['$resource',
+function($resource)  {
+
+        this.getTranslation = function($scope, language) {
+            var languageFilePath = '/modules/core/translation_' + language + '.json'; 
+            console.log(languageFilePath);
+            $resource(languageFilePath).get(function (data) {
+                $scope.translation = data;
+            });
+        };
+    }
+]);
+
+
+// 'translation_' + language + '.json'
 'use strict';
 
 // Config HTTP Error Handling
