@@ -7,19 +7,20 @@ module.exports = {
 			css: [
 				'public/lib/bootstrap/dist/css/bootstrap.min.css',
 				'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
+				'public/lib/angular-material/modules/css/angular-material-layouts.css'
 			],
 			js: [
-				'public/lib/angular/angular.min.js',
-				'public/lib/angular-aria/aria.js', 
+				'public/lib/angular/angular.js',
+				'public/lib/angular-aria/angular-aria.js', 
 				'public/lib/angular-resource/angular-resource.js', 
 				'public/lib/angular-cookies/angular-cookies.js', 
 				'public/lib/angular-animate/angular-animate.js', 
 				'public/lib/angular-material/angular-material.js', 
 				'public/lib/angular-touch/angular-touch.js', 
 				'public/lib/angular-sanitize/angular-sanitize.js', 
-				'public/lib/angular-ui-router/release/angular-ui-router.min.js',
-				'public/lib/angular-ui-utils/ui-utils.min.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
+				'public/lib/angular-ui-router/release/angular-ui-router.js',
+				'public/lib/angular-ui-utils/ui-utils.js',
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 				'public/lib/angular-google-maps/dist/angular-google-maps.js'
 				
 				
