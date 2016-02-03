@@ -29,6 +29,7 @@ angular.module('core').controller('HomeController', ['$scope','$http', '$mdToast
     $scope.hideContactHeader = true;
     $scope.mapToggle = false;
     $scope.mapToggle1 = false;
+    $scope.user = {};
 
     $scope.mapTrigger = function() {
         $scope.toggleMap = true;
@@ -53,6 +54,16 @@ angular.module('core').controller('HomeController', ['$scope','$http', '$mdToast
         $scope.showContactNote = true;
         $scope.hideContactHeader = true;
 
+    };
+
+    $scope.sendMail = function() {
+        $http.post('/sendmail', $scope.user).success(function(response) {
+            $scope.user = {};
+            $scope.closeContactForm();
+        }).error(function(error) {
+            $scope.closeContactForm();
+            $scope.error = error.message;
+        });
     };
     //Run translation if selected language changes
 

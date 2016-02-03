@@ -20,10 +20,10 @@ exports.sendMail = function(req, res) {
 
     var mailData = req.body;
     transporter.sendMail({
-        from: mailData.contactEmail,
+        from: mailData.email,
         to: 'atumachimelawilliam@gmail.com',
-        subject: 'Message from ' + mailData.contactName,
-        text: mailData.contactMsg
+        subject: 'Message from ' + mailData.name,
+        text: mailData.comment
     }, function(error, info) {
         if (error) {
             res.jsonp('error');
