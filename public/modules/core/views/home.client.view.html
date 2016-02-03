@@ -1,13 +1,13 @@
 <section data-ng-controller="HomeController">
   <div id="wrapper">
     <!-- <div id="landing-page" class="panels bg-one"> -->
-    <div class="container-fluid overlay">  
+    <div class="container-fluid overlay" id="home-page">  
       <div id="logo-mod">
         <a href="/"><img src="/modules/core/img/brand/prologo.png" alt="PRO SERVICES" class="mod-logo1">
         </a>
       </div>
-      <div class="row" id="coy-name">
-        <h1 class="col-md-10 home-title col-md-offset-1">
+      <div id="coy-name">
+        <h1 class="col-md-10 home-title col-md-offset-2">
           <span>
             <ul>
               <li class="app-title">{{translation.TRADE_MARK}}</li>
@@ -170,15 +170,15 @@
         </div>
       </div>
       <div id="location-wrapper" class="location-panels">
-      <div class="col-md-8 col-md-offset-2">
-        <h3>{{translation.LOOKING_FOR}}</h3>
+      <div class="col-md-8 locate-wrapper col-md-offset-2">
+        <h3 data-ng-hide="mapToggle">{{translation.LOOKING_FOR}}</h3>
         <div>
             <div data-ng-show="toggleMap">
               <a href="" data-ng-click="toggleMapClose()">{{translation.CLOSE}}</a>
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.4927532797024!2d8.781482514322812!3d-0.7319547854780628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a83b771a6f4f7b5%3A0x90f670714d51f67!2s%C3%89glise+Ste+Barbe%2C+Port-Gentil%2C+Gabon!5e0!3m2!1sen!2s!4v1452812455097" width="880px" height="500px" frameborder="0" style="border:0;" allowfullscreen>
               </iframe>     
             </div>
-            <div id="locate-title" ng-show="toggleMapCtrl"> 
+            <div id="locate-title" data-ng-hide="mapToggle1"> 
               <p>{{translation.WE_ARE}}<br>{{translation.FEEL_FREE}}<br>
               {{translation.CHEERS}}</p>
 
@@ -198,19 +198,19 @@
           </div>
           <ul id="footer-nav">  
             <li class="hover">
-              <a href="#"><img src="/modules/core/img/brand/homee.png"/></a><div class="tooltip">{{translation.HOME_PRO}}</div>
+              <a ng-href="#home-page"><img src="/modules/core/img/brand/homee.png"/></a><div class="tooltip">{{translation.HOME_PRO}}</div>
             </li>
             <li class="hover">
-              <a href="#"><img src="/modules/core/img/brand/aboutpro.png"/></a><div class="tooltip1">{{translation.ABOUT_US}}</div>
+              <a ng-href="#about-us"><img src="/modules/core/img/brand/aboutpro.png"/></a><div class="tooltip1">{{translation.ABOUT_US}}</div>
             </li>
             <li class="hover">
-          <a href="#"><img src="/modules/core/img/brand/services.png"/></a><div class="tooltip2">{{translation.SERVICES_PRO}}</div>
+          <a href="#services"><img src="/modules/core/img/brand/services.png"/></a><div class="tooltip2">{{translation.SERVICES_PRO}}</div>
             </li>
             <li class="hover">
-              <a href="#"><img src="/modules/core/img/brand/customers.png"></a><div class="tooltip3">{{translation.CLIENTS_PRO}}</div>
+              <a href="#clients"><img src="/modules/core/img/brand/customers.png"></a><div class="tooltip3">{{translation.CLIENTS_PRO}}</div>
             </li>
             <li class="hover">
-              <a href="#"><img src="/modules/core/img/brand/contact.png"></a><div class="tooltip4">{{translation.CONTACT_US}}</div>
+              <a href="#contact-us"><img src="/modules/core/img/brand/contact.png"></a><div class="tooltip4">{{translation.CONTACT_US}}</div>
             </li>
           </ul>  
           <ul id="footer-img">
