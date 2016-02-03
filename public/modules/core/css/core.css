@@ -2629,7 +2629,7 @@ strong {
   }
 
 }
-@media (max-width: 300px) and (max-width: 500px) {
+@media (min-width: 300px) and (max-width: 500px) {
   #form-div{
     left: 3%;
     margin-right: 3%;
@@ -2670,28 +2670,28 @@ strong {
   #about-us .about-content {
     float: left;
     display: inline;
-    margin-left: 180px;
+    margin-left: 100px;
     text-align: center;
   }
   .about-content {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
     border: 2px solid #999;
     margin-top: 20px;
     background-color: #19020e;
   }
   .about-content h4 {
-    margin-top: 40px;
+    margin-top: 20px;
     font-weight: bold;
     font-family: 'Molengo', san-serif !important;
-    font-size: 1em;
+    font-size: 0.9em;
   }
   .about-content p {
     position: relative;
     display: block;
     font-family: 'Poiret One', cursive;
-    font-size: 0.9em;
+    font-size: 0.7em;
     line-height: 1.8em;
     color: #fff;
     text-align: center;
@@ -2729,60 +2729,69 @@ strong {
   #contact-us {
     background: url('/modules/core/img/brand/feedbackimg.jpg') no-repeat;
     background-size: cover;
-    height: 60% !important;
+    height: 100% !important;
     min-height: 100%;
     position: relative;
     font-family: 'Poiret One', cursive !important;
   }
   .contact-us-panels {
     height: 100% !important;
-    min-height: 60% !important;
-    min-height: 10% !important;
+    min-height: 100% !important;
   }
   #location-wrapper {
     background-color: #388;
     overflow: visible;
-    min-height: 80%;
+    min-height: 100%;
   }
-
+  iframe{
+    width: 380px !important;
+    height: 360px !important;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    z-index: 5000;
+    margin-top: 5px;
+  }
   #footer {
     padding-bottom: 10px;
     background: #3f0723;
     position: fixed;
     bottom: 0;
-    height: 30% !important;
+    height: 35% !important;
   }
   #footer #footer-lang-select h4 {
     float: left;
     text-align: right;
     margin-left: 5px;
     padding: 20px;
-    margin-top: 25px;
+    margin-top: 10px;
     border: none;
-    font-size: 1.7em;
+    font-size: 1.3em;
   }
   .language-select #select-title {
     color: #fff;
     font-weight: bolder;
-    line-height: 5.5em;
+    line-height: 3.5em;
   }
   #footer #footer-lang-select select{
     float: left;
     text-align: right;
-    margin-left: 5px;
-    padding: 15px;
-    margin-top: 80px;
+    margin-left: 33px;
+    padding: 3px;
     border: none;
-    font-size: 1.4em;
+    font-size: 1em;
     width: 25%;
     height: 2%;
+    margin-top: 1px;
+    clear: both;
   }
   #footer-nav{
-    margin-top: 20px;
+    margin-top: 10px;
   }
   #footer ul{
     display: inline-block;
-    margin-top: 40px;
+    margin-top: 10px;
   } 
   #footer #footer-nav li a {
     float: left;
