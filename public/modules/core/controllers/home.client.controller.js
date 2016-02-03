@@ -57,8 +57,10 @@ angular.module('core').controller('HomeController', ['$scope','$http', '$mdToast
     };
 
     $scope.sendMail = function() {
+      console.log($scope.user);
         $http.post('/sendmail', $scope.user).success(function(response) {
-            $scope.user = {};
+            console.log('response', response);
+            $scope.user = '';
             $scope.closeContactForm();
         }).error(function(error) {
             $scope.closeContactForm();
