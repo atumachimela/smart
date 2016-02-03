@@ -2639,11 +2639,18 @@ strong {
     padding-right: 3%;
   }
   #logo-mod .mod-logo1 {
-    width: 30%;
+    width: 20%;
     height: 20%;
     overflow: visible;
     display: block;
-    margin: 20px;
+    margin: 10px;
+  }
+  #coy-name {
+    text-align: center;
+    margin: 0 auto;
+    text-align: center;
+    top: 60px;
+    position: fixed;
   }
   ul .app-title {
     font-size: 1.4em;
@@ -2651,7 +2658,7 @@ strong {
     font-family: 'BenchNine', sans-serif;
     color: #990000;
     text-transform: uppercase;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.3em;
     margin: 0 auto;
     text-align: center;
   }
@@ -2659,11 +2666,11 @@ strong {
     float: left;
     color: #990000;
     text-align: left;
-    top: 50px;
+    top: 20px;
     padding-left: 10px;
     text-decoration: none;
     font-weight: bolder;
-    font-size: 1em;
+    font-size: 0.7em;
     font-family: 'Dosis', sans-serif;
     clear: left;
   }
