@@ -17,8 +17,7 @@ exports.index = function(req, res) {
  * Send an email when the contact from is submitted
  */
 exports.sendMail = function(req, res) {
-
-    var mailData = req.body;
+   var mailData = req.body;
     transporter.sendMail({
         from: mailData.email,
         to: 'atumachimelawilliam@gmail.com',
