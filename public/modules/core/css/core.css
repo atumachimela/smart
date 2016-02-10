@@ -679,17 +679,15 @@ h4+p{
     height: 50%;
     width: 50%;
 }
-.bg-one{
+#video-background{
   min-width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    /*opacity: 0.4;*/
+  height: 100%;
+  margin: 0 auto;
 }
-
-.bg-one {
-  background: url('/modules/core/img/brand/tahitianpearls.jpg') no-repeat;
-  background-size: cover!important;
-}
+/*.home-page{
+  min-width: 100%;
+  min-height: 100%;
+}*/
 #staff{
   background: url('/modules/core/img/brand/metalfabricator.jpg') no-repeat;
   background-size: cover!important;
@@ -2361,15 +2359,6 @@ strong {
     margin-top: 10%;
 
   }
-  #video-background{
-  background: url('/modules/core/img/brand/tahitianpearls.jpg') no-repeat;
-  background-size: cover;
-  position: fixed;
-  right: 0; 
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  }
   iframe{
     width: 680px !important;
     height: 400px !important;
@@ -2377,6 +2366,17 @@ strong {
     border-right-width: 0px;
     border-bottom-width: 0px;
     border-left-width: 0px;
+  }
+}
+@media (min-width: 200px) and (max-width: 800px){
+  .home-page{
+    background: url('/modules/core/img/brand/lascatedralesbeach.jpg') no-repeat !important;
+    background-size: cover!important;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  #video-background {
+    display: none;
   }
 }
 @media (min-width: 700px) and (max-width: 900px) {
