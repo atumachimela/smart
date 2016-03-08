@@ -17,7 +17,9 @@
     "angular-simple-logger": "~0.1.5",
     "angular-google-maps": "~2.2.1",
     "angular-material": "~1.0.3",
-    "angular-aria": "~1.4.9"
+    "angular-aria": "~1.4.9",
+    "Progress.js": "progress.js#~0.1.0",
+    "angular-scroll-progress-meter": "simonengelhardt/angular-scroll-progress-meter"
   },
   "resolutions": {
     "angular-animate": "^1.4.8",
