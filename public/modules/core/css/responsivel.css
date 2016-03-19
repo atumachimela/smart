@@ -1,0 +1,1005 @@
+/*specific mobile screen*/
+
+@media (min-width: 480px) and (max-width: 485px){
+  #coy-name{
+  text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  top: 33px;
+  position: fixed;
+  }
+  #logo-mod{
+     width: 100%;
+    height: 100%;
+    overflow: visible;
+    display: block;
+  }
+  #logo-mod .mod-logo1{
+     width: 45%;
+    height: 30%;
+    overflow: visible;
+    display: block;
+    margin: 20px;
+  }
+  .home-title span{
+  margin: 0 auto;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  }
+  ul .app-title{
+    font-size: 1em;
+    font-weight: normal;
+    font-family: 'BenchNine', sans-serif;
+    color:#990000;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    margin: 0 auto;
+    text-align: left;
+  }
+  #coy-name {
+    text-align: center;
+    margin: 0 auto;
+    text-align: center;
+    top: 103px;
+    position: fixed;
+  }
+  #coy-name .home-title ul li .nugget {
+    float: left;
+    color: #990000;
+    text-align: left;
+    top: 50px;
+    padding-left: 3px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 0.6em;
+    font-family: 'Dosis', sans-serif;
+    clear: left;
+  }
+  #about-us-wrapper{
+    margin-top: 50px;
+  }
+  #about-us .about-content {
+    float: left;
+    display: inline;
+    margin-left: 130px;
+    text-align: center;
+  }
+  .about-content {
+    height: 170px !important;
+    width: 170px !important;
+    border-radius: 50%;
+    border: 2px solid #999;
+    margin-top: 10px;
+    background-color: #19020e;
+  }
+  .about-content h4 {
+    margin-top: 30px;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    font-size: 1em;
+  }
+  .about-content p {
+    position: relative;
+    display: block;
+    font-family: 'Poiret One', cursive;
+    font-size: 0.8em;
+    line-height: 1.8em;
+    color: #fff;
+    text-align: center;
+    margin-top: 5px;
+    padding: 10px;
+  }
+  #about-us{
+    min-height: 750px;
+  }
+  #services{
+    min-height: 480px;
+  }
+  #location-wrapper{
+    min-height: 460px;
+  }
+  #contact-us{
+    min-height: 500px !important;
+  }
+  #footer{
+    height: 20% !important;
+  }
+  #footer #footer-lang-select select {
+    float: left;
+    text-align: right;
+    margin-left: 33px;
+    padding: 3px;
+    border: none;
+    font-size: 1em;
+    width: 30%;
+    height: 5%;
+    margin-top: 22px;
+    clear: both;
+  }
+  #footer ul li{
+    float: right;
+    padding: 2px;
+  }
+  #footer ul li a img {
+    width: 25px;
+    height: 25px;
+  }
+
+}
+
+/*landscape orientation for iphone 5*/
+@media (min-width: 568px) and (max-width: 570px){
+  #coy-name{
+  text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  top: 43px;
+  position: fixed;
+  }
+  #logo-mod{
+     width: 50%;
+    height: 50%;
+    overflow: visible;
+    display: block;
+  }
+  #logo-mod .mod-logo1{
+     width: 45%;
+    height: 30%;
+    overflow: visible;
+    display: block;
+    margin: 20px;
+  }
+  .home-title span{
+  margin: 0 auto;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  }
+  ul .app-title{
+    font-size: 1em;
+    font-weight: normal;
+    font-family: 'BenchNine', sans-serif;
+    color:#990000;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #coy-name .home-title ul li .nuggets {
+    float: left;
+    color: #990000;
+    text-align: left;
+    top: 50px;
+    padding-left: 10px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 0.5em;
+    font-family: 'Dosis', sans-serif;
+  }
+
+  #about-us .about-content {
+    float: left;
+    display: inline;
+    margin: 4px;
+    text-align: center;
+  }
+  .about-content {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    margin-top: 20px;
+    background-color: #19020e;
+  }
+  .about-content h4 {
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    font-size: 1em;
+  }
+  .about-content p {
+    position: relative;
+    display: block;
+    font-family: 'Poiret One', cursive;
+    font-size: 0.9em;
+    line-height: 1.8em;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .gmail-page {
+    color: #444 !important;
+    margin-top: 90px;
+    padding-bottom: 100px;
+  }
+  .carousel .text-wrapper, .carousel h2{
+    font-size:0.9em;
+    padding:1.5em;
+    position:absolute;
+    right:10px;
+    left:10px;
+    text-align:left;
+    color:#fff;
+    /*font-weight: bold;*/
+    width: 100%;
+    opacity: 0.75;
+    background-color:rgba(0,0,0,0.7);
+    font-family: 'Molengo', san-serif !important;
+    
+}
+.carousel .text-wrapper p{
+  font-size: 0.7em;
+  color: #fff;
+  font-family: 'Poiret One',cursive;
+}
+  #services{
+    min-height: 520px !important;
+  }
+  #services h3 {
+    color: #0064b2;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    margin: 0 auto;
+    font-size: 1.2em;
+    position: relative;
+    text-align: center;
+    top: 65px;
+    letter-spacing: 4px;
+  }
+  .contact-us-panels {
+    min-height: 500px !important;
+    position: relative;
+  }
+  #location-wrapper {
+    background-color: #388;
+    overflow: visible;
+    min-height: 470px;
+  }
+  #location-wrapper h3, #contact-us h3{
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    margin: 0 auto;
+    font-size: 1.3em;
+    position: relative;
+    text-align: center;
+    top:80px; 
+    letter-spacing: 4px;
+` }
+  #locate-title p, #contact-note p {
+    text-align: center;
+    color: #fff;
+    font-family: 'Poiret One', cursive !important;
+    font-size: 1em;
+    /*display: block;*/
+  }
+  #footer {
+    padding-bottom: 10px;
+    background: #3f0723;
+    position: fixed;
+    bottom: 0;
+    height: 25% !important;
+  }
+
+  #footer ul li a img {
+    width: 25px;
+    height: 25px;
+  }
+  #footer #footer-img li{
+    margin-right: 50px !important; 
+  }
+  .language-select .form-control {
+    width: 25%;
+    font-weight: bold;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    overflow: hidden;
+  }
+
+}
+/*lanscape for devices with the below media querie
+eg Galaxy Note 3*/
+
+@media (min-width: 630px) and (max-width: 645px) {
+  #coy-name{
+  text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  top: 50px;
+  position: fixed;
+  }
+  #logo-mod{
+     width: 50%;
+    height: 50%;
+    overflow: visible;
+    display: block;
+  }
+  #logo-mod .mod-logo1{
+     width: 45%;
+    height: 30%;
+    overflow: visible;
+    display: block;
+    margin: 20px;
+  }
+  .home-title span{
+  margin: 0 auto;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  }
+  ul .app-title{
+    font-size: 1.7em;
+  }
+  #coy-name .home-title ul li .nuggets{
+    font-size: 0.6em;
+  }
+  #about-us .about-content {
+    margin: 6px;
+    text-align: center;
+    font-size: 0.6em;
+  }
+  #about-us-wrapper{
+    margin-top: 25%;
+  }
+  .about-content {
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    margin-top: 40px;
+    background-color: #19020e;
+  }
+  #about-us{ 
+    color: #fff;
+    margin-top: 80%;
+    background-color: #f0f8ff!important;  
+    min-height: 500px!important;
+    background-color: #967;
+  }
+   #services{
+    min-height: 600px;
+    height: 600px;
+  }
+  .gmail-page {
+    color: #444 !important;
+    margin-top: 90px;
+    padding-bottom: 100px;
+  }
+  #services h3 {
+    color: #0064b2;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    margin: 0 auto;
+    font-size: 1.9em;
+    position: relative;
+    text-align: center;
+    top: 65px;
+    letter-spacing: 4px;
+  }
+  #clients{
+    min-height: 30%;
+  }
+  .contact-us-panels {
+    height: 600px !important;
+    min-height: 100% !important;
+    position: relative;
+  }
+  #location-wrapper {
+    background-color: #388;
+    overflow: visible;
+    min-height: 550px;
+  }
+  #footer {
+    padding-bottom: 10px;
+    background: #3f0723;
+    position: fixed;
+    bottom: 0;
+    height: 25% !important;
+  }
+  #footer #footer-lang-select select{
+    min-width: 30%;
+  }
+  #footer ul li a img {
+    width: 20px;
+    height: 20px;
+  }
+  #footer #footer-img li{
+    margin-right: 50px !important; 
+  }
+}
+
+/*iphone 6 landscape*/
+@media (min-width: 667px) and (max-width: 670px) {
+  #coy-name{
+  text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  top: 70px;
+  position: fixed;
+  }
+  #logo-mod{
+     width: 50%;
+    height: 50%;
+    overflow: visible;
+    display: block;
+  }
+  ul .app-title{
+    font-size: 1.3em;
+    font-weight: normal;
+    font-family: 'BenchNine', sans-serif;
+    color:#990000;
+    text-transform: uppercase;
+    letter-spacing: 0.7em;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #coy-name .home-title ul li .nuggets {
+    float: left;
+    color: #990000;
+    text-align: left;
+    top: 50px;
+    padding-left: 10px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 0.6em;
+    font-family: 'Dosis', sans-serif;
+  }
+  #about-us{ 
+    color: #fff;
+    margin-top: 60%;
+    background-color: #f0f8ff!important;  
+    min-height: 100%!important;
+    background-color: #967;
+  }
+  .about-content {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    background-color: #19020e;
+  }
+  #about-us .about-content {
+    float: left;
+    display: inline;
+    margin: 5px;
+    text-align: center;
+  }
+  .about-content h4 {
+    margin-top: 30px;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+  }
+  .about-content p {
+    position: relative;
+    display: block;
+    font-family: 'Poiret One', cursive;
+    font-size: 0.9em;
+    line-height: 1.8em;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .gmail-page {
+    color: #444 !important;
+    margin-top: 90px;
+    padding-bottom: 100px;
+  }
+  #services {
+    min-height: 570px;
+  }
+  #services h3 {
+    color: #0064b2;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    margin: 0 auto;
+    font-size: 1.2em;
+    position: relative;
+    text-align: center;
+    top: 65px;
+    letter-spacing: 4px;
+  }
+  #location-wrapper h3, #contact-us h3 {
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    margin: 0 auto;
+    font-size: 1.2em;
+    position: relative;
+    text-align: center;
+    top: 80px;
+    letter-spacing: 4px;
+  }
+  #locate-title p, #contact-note p {
+    text-align: center;
+    color: #fff;
+    font-family: 'Poiret One', cursive !important;
+    font-size: 1.3em;
+  }
+
+  .contact-us-panels {
+    min-height: 600px !important;
+    position: relative;
+  }
+  #location-wrapper {
+    background-color: #388;
+    overflow: visible;
+    min-height: 600px;
+  }
+  #footer {
+    background: #3f0723;
+    position: fixed;
+    bottom: 0;
+    height: 25% !important;
+  }
+  #footer #footer-lang-select h4 {
+    float: left;
+    text-align: right;
+    margin-left: 45px;
+    padding: 10px;
+    margin-top: 40px;
+    border: none;
+    font-size: 1em;
+  }
+  .language-select #select-title {
+    color: #fff;
+    font-weight: bolder;
+    line-height: 2.5em;
+  }
+  .language-select #select-title {
+    color: #fff;
+    font-weight: bolder;
+    line-height: 1.8em;
+  }
+  #footer #footer-lang-select select {
+    float: left;
+    text-align: right;
+    margin-left: 45px;
+    padding: 15px;
+    margin-top: 30px;
+    border: none;
+    font-size: 1em;
+    width: 25%;
+    height: 4%;
+  }
+  #footer ul{
+    display: inline;
+  }
+  #footer-img{
+    margin-top: 10px!important;
+  }
+  #footer ul li a img {
+    width: 25px;
+    height: 25px;
+  }
+  #footer #footer-img li{
+    margin-right: 50px !important; 
+  }
+  #footer #footer-img li a {
+    float: right;
+    color: #fff;
+    text-align: right;
+    padding: 10px;  
+  }
+}
+@media (min-width: 685px) and (max-width: 700px){
+  #coy-name{
+  text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  top: 50px !important;
+  position: fixed;
+  }
+  #logo-mod{
+    width: 50%;
+    height: 50%;
+    overflow: visible;
+    display: block;
+  }
+  #logo-mod .mod-logo1{
+     width: 45%;
+    height: 30%;
+    overflow: visible;
+    display: block;
+    margin: 20px;
+  }
+  .home-title span{
+  margin: 0 auto;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  /*line-height: 0.3em !important;*/
+  text-align: center;
+  }
+  ul .app-title{
+    font-size: 1.6em;
+    font-weight: normal;
+    font-family: 'BenchNine', sans-serif;
+    color:#990000;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #about-us{ 
+    color: #fff;
+    margin-top: 60%;
+    background-color: #f0f8ff!important;  
+    min-height: 900px!important;
+    background-color: #967;
+  }
+  #app-title, #coy-name .home-title ul li .nuggets {
+    display: none;
+  }
+  #coy-name .home-title ul li .nugget{
+    float: left;
+    color: #990000;
+    text-align: left;
+    padding-left: 10px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 0.7em;
+    font-family: 'Dosis', sans-serif;
+    clear: left;
+  }
+  .gmail-page {
+    color: #444 !important;
+    margin-top: 90px;
+    padding-bottom: 100px;
+  }
+  #services {
+    min-height: 640px;
+  }
+  #services h3 {
+    color: #0064b2;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    margin: 0 auto;
+    font-size: 1.9em;
+    position: relative;
+    text-align: center;
+    top: 65px;
+    letter-spacing: 4px;
+  }
+  .contact-us-panels {
+    min-height: 600px !important;
+    position: relative;
+  }
+  #location-wrapper {
+    background-color: #388;
+    overflow: visible;
+    min-height: 600px;
+  }
+  #footer {
+    background: #3f0723;
+    position: fixed;
+    bottom: 0;
+    height: 25% !important;
+  }
+  #footer #footer-lang-select h4 {
+    float: left;
+    text-align: right;
+    margin-left: 45px;
+    padding: 10px;
+    margin-top: 40px;
+    border: none;
+    font-size: 1em;
+  }
+  .language-select #select-title {
+    color: #fff;
+    font-weight: bolder;
+    line-height: 2.5em;
+  }
+  .language-select #select-title {
+    color: #fff;
+    font-weight: bolder;
+    line-height: 1.8em;
+  }
+  #footer #footer-lang-select select {
+    float: left;
+    text-align: right;
+    margin-left: 5px;
+    padding: 15px;
+    margin-top: 30px;
+    border: none;
+    font-size: 1em;
+    width: 25%;
+    height: 4%;
+  }
+  #footer ul{
+    display: inline;
+  }
+  #footer-img{
+    margin-top: 10px!important;
+  }
+  #footer ul li a img {
+    width: 25px;
+    height: 25px;
+  }
+  #footer #footer-img li{
+    margin-right: 50px !important; 
+  }
+  #footer #footer-img li a {
+    float: right;
+    color: #fff;
+    text-align: right;
+    padding: 10px;  
+  }
+}
+
+/*iphone 6plus landscape*/
+@media (min-width: 736px) and (max-width: 740px){
+
+  #coy-name {
+    text-align: center;
+    margin: 0 auto;
+    text-align: center;
+    top: 75px !important;
+    position: fixed;
+  }
+  #logo-mod{
+    width: 50%;
+    height: 50%;
+    overflow: visible;
+    display: block;
+  }
+  #logo-mod .mod-logo1{
+     width: 45%;
+    height: 30%;
+    overflow: visible;
+    display: block;
+    margin: 20px;
+  }
+  .home-title span{
+  margin: 0 auto;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  }
+  ul .app-title{
+    font-size: 1.4em;
+    font-weight: normal;
+    font-family: 'BenchNine', sans-serif;
+    color:#990000;
+    text-transform: uppercase;
+    letter-spacing: 0.7em;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #coy-name .home-title ul li .nuggets{
+    float: left;
+    color: #990000;
+    text-align: left;
+    padding-left: 10px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 0.5em;
+    font-family: 'Dosis', sans-serif;
+    clear: left;
+  }
+  .about-content {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    background-color: #19020e;
+  }
+  #about-us .about-content {
+    float: left;
+    display: inline;
+    margin: 5px;
+    text-align: center;
+    margin-left: 25px;
+  }
+  .about-content h4 {
+    margin-top: 30px;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+  }
+  .about-content p {
+    position: relative;
+    display: block;
+    font-family: 'Poiret One', cursive;
+    font-size: 0.9em;
+    line-height: 1.8em;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .gmail-page {
+    color: #444 !important;
+    margin-top: 90px;
+    padding-bottom: 100px;
+  }
+  #services {
+    min-height: 640px;
+  }
+  #services h3 {
+    color: #0064b2;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    margin: 0 auto;
+    font-size: 1.9em;
+    position: relative;
+    text-align: center;
+    top: 65px;
+    letter-spacing: 4px;
+  }
+  .contact-us-panels {
+    min-height: 640px !important;
+    position: relative;
+  }
+  #location-wrapper {
+    background-color: #388;
+    overflow: visible;
+    min-height: 640px;
+  }
+  #footer {
+    background: #3f0723;
+    position: fixed;
+    bottom: 0;
+    height: 25% !important;
+  }
+  #footer #footer-lang-select h4 {
+    float: left;
+    text-align: right;
+    margin-left: 45px;
+    padding: 10px;
+    margin-top: 40px;
+    border: none;
+    font-size: 1em;
+  }
+  .language-select #select-title {
+    color: #fff;
+    font-weight: bolder;
+    line-height: 2.5em;
+  }
+  .language-select #select-title {
+    color: #fff;
+    font-weight: bolder;
+    line-height: 1.8em;
+  }
+  #footer #footer-lang-select select {
+    float: left;
+    text-align: right;
+    margin-left: 45px;
+    padding: 15px;
+    margin-top: 30px;
+    border: none;
+    font-size: 1em;
+    width: 25%;
+    height: 4%;
+  }
+  #footer ul{
+    display: inline;
+  }
+  #footer-img{
+    margin-top: 10px!important;
+  }
+  #footer ul li a img {
+    width: 25px;
+    height: 25px;
+  }
+  #footer #footer-img li{
+    margin-right: 50px !important; 
+  }
+  #footer #footer-img li a {
+    float: right;
+    color: #fff;
+    text-align: right;
+    padding: 10px;  
+  }
+}
+
+
+
+/*General Mobile Small Device Screen Sizes*/
+
+@media(min-width: 300px) and (max-width: 480px){
+  #app-title{
+  display: none;
+ }
+  .contact-icons{
+    font-size: 0.7em;
+  }
+  .chi-bot{
+    font-size: 0.7em;
+  }
+  .chi-bot {
+    border: 3px solid #fff;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10%;
+    cursor: pointer;
+    width:135px !important;
+    height: 45px !important;
+  }
+  #about-us .about-content {
+    float: left;
+    display: inline;
+    margin-left: 170px;
+    text-align: center;
+  }
+  .about-content {
+    height: 170px !important;
+    width: 170px !important;
+    border-radius: 50%;
+    border: 2px solid #999;
+    margin-top: 10px;
+    background-color: #19020e;
+  }
+  .about-content h4 {
+    margin-top: 30px;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    font-size: 1em;
+  }
+  .about-content p {
+    position: relative;
+    display: block;
+    font-family: 'Poiret One', cursive;
+    font-size: 0.8em;
+    line-height: 1.8em;
+    color: #fff;
+    text-align: center;
+    margin-top: 5px;
+    padding: 10px;
+  }
+  .carousel .text-wrapper, .carousel h2{
+    font-size:0.9em;
+    padding:1.5em;
+    position:absolute;
+    right:10px;
+    left:10px;
+    text-align:left;
+    color:#fff;
+    /*font-weight: bold;*/
+    width: 100%;
+    opacity: 0.75;
+    background-color:rgba(0,0,0,0.7);
+    font-family: 'Molengo', san-serif !important;  
+  }
+  .carousel .text-wrapper p{
+    font-size: 0.7em;
+    color: #fff;
+    font-family: 'Poiret One',cursive;
+  }
+
+  #services h3 {
+    color: #0064b2;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    margin: 0 auto;
+    font-size: 1.2em;
+    position: relative;
+    text-align: center;
+    top: 65px;
+    letter-spacing: 4px;
+  }
+  
+  #location-wrapper h3, #contact-us h3{
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    margin: 0 auto;
+    font-size: 1.3em;
+    position: relative;
+    text-align: center;
+    top:80px; 
+    letter-spacing: 4px;
+  }
+  #locate-title p, #contact-note p {
+    text-align: center;
+    color: #fff;
+    font-family: 'Poiret One', cursive !important;
+    font-size: 1em;
+    /*display: block;*/
+  }
+  #footer #footer-lang-select select {
+    margin-left: 33px
+  }
+}

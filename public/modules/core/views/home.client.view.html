@@ -9,18 +9,9 @@
       <div id="coy-name">
         <h1 class="col-md-10 home-title col-md-offset-2">
           <span>
-            <ul id="app-title">
-              <li class="app-title">{{translation.TRADE_MARK}}</li>
-              <li><p class="nuggets">{{translation.TRADE_MARK1}}</li>
-              <li><p class="nuggets" id="nuggets-2">{{translation.TRADE_MARK4}}</li>
-              <li><p class="nuggets">{{translation.TRADE_MARK2}} &</p></li>
-              <li><p class="nuggets">{{translation.TRADE_MARK3}}</p></li>
-            </ul>
-          </span>
-          <span>
             <ul>
               <li class="app-title">{{translation.TRADE_MARK}}</li>
-              <li><p class="nugget">{{translation.TRADE_MARK1}}, {{translation.TRADE_MARK2}} &{{translation.TRADE_MARK3}}</p></li>
+              <li><p class="nuggets">{{translation.TRADE_MARK1}}, {{translation.TRADE_MARK2}} &{{translation.TRADE_MARK3}}</p></li>
             </ul>
           </span>
         </h1>
@@ -196,11 +187,11 @@
       </div>
       <div id="footer" class="footer-panels">
           <div class="language-select" id="footer-lang-select">
-                <h4 id="select-title">English / Francais</h4>
-                 <select class="form-control" ng-change="translate()" ng-model="selectedLanguage">
-                      <option value="en">English</option>
-                      <option value="por">Francais</option>
-                  </select>
+            <!-- <h4 id="select-title">English / Francais</h4> -->
+            <select class="form-control" ng-change="translate()" ng-model="selectedLanguage">
+            <option value="en">English</option>
+            <option value="por">Francais</option>
+            </select>
           </div>
           <ul id="footer-img">
               <li></li>
