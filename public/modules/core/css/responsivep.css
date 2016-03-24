@@ -17,6 +17,8 @@
     max-width: 978px;
   }
 }
+/*General Mobile Small Device Screen Sizes*/
+
 @media (min-width: 300px) and (max-width: 800px){
   .home-page{
     background: url('/modules/core/img/brand/lascatedralesbeach.jpg') no-repeat !important;
@@ -28,6 +30,116 @@
     display: none;
   }
 }
+
+@media(min-width: 300px) and (max-width: 480px){
+  #app-title{
+  display: none;
+ }
+  .contact-icons{
+    font-size: 0.7em;
+  }
+  .chi-bot{
+    font-size: 0.7em;
+  }
+  .chi-bot {
+    border: 3px solid #fff;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10%;
+    cursor: pointer;
+    width:135px !important;
+    height: 45px !important;
+  }
+  #about-us .about-content {
+    float: left;
+    display: inline;
+    margin-left: 170px;
+    text-align: center;
+  }
+  .about-content {
+    height: 170px !important;
+    width: 170px !important;
+    border-radius: 50%;
+    border: 2px solid #999;
+    margin-top: 10px;
+    background-color: #19020e;
+  }
+  .about-content h4 {
+    margin-top: 30px;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    font-size: 1em;
+  }
+  .about-content p {
+    position: relative;
+    display: block;
+    font-family: 'Poiret One', cursive;
+    font-size: 0.8em;
+    line-height: 1.8em;
+    color: #fff;
+    text-align: center;
+    margin-top: 5px;
+    padding: 10px;
+  }
+  .carousel .text-wrapper, .carousel h2{
+    font-size:0.9em;
+    padding:1.5em;
+    position:absolute;
+    right:10px;
+    left:10px;
+    text-align:left;
+    color:#fff;
+    /*font-weight: bold;*/
+    width: 100%;
+    opacity: 0.75;
+    background-color:rgba(0,0,0,0.7);
+    font-family: 'Molengo', san-serif !important;  
+  }
+  .carousel .text-wrapper p{
+    font-size: 0.7em;
+    color: #fff;
+    font-family: 'Poiret One',cursive;
+  }
+
+  #services h3 {
+    color: #0064b2;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    margin: 0 auto;
+    font-size: 1.2em;
+    position: relative;
+    text-align: center;
+    top: 65px;
+    letter-spacing: 4px;
+  }
+  
+  #location-wrapper h3, #contact-us h3{
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    margin: 0 auto;
+    font-size: 1.3em;
+    position: relative;
+    text-align: center;
+    top:80px; 
+    letter-spacing: 4px;
+  }
+  #locate-title p, #contact-note p {
+    text-align: center;
+    color: #fff;
+    font-family: 'Poiret One', cursive !important;
+    font-size: 1em;
+    /*display: block;*/
+  }
+  #footer #footer-lang-select select {
+    margin-left: 33px
+  }
+}
+
+/*General Screen Media Queries Stops here
+  You can add more
+*/
+
 @media (min-width: 1500px) and (max-width: 1800px) {
     #in-bt-lf .padd {
         padding: 0 5px 0 0;
@@ -54,48 +166,7 @@
     font-size: 21px;
   }
 }
-@media (min-width: 1200px) and (max-width: 1300px){
 
-  .location-wrapper .inner {
-      padding: 100px 0;
-  }
-  .container {
-      width: 100%;
-  }
-  .home .home-title {
-      font-size: 122px;
-  }
-  .home .home-subtitle {
-    padding-top: 20px;
-    margin-top: 20px;
-    font-size: 21px;
-  }
-  .button-wrapper {
-    padding-top: 20px;
-    text-align: right;
-  }
-  #about-us .about-content {
-    float: left;
-    display: inline;
-    margin: 10px;
-    text-align: center;
-  }
-  #footer #footer-img li a {
-    float: right;
-    color: #fff;
-    text-align: right;
-    margin-left: 5px;
-    padding-top: 15px;
-  }
-  iframe{
-    width: 700px !important;
-    height: 400px !important;
-    border-top-width: 0px;
-    border-right-width: 0px;
-    border-bottom-width: 0px;
-    border-left-width: 0px;
-  }
-}
 
 @media (min-width: 900px) and (max-width: 1100px) {
   #landing-page{
@@ -210,6 +281,125 @@
 }
 
 /*Mobile Devices Screen Sizes*/
+@media (min-width: 798px) and (max-width: 800px) {
+  .overlay {
+    background-color: #fff;
+    min-height: 1200px;
+    opacity: 0.85;
+    border-bottom: 5px solid #333;
+  }
+  ul .app-title {
+    font-size: 2.7em;
+    font-weight: normal;
+    font-family: 'BenchNine', sans-serif;
+    color: #990000;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #about-us {
+    color: #fff;
+    margin-top: 140%;
+    background-color: #f0f8ff!important;
+    min-height: 100%;
+  }
+  #logo-mod .mod-logo1 {
+    width: 45%;
+    height: 30%;
+    overflow: visible;
+    display: block;
+    margin: 100px;
+  }
+  #coy-name {
+    margin: 0 auto;
+    text-align: center;
+    top: 480px;
+    position: fixed;
+  }
+  #about-us-wrapper {
+    margin-top: 25%;
+  }
+  #about-us .about-content {
+    float: left;
+    display: inline;
+    margin: 20px;
+    margin-left: 230px;
+    text-align: center;
+  }
+  #services {
+    position: relative;
+    height: 70%;
+    background-color: #fff!important;
+  }
+  #services h3 {
+    color: #0064b2;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    margin: 0 auto;
+    font-size: 1.9em;
+    position: relative;
+    text-align: center;
+    top: 155px;
+    letter-spacing: 4px;
+  }
+  .gmail-page {
+    color: #444 !important;
+    margin-top: 220px;
+    padding-bottom: 100px;
+  }
+  .contact-us-panels {
+    height: 70% !important;
+    min-height: 60% !important;
+  }
+
+  #location-wrapper h3, #contact-us h3 {
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Molengo', san-serif !important;
+    margin: 0 auto;
+    font-size: 1.9em;
+    position: relative;
+    text-align: center;
+    top: 160px;
+    letter-spacing: 4px;
+  }
+  #locate-title p, #contact-note p {
+    text-align: center;
+    color: #fff;
+    font-family: 'Poiret One', cursive !important;
+    font-size: 1.6em;
+    margin-top: 220px;
+  }
+  #location-wrapper {
+    background-color: #388;
+    overflow: visible;
+    min-height: 82%;
+  }
+  #footer #footer-lang-select h4, #footer #footer-lang-select select, #footer-lang-select select option{
+    float: left;
+    text-align: right;
+    margin-left: 85px;
+    padding: 0;
+    margin-top: 65px;
+    border: none;
+  }
+  .language-select .form-control {
+    width: 22%;
+    font-weight: bold;
+    font-size: 1em;
+    outline: none;  
+  }
+  #footer #footer-img li a {
+    /* float: right; */
+    color: #fff;
+    text-align: right;
+    margin-right: 75px;
+    margin-left: 207px;
+    padding: 12px;
+  }
+
+}
 
 /*Apple ipad Portrait*/
 
@@ -726,7 +916,7 @@
 
 }
 
-/*Galaxy Note 3*/
+/*Galaxy Note 3, Galaxy Note II, Galaxy S III, Galaxy S5*/
 @media (min-width: 360px) and (max-width: 365px){
   #about-us {
     margin-top: 900px;
