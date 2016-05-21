@@ -1,4 +1,4 @@
-<!-- <section data-ng-controller="HomeController">
+<section data-ng-controller="HomeController">
   <div class="navbar-header" id="app-name">
     <button class="navbar-toggle" type="button" ng-click="toggleCollapsibleMenu()">
       <span class="sr-only">Toggle navigation</span>
@@ -7,6 +7,19 @@
       <span class="icon-bar"></span>
     </button>
     <a ui-sref="home" class="navbar-brand" >
+      <div id="coy-name">
+        <h1 class="col-md-10 home-title col-md-offset-2">
+          <span>
+            <ul>
+            <div id="logo-mod">
+              <a href="/"><img src="/modules/core/img/brand/prologo.png" alt="Morphe" class="mod-logo1">
+              </a>
+            </div>|
+              <li class="app-title">Morphes</li>
+            </ul>
+          </span>
+        </h1>
+      </div>
        <img src="/modules/core/img/brand/logo.png" id="app-logo"/>
     </a>
   </div>
@@ -29,39 +42,52 @@
     <ul class="nav navbar-nav navbar" id="admin-header">
       <li>
         <a href="#">
-          <span>{{translation.HOME_PRO}}</span>
+          <span>Home</span>
         </a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar" id="admin-header">
       <li>
         <a href="#">
-          <span>{{translation.ABOUT_US}}</span>
+          <span>About Us</span>
         </a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar" id="admin-header">
       <li>
         <a href="#">
-          <span>{{translation.SERVICES_PRO}}</span>
+          <span>Goal</span>
         </a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar" id="admin-header">
       <li>
         <a href="#">
-          <span>{{translation.CLIENTS}}</span>
+          <span>Services</span>
         </a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar" id="admin-header">
       <li>
         <a href="#">
-          <span>{{translation.GOAL_PRO}}</span>
+          <span>Contact Us</span>
         </a>
       </li>
     </ul>
-    
+    <ul class="nav navbar-nav navbar" id="admin-header">
+      <li>
+        <a href="#">
+          <span>Locate Us</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar" id="admin-header">
+      <li>
+        <a href="#">
+          <span>Career</span>
+        </a>
+      </li>
+    </ul>
     <ul class="nav navbar-nav navbar-right" data-ng-hide="authentication.user" id="admin-header">
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -78,7 +104,7 @@
         </ul>
       </li>
     </ul>
-    <!-<ul class="nav navbar-nav navbar-right" data-ng-hide="authentication.user">
+    <ul class="nav navbar-nav navbar-right" data-ng-hide="authentication.user">
       <li ui-route="/signup" ng-class="{active: $uiRoute}">
         <a href="/#!/signup">Sign Up</a>
       </li>
@@ -86,8 +112,8 @@
       <li ui-route="/signin" ng-class="{active: $uiRoute}">
         <a href="/#!/signin">Sign In</a>
       </li>
-    </ul> -->
-    <!-- <ul class="nav navbar-nav navbar-right" data-ng-show="authentication.user">
+    </ul>
+    <ul class="nav navbar-nav navbar-right" data-ng-show="authentication.user">
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
           <span data-ng-bind="authentication.user.displayName"></span> <b class="caret"></b>
@@ -107,6 +133,5 @@
       </li>
     </ul>
   </nav>
-
 </section>
- --> 
+ 
